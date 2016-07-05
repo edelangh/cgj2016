@@ -21,8 +21,24 @@ var jumping = false
 var can_continue_jump = false
 
 var prev_jump_pressed = false
+var die = false
+
+func die():
+	die = true
+	if not global.gameover:
+		var gameOver = preload('res://gameover/gameover.scn')
+		var game = gameOver.instance()
+		game.set_pos(global.camera_pos)
+		global.main_camera.add_child(game)
+
+func check_die():
+	if get_pos().y > 600:
+		die()
 
 func _fixed_process(delta):
+	if global.gameover or die:
+		return
+	check_die()
 	var force = Vector2(WALK_SPEED, GRAVITY)
 	var jump = Input.is_action_pressed("player_jump")
 	var camera_pos = global.camera_pos
@@ -85,4 +101,5 @@ func _fixed_process(delta):
 
 
 func _ready():
+	global.gameover = false
 	set_fixed_process(true)
