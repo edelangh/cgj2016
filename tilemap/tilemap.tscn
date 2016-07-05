@@ -378,4 +378,39 @@ polygon = Vector2Array( -32, -16, 32, -16, 32, 16, -32, 16 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
+[node name="chair_left" type="Sprite" parent="."]
+
+transform/pos = Vector2( 32, 352 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 256, 64, 64 )
+
+[node name="table" type="Sprite" parent="."]
+
+transform/pos = Vector2( 96, 352 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 256, 64, 64 )
+
+[node name="chair_right" type="Sprite" parent="."]
+
+transform/pos = Vector2( 160, 352 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 128, 256, 64, 64 )
+
+[node name="chain" type="Sprite" parent="."]
+
+transform/pos = Vector2( 32, 416 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 192, 64, 64, 64 )
+
+[node name="light" type="Sprite" parent="."]
+
+transform/pos = Vector2( 32, 480 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 192, 128, 64, 64 )
+
 
