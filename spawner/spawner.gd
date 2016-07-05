@@ -28,11 +28,9 @@ func _process(delta):
 		room.set_pos(pos)
 		add_child(room)
 		rooms.push_back(room)
-		print("add")
-	room_i += 1
+
 	for room in rooms:
 		var dist = room.get_pos() - global.camera_pos
 		var norm = dist.length()
 		if dist.x < 0 and norm > 64 * 40:
 			rooms.erase(room)
-			print("remove")
