@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://Camera/camera.gd" type="Script" id=1]
+[ext_resource path="res://images_src/background.jpg" type="Texture" id=2]
+[ext_resource path="res://Camera/BackgroundMove.gd" type="Script" id=3]
 
 [node name="Camera2D" type="KinematicBody2D"]
 
@@ -28,5 +30,79 @@ drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 147.544, 299.12 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="Sprite1" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 436.846, 298.821 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 726.846, 298.821 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 1016.85, 298.821 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 1305.85, 298.821 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="Sprite5" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 1586.85, 298.821 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="Sprite6" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 1866.85, 298.821 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="Sprite7" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 2146.85, 298.821 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="Sprite8" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 2426.85, 298.821 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
 
 

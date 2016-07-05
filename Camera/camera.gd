@@ -12,11 +12,8 @@ func _fixed_process(delta):
 	var motion = velocity * delta
 	if motion.x > WALK_SPEED_MAX:
 		motion.x = WALK_SPEED_MAX
-	
 	move(motion)
 
 func _ready():
 	set_fixed_process(true)
 	pass
-
-
