@@ -2,14 +2,9 @@
 
 [ext_resource path="res://spawner/spawner.gd" type="Script" id=1]
 
-[node name="Control" type="Control"]
+[node name="patterns_spawner" type="Node2D"]
 
-margin/right = 40.0
-margin/bottom = 40.0
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
 script/script = ExtResource( 1 )
+tileset_test = null
 
 

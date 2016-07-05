@@ -20,11 +20,6 @@ collision/margin = 0.08
 transform/pos = Vector2( 46.2143, 180.913 )
 collision/margin = 0.08
 
-[node name="Control" parent="." instance=ExtResource( 4 )]
-
-margin/left = -265.0
-margin/top = -12.0
-margin/right = -225.0
-margin/bottom = 20.0
+[node name="patterns_spawner" parent="." instance=ExtResource( 4 )]
 
 
