@@ -25,15 +25,17 @@ func _fixed_process(delta):
 	var jump = Input.is_action_pressed("player_jump")
 	var camera_pos = global.camera_pos
 	var pos = get_pos()
-	var dist = camera_pos.x - pos.x
+	var dist = camera_pos.x - pos.x - 100
 	var dist_ratio = dist / 600.0
-	
 	var motion
-	velocity += force * delta   # Integrate forces to velocity
+	var max_speed = lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0))
+	velocity += force * delta     # Integrate forces to velocity
 	motion = velocity * delta     # Integrate velocity into motion and move
-	if motion.x > lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0)):
-		motion.x = WALK_SPEED_MAX
-	motion = move(motion)       # Move and consume motion
+	
+	if motion.x > max_speed:
+		motion.x = max_speed
+	print("My speed %f  %f %f" % [motion.x, max_speed, dist_ratio])
+	motion = move(motion)         # Move and consume motion
 	
 	var floor_velocity = Vector2()
 	
