@@ -1,14 +1,15 @@
 
 extends KinematicBody2D
 
-const GRAVITY = 600
 
 const FLOOR_ANGLE_TOLERANCE = 40
 var WALK_SPEED = global.WALK_SPEED
 var WALK_SPEED_MAX = global.WALK_SPEED_MAX
 var WALK_SPEED_MIN = global.WALK_SPEED_MIN
 
-const JUMP_SPEED = 400
+const GRAVITY = 2000
+const JUMP_SPEED = 30000
+const JUMP_SPEED_CONTINUE = 1500
 const JUMP_MAX_AIRBORNE_TIME = 0.2
 
 const SLIDE_STOP_VELOCITY = 1.0
@@ -17,6 +18,7 @@ const SLIDE_STOP_MIN_TRAVEL = 1.0
 var velocity = Vector2()
 var on_air_time = 100
 var jumping = false
+var can_continue_jump = false
 
 var prev_jump_pressed = false
 
@@ -34,9 +36,10 @@ func _fixed_process(delta):
 	
 	if motion.x > max_speed:
 		motion.x = max_speed
-	print("My speed %f  %f %f" % [motion.x, max_speed, dist_ratio])
-	motion = move(motion)         # Move and consume motion
 	
+	motion = move(motion)         # Move and consume motion
+	#if can_continue_jump and not jump:
+#		can_continue_jump = false
 	var floor_velocity = Vector2()
 	
 	if (is_colliding()):
@@ -51,7 +54,7 @@ func _fixed_process(delta):
 			revert_motion()
 			velocity.y = 0.0
 		else:
-			# For every other case of motion, our motion was interrupted.
+			# For every other c-ase of motion, our motion was interrupted.
 			# Try to complete the motion by "sliding" by the normal
 			motion = n.slide(motion)
 			velocity = n.slide(velocity)
@@ -65,12 +68,16 @@ func _fixed_process(delta):
 	if (jumping and velocity.y > 0):
 		# If falling, no longer jumping
 		jumping = false
+
+	if jump && jumping and can_continue_jump:
+		velocity.y -= (JUMP_SPEED_CONTINUE + velocity.y) * delta
 	
 	if (on_air_time < JUMP_MAX_AIRBORNE_TIME and jump and not prev_jump_pressed and not jumping):
 		# Jump must also be allowed to happen if the character left the floor a little bit ago.
 		# Makes controls more snappy.
-		velocity.y = -JUMP_SPEED
+		velocity.y = -JUMP_SPEED * delta
 		jumping = true
+		can_continue_jump = true
 	
 	on_air_time += delta
 	prev_jump_pressed = jump

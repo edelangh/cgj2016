@@ -12,7 +12,7 @@ func _fixed_process(delta):
 	var motion = velocity * delta
 	if motion.x > WALK_SPEED_MAX:
 		motion.x = WALK_SPEED_MAX
-	print("Canmea %f" % motion.x)
+	
 	move(motion)
 
 func _ready():

@@ -16,7 +16,7 @@ transform/pos = Vector2( -1, 5 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( -93.5302, 346.637 )
+transform/pos = Vector2( -100.332, 342.556 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
