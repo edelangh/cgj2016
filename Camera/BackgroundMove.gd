@@ -5,12 +5,17 @@ extends Sprite
 # var a=2
 # var b="textvar"
 
-var move_speed = 100.0
+export(int, "Layer1", "Layer2", "Layer3") var layer_lvl = 0
+var move_speed = 0
+
 var printer = false
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	if layer_lvl == 0:		move_speed = 75
+	elif layer_lvl == 1:	move_speed = 100
+	else:					move_speed = 125
 	set_process(true)
 	pass
 
