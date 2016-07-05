@@ -16,12 +16,9 @@ extents = Vector2( 10, 10 )
 transform/pos = Vector2( -1, 5 )
 script/script = ExtResource( 1 )
 
-[node name="Node2D" parent="." instance=ExtResource( 2 )]
+[node name="Player" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 0, -4.10114 )
-collision/margin = 0.08
-
-[node name="Node2D" parent="Node2D" instance=ExtResource( 3 )]
+transform/pos = Vector2( -100.332, 342.556 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -55,8 +52,7 @@ _update_shape_index = 0
 
 [node name="Camera2D" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 2.78955, -11.1581 )
-collision/margin = 0.08
+transform/pos = Vector2( 46.2143, 180.913 )
 
 [node name="Sprite1" type="Sprite" parent="."]
 
@@ -87,5 +83,9 @@ transform/scale = Vector2( 2.82856, 4.87995 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -130.274, 16.7018 )
 
 

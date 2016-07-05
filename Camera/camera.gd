@@ -8,10 +8,11 @@ var velocity = Vector2()
 
 func _fixed_process(delta):
 	velocity += force * delta
-	global.camera_pos = get_pos()
+	global.camera_pos = get_pos() 
 	var motion = velocity * delta
 	if motion.x > WALK_SPEED_MAX:
 		motion.x = WALK_SPEED_MAX
+	
 	move(motion)
 
 func _ready():
