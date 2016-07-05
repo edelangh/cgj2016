@@ -67,7 +67,7 @@ polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32, -32, -32 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
-[node name="Sprite 2" type="Sprite" parent="."]
+[node name="Coin" type="Sprite" parent="."]
 
 transform/pos = Vector2( 104, 32 )
 texture = ExtResource( 1 )
@@ -75,7 +75,7 @@ region = true
 region_rect = Rect2( 64, 0, 64, 64 )
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite 2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Coin"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 2 )
@@ -88,14 +88,14 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite 2/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coin/StaticBody2D"]
 
 build_mode = 0
 polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32, -32, -32 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
-[node name="Sprite 3" type="Sprite" parent="."]
+[node name="Unicorn" type="Sprite" parent="."]
 
 transform/pos = Vector2( 176, 32 )
 texture = ExtResource( 1 )
@@ -103,7 +103,7 @@ region = true
 region_rect = Rect2( 128, 0, 64, 64 )
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite 3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Unicorn"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 3 )
@@ -116,14 +116,14 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite 3/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unicorn/StaticBody2D"]
 
 build_mode = 0
 polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32, -32, -32 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
-[node name="Sprite 4" type="Sprite" parent="."]
+[node name="Discreasing" type="Sprite" parent="."]
 
 transform/pos = Vector2( 248, 32 )
 texture = ExtResource( 1 )
@@ -131,7 +131,7 @@ region = true
 region_rect = Rect2( 196, 0, 64, 64 )
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite 4"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Discreasing"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 4 )
@@ -144,14 +144,14 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite 4/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Discreasing/StaticBody2D"]
 
 build_mode = 0
 polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
-[node name="Sprite 5" type="Sprite" parent="."]
+[node name="Increasing" type="Sprite" parent="."]
 
 transform/pos = Vector2( 320, 32 )
 texture = ExtResource( 1 )
@@ -159,7 +159,7 @@ region = true
 region_rect = Rect2( 0, 64, 64, 64 )
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite 5"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Increasing"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 5 )
@@ -172,14 +172,14 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite 5/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Increasing/StaticBody2D"]
 
 build_mode = 0
 polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
-[node name="Sprite 6" type="Sprite" parent="."]
+[node name="Trap" type="Sprite" parent="."]
 
 transform/pos = Vector2( 392, 32 )
 texture = ExtResource( 1 )
@@ -187,7 +187,7 @@ region = true
 region_rect = Rect2( 64, 64, 64, 64 )
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite 6"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Trap"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 6 )
@@ -200,14 +200,14 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite 6/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Trap/StaticBody2D"]
 
 build_mode = 0
 polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
-[node name="Sprite 7" type="Sprite" parent="."]
+[node name="Accelerator - Jumper" type="Sprite" parent="."]
 
 transform/pos = Vector2( 464, 32 )
 texture = ExtResource( 1 )
@@ -215,7 +215,7 @@ region = true
 region_rect = Rect2( 128, 64, 64, 64 )
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite 7"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Accelerator - Jumper"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 7 )
@@ -228,7 +228,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite 7/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Accelerator - Jumper/StaticBody2D"]
 
 build_mode = 0
 polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
