@@ -79,6 +79,7 @@ func _fixed_process(delta):
 		jumping = true
 		can_continue_jump = true
 	
+	velocity.y = clamp(velocity.y, -500, 500) # Horrible things but it fix some bugs
 	on_air_time += delta
 	prev_jump_pressed = jump
 
