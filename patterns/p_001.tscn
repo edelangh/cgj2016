@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://patterns/move.gd" type="Script" id=1]
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://items/trap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=6]
 [ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=7]
-[ext_resource path="res://tilemap/Pierre-2.png" type="Texture" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -133,20 +132,5 @@ transform/pos = Vector2( 864, 96 )
 transform/pos = Vector2( 1376, 224 )
 
 [node name="background" type="Node2D" parent="."]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-layer = -1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-__meta__ = { "_editor_collapsed":true }
-
-[node name="Sprite" type="Sprite" parent="CanvasLayer"]
-
-transform/pos = Vector2( 800, 450 )
-texture = ExtResource( 8 )
-region = true
-region_rect = Rect2( 0, 0, 1600, 900 )
 
 
