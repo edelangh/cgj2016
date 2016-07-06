@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://font/big_intro.fnt" type="Font" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "\nextends Control\n\nvar scoreLabel = null\nvar multiLabel = null\n\nfunc _ready():\n\tscoreLabel = get_node(\"score\")\n\tmultiLabel = get_node(\"multiplicator\")\n\tset_process(true)\n\tpass\n\nfunc _process(delta): # Can be better if we use signal on change of score\n\tscoreLabel.set_text(\"%d \" % global.score)\n\tmultiLabel.set_text(\" X %d\" % global.score_multiplier)"
+
+[node name="Control" type="Control"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+layer = 2
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+
+anchor/right = 1
+margin/top = 20.0
+margin/bottom = 120.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = SubResource( 1 )
+
+[node name="multiplicator" type="Label" parent="CanvasLayer/Control"]
+
+anchor/left = 3
+margin/right = 1600.0
+margin/bottom = 100.0
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.03125, 1, 0, 1 )
+text = " X 4"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="score" type="Label" parent="CanvasLayer/Control"]
+
+anchor/right = 1
+margin/bottom = 100.0
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.972656, 0.0151978, 0.0151978, 1 )
+custom_colors/font_color_shadow = Color( 0, 1, 0.0859375, 1 )
+text = "1500"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
