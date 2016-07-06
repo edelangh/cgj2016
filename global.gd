@@ -3,6 +3,7 @@ extends Node
 
 var main_camera = null
 var camera_pos = Vector2()
+var player_pos = Vector2()
 var WALK_SPEED = 300
 const WALK_SPEED_MIN = 6
 const WALK_SPEED_MAX = 9

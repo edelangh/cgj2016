@@ -56,6 +56,7 @@ func _fixed_process(delta):
 		motion.x = max_speed
 	
 	motion = move(motion)         # Move and consume motion
+	global.player_pos = pos
 	#if can_continue_jump and not jump:
 #		can_continue_jump = false
 	var floor_velocity = Vector2()
@@ -108,11 +109,11 @@ func _fixed_process(delta):
 var dust = preload("res://particles/running_dust.tscn")
 
 func emit_dust():
-	print("HEY")
-	var r = dust.instance()
-	r.set_pos(get_pos() + Vector2(-5, 25))
-	get_parent().add_child(r)
-	r.set_emitting(true)
+	if not jumping:
+		var r = dust.instance()
+		r.set_pos(get_pos() + Vector2(-5, 25))
+		get_parent().add_child(r)
+		r.set_emitting(true)
 
 func _ready():
 	global.gameover = false

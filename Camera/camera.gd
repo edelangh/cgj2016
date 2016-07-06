@@ -7,14 +7,19 @@ var force = Vector2(WALK_SPEED, 0)
 var velocity = Vector2()
 
 func _fixed_process(delta):
-	velocity += force * delta
-	global.camera_pos = get_pos() 
+	if global.gameover:
+		return
+	var pos = get_pos()
+	var p_pos = global.player_pos
 	var motion = velocity * delta
+	
+	global.camera_pos = pos
+	velocity += force * delta
 	if motion.x > WALK_SPEED_MAX:
 		motion.x = WALK_SPEED_MAX
+	set_pos(Vector2(pos.x, p_pos.y))
 	move(motion)
 
 func _ready():
 	global.main_camera = self
 	set_fixed_process(true)
-	pass
