@@ -13,5 +13,6 @@ func _on_Area2D_body_enter(body):
 		take_it()
 
 func take_it():
+	get_node("SamplePlayer2D").play("coin-collect")
 	get_node("anim").play("taken")
 	taken = true
