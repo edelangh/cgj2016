@@ -5,7 +5,6 @@ export(String, FILE) var tileset_test = null
 
 var store = []
 var rooms = []
-var room_i = 0
 
 func _ready():
 	if tileset_test != null:
