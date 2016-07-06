@@ -9,7 +9,6 @@ points = Vector2Array( 32, -16, 32, 16, -32, 16, -32, -16 )
 
 [node name="one_way_platform" type="Sprite"]
 
-transform/pos = Vector2( 32, 32 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 192, 0, 64, 64 )
