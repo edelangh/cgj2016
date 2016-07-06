@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://patterns/move.gd" type="Script" id=1]
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://items/trap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=6]
 [ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=7]
+[ext_resource path="res://tilemap/Pierre-2.png" type="Texture" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,9 +29,11 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -131049, 1, -131048, 1, -131047, 1, -65528, 15, 8, 15, 33, 9, 34, 1, 35, 10, 65544, 15, 65568, 9, 65569, 1, 65570, 3, 65571, 4, 65572, 10, 131080, 15, 131095, 1, 131097, 1, 131098, 1, 131103, 9, 131104, 1, 131105, 6, 131106, 6, 131107, 4, 131108, 4, 131109, 4, 196616, 16, 196638, 9, 196639, 1, 196640, 5, 262174, 6, 262175, 6, 262176, 6, 262177, 6, 262178, 6, 327687, 12, 327688, 13, 327689, 14, 393216, 1, 393217, 1, 393218, 1, 393221, 1, 393222, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393227, 1, 393228, 1, 393229, 1, 393230, 1, 393231, 1, 393232, 1, 393233, 1, 393234, 1, 393235, 1, 393236, 1, 393237, 1, 393238, 1, 393239, 1, 393240, 1, 393241, 1, 393242, 1, 393243, 1, 393244, 1, 393245, 1, 393246, 1, 393247, 1, 393248, 1, 393249, 4, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 458753, 4, 458759, 4, 458763, 4, 458767, 4, 458777, 4, 458780, 4, 458788, 1, 458789, 1, 458790, 1, 458791, 1, 524289, 4, 524295, 4, 524299, 4, 524303, 4, 524313, 4, 524316, 4, 524317, 4, 524318, 4, 524321, 4, 524323, 4, 524325, 4, 524326, 4, 524327, 4, 589825, 4, 589831, 4, 589835, 4, 589839, 4, 589849, 4, 589853, 4, 655364, 5, 655369, 5, 655374, 5, 655379, 5, 655384, 5, 655389, 5, 655394, 5, 655399, 5 )
+tile_data = IntArray( -131049, 1, -131048, 1, -131047, 1, -65536, 9, -65535, 10, -65533, 9, -65532, 10, -65530, 9, -65529, 10, -65528, 15, -65527, 9, -65526, 10, -65524, 9, -65523, 10, 8, 15, 65544, 15, 131080, 15, 131095, 1, 131097, 1, 131098, 1, 131103, 9, 131104, 1, 131105, 1, 131106, 1, 131107, 1, 131108, 1, 131109, 1, 131110, 10, 196616, 16, 196638, 9, 196639, 1, 196640, 1, 196641, 1, 196642, 1, 196643, 1, 196644, 1, 196645, 1, 196646, 1, 196647, 10, 262173, 9, 262174, 7, 262175, 7, 262176, 7, 262177, 7, 262178, 7, 262179, 7, 262180, 7, 262181, 7, 262182, 7, 262183, 7, 327687, 12, 327688, 13, 327689, 14, 393216, 1, 393217, 1, 393218, 1, 393221, 1, 393222, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393227, 1, 393228, 1, 393229, 1, 393230, 1, 393231, 1, 393232, 1, 393233, 1, 393234, 1, 393235, 1, 393236, 1, 393237, 1, 393238, 1, 393239, 1, 393240, 1, 393241, 1, 393242, 1, 393243, 1, 393244, 1, 393245, 1, 393246, 1, 393247, 1, 393248, 1, 393249, 4, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 458753, 4, 458759, 4, 458763, 4, 458767, 4, 458777, 4, 458780, 4, 458787, -1073741815, 458788, 1, 458789, 1, 458790, 1, 458791, 1, 524289, 4, 524295, 4, 524299, 4, 524303, 4, 524313, 4, 524316, 4, 524317, 4, 524318, 4, 524324, -1073741815, 524325, 4, 524326, 4, 524327, 4, 589825, 4, 589831, 4, 589835, 4, 589839, 4, 589849, 4, 589853, 4, 655364, 0, 655369, 0, 655374, 5, 655379, 5, 655384, 5, 655389, 5, 655399, 5 )
 
 [node name="coins" type="Node2D" parent="."]
+
+__meta__ = { "_editor_collapsed":true }
 
 [node name="coin" parent="coins" instance=ExtResource( 3 )]
 
@@ -57,6 +60,8 @@ gravity = 9.8
 linear_damp = 0.1
 
 [node name="on_way_platforms" type="Node2D" parent="."]
+
+__meta__ = { "_editor_collapsed":true }
 
 [node name="one_way_platform" parent="on_way_platforms" instance=ExtResource( 4 )]
 
@@ -96,12 +101,16 @@ transform/pos = Vector2( 800, 288 )
 
 [node name="traps" type="Node2D" parent="."]
 
+__meta__ = { "_editor_collapsed":true }
+
 [node name="trap" parent="traps" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 672, 224 )
 linear_damp = 0.1
 
 [node name="dimensions_left" type="Node2D" parent="."]
+
+__meta__ = { "_editor_collapsed":true }
 
 [node name="dimensional_square_left" parent="dimensions_left" instance=ExtResource( 6 )]
 
@@ -113,6 +122,8 @@ transform/pos = Vector2( 1056, 96 )
 
 [node name="dimensions_right" type="Node2D" parent="."]
 
+__meta__ = { "_editor_collapsed":true }
+
 [node name="dimensional_square_right" parent="dimensions_right" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 864, 96 )
@@ -120,5 +131,22 @@ transform/pos = Vector2( 864, 96 )
 [node name="dimensional_square_right1" parent="dimensions_right" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1376, 224 )
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+
+transform/pos = Vector2( 800, 450 )
+texture = ExtResource( 8 )
+region = true
+region_rect = Rect2( 0, 0, 1600, 900 )
 
 
