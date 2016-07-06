@@ -16,6 +16,7 @@ func _ready():
 		return	
 	store.push_back(preload('res://patterns/p_001.tscn'))
 	store.push_back(preload('res://patterns/p_002.tscn'))
+	store.push_back(preload('res://patterns/p_003.tscn'))
 	var room = store[0].instance()
 	var pos = Vector2(start_pos, 0)
 	instance_count += 1
