@@ -28,7 +28,7 @@ func die():
 
 func check_die():
 	var pos = get_pos()
-	var cam_pos = global.camera_pos
+	var cam_pos = global.main_camera.get_pos()
 	var dist = cam_pos.x - pos.x
 	if pos.y > 896 or dist > 1000:
 		die()
@@ -39,12 +39,12 @@ func _fixed_process(delta):
 	check_die()
 	var force = Vector2(WALK_SPEED, GRAVITY)
 	var jump = Input.is_action_pressed("player_jump")
-	var camera_pos = global.camera_pos
+	var camera_pos = global.main_camera.get_pos()
 	var pos = get_pos()
 	var dist = camera_pos.x - pos.x - DIST_TO_CENTER
 	var dist_ratio = dist / 600.0
 	var motion
-	var max_speed = lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0))
+	var max_speed = lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0)) * delta
 	velocity += force * delta     # Integrate forces to velocity
 	motion = velocity * delta     # Integrate velocity into motion and move
 	
@@ -52,7 +52,6 @@ func _fixed_process(delta):
 		motion.x = max_speed
 	
 	motion = move(motion)         # Move and consume motion
-	global.player_pos = pos
 	#if can_continue_jump and not jump:
 #		can_continue_jump = false
 	var floor_velocity = Vector2()
@@ -112,6 +111,7 @@ func emit_dust():
 		r.set_emitting(true)
 
 func _ready():
+	global.player = self
 	set_pos(global.PLAYER_START_POS)
 	global.gameover = false
 	animator = get_node("Sprite/anim")
