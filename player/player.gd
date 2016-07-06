@@ -20,6 +20,7 @@ var can_continue_jump = false
 
 var prev_jump_pressed = false
 var die = false
+var animator = null
 
 func die():
 	die = true
@@ -87,6 +88,7 @@ func _fixed_process(delta):
 	if (jumping and velocity.y > 0):
 		# If falling, no longer jumping
 		jumping = false
+		animator.play("run")
 
 	if jump && jumping and can_continue_jump:
 		velocity.y -= (JUMP_SPEED_CONTINUE + velocity.y) * delta
@@ -96,6 +98,7 @@ func _fixed_process(delta):
 		# Makes controls more snappy.
 		velocity.y = -JUMP_SPEED * delta
 		jumping = true
+		animator.play("jump")
 		can_continue_jump = true
 	
 	velocity.y = clamp(velocity.y, -500, 500) # Horrible things but it fix some bugs
@@ -105,4 +108,6 @@ func _fixed_process(delta):
 
 func _ready():
 	global.gameover = false
+	animator = get_node("Sprite/anim")
+	animator.play("run")
 	set_fixed_process(true)
