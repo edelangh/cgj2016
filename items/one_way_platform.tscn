@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://tilemap/castle_tiles.png" type="Texture" id=1]
+[ext_resource path="res://items/one_way_platform.png" type="Texture" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -10,7 +10,6 @@ points = Vector2Array( 32, -16, 32, 16, -32, 16, -32, -16 )
 [node name="one_way_platform" type="Sprite"]
 
 texture = ExtResource( 1 )
-region = true
 region_rect = Rect2( 192, 0, 64, 64 )
 __meta__ = { "_edit_group_":true }
 
