@@ -1,6 +1,4 @@
-
 extends KinematicBody2D
-
 
 const FLOOR_ANGLE_TOLERANCE = 40
 var WALK_SPEED = global.WALK_SPEED
