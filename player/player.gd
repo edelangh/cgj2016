@@ -112,6 +112,7 @@ func emit_dust():
 		r.set_emitting(true)
 
 func _ready():
+	set_pos(global.PLAYER_START_POS)
 	global.gameover = false
 	animator = get_node("Sprite/anim")
 	animator.play("run")

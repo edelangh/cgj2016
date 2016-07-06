@@ -35,26 +35,18 @@ tile_data = IntArray( -131049, 1, -131048, 1, -131047, 1, -65528, 15, 8, 15, 34,
 [node name="coin" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 541.345, 299.38 )
-gravity = 9.8
-linear_damp = 0.1
 
 [node name="coin1" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 928, 224 )
-gravity = 9.8
-linear_damp = 0.1
 
 [node name="coin2" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 992, 224 )
-gravity = 9.8
-linear_damp = 0.1
 
 [node name="coin3" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1184, 160 )
-gravity = 9.8
-linear_damp = 0.1
 
 [node name="on_way_platforms" type="Node2D" parent="."]
 
@@ -98,7 +90,8 @@ transform/pos = Vector2( 800, 288 )
 
 [node name="trap" parent="traps" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 928, 352 )
+transform/pos = Vector2( 544, 160 )
+linear_damp = 0.1
 
 [node name="dimensions_left" type="Node2D" parent="."]
 

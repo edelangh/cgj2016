@@ -4,16 +4,21 @@ extends Node
 signal dimension_left(scale)
 signal dimension_right(scale)
 
+const SCORE_BY_SEC = 100
+var score = 0
+var highscore = 0
+var score_multiplier = 1
 var main_camera = null
 var camera_pos = Vector2()
 var player_pos = Vector2()
-var WALK_SPEED = 300
+var WALK_SPEED = 1000
 const WALK_SPEED_MIN = 7
-const WALK_SPEED_MAX = 9
+const WALK_SPEED_MAX = 20
 var gameover = false
 var scale_factor = 0
 const SCALE_FACTOR_MIN = -1
 const SCALE_FACTOR_MAX = 1
+const PLAYER_START_POS = Vector2(-300, 300)
 
 func run_death():
 	if not gameover:
@@ -22,5 +27,3 @@ func run_death():
 		game.set_pos(camera_pos)
 		main_camera.add_child(game)
 
-func _ready():
-	pass

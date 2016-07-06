@@ -7,12 +7,13 @@ var store = []
 var rooms = []
 var instance_count = 0
 const PATTERNS_WIDTH = 64 * 40
-var start_pos = -PATTERNS_WIDTH/2
+var start_pos
 
 func _ready():
+	start_pos = -get_viewport().get_rect().size.x * 0.5
 	if tileset_test != null:
 		add_child(load(tileset_test).instance())
-		return
+		return	
 	store.push_back(preload('res://patterns/p_001.tscn'))
 	store.push_back(preload('res://patterns/p_002.tscn'))
 	var room = store[0].instance()
