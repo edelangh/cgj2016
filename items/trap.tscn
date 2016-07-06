@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 22.9981
+radius = 12.8301
 
 [node name="trap" type="Area2D"]
 
@@ -30,5 +30,14 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+
+rect = Rect2( -10, -10, 20, 20 )
+enabler/pause_animations = true
+enabler/freeze_bodies = true
+enabler/pause_particles = true
+enabler/process_parent = false
+enabler/fixed_process_parent = false
 
 
