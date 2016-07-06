@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 radius = 50.3262
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 resource/name = "jump"
 length = 2.0
@@ -19,9 +19,8 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/keys = { "cont":false, "times":FloatArray( 0, 0.4, 0.8, 1.2, 1.6 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "values":[ 8, 9, 11, 13, 15 ] }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource/name = "run"
 length = 0.5
 loop = true
 step = 0.1
@@ -34,7 +33,7 @@ tracks/0/keys = { "cont":false, "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ), "tr
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 0.5, -0, 0, 0.5, 4.5, 5.5 )
+shapes/0/transform = Matrix32( 0.5, 0, 0, 0.5, 4.5, 5.5 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -47,15 +46,15 @@ transform/scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 8
-frame = 11
+frame = 15
 
 [node name="anim" type="AnimationPlayer" parent="Sprite"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.01
 root/root = NodePath("..")
-anims/jump = SubResource( 3 )
-anims/run = SubResource( 2 )
+anims/jump = SubResource( 2 )
+anims/run = SubResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -68,5 +67,14 @@ transform/scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="emit_dust"]
 
 
