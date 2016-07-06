@@ -12,33 +12,34 @@ var start_pos
 func _ready():
 	start_pos = -get_viewport().get_rect().size.x * 0.5
 	if tileset_test != null:
-		add_child(load(tileset_test).instance())
-		return	
+		var pattern = load(tileset_test).instance()
+		pattern.set_pos(Vector2(start_pos, 0))
+		add_child(pattern)
+		set_process(true)
+		return
 	store.push_back(preload('res://patterns/p_001.tscn'))
 	store.push_back(preload('res://patterns/p_002.tscn'))
 	store.push_back(preload('res://patterns/p_003.tscn'))
 	var room = store[0].instance()
-	var pos = Vector2(start_pos, 0)
-	instance_count += 1
-	room.set_pos(pos)
+	room.set_pos(Vector2(start_pos, 0))
 	add_child(room)
 	rooms.push_back(room)
 	set_process(true)
 
 func _process(delta):
-	if tileset_test != null:
-		return
 	if rooms.size() < 3:
-		var room = store[rand_range(0, store.size())].instance()
-		var lol = global.camera_pos.x - fmod(global.camera_pos.x, 64)
-		var pos = Vector2(start_pos + PATTERNS_WIDTH * instance_count, 0)
 		instance_count += 1
-		room.set_pos(pos)
-		add_child(room)
-		rooms.push_back(room)
-
+		if tileset_test != null:
+			var room = load(tileset_test).instance()
+			room.set_pos(Vector2(start_pos + PATTERNS_WIDTH * instance_count, 0))
+			add_child(room)
+		else:
+			var room = store[rand_range(0, store.size())].instance()
+			room.set_pos(Vector2(start_pos + PATTERNS_WIDTH * instance_count, 0))
+			add_child(room)
+			rooms.push_back(room)
 	for room in rooms:
-		var dist = room.get_pos() - global.camera_pos
-		var norm = dist.length()
-		if dist.x < 0 and norm > PATTERNS_WIDTH:
+		var dist = room.get_pos() - global.main_camera.get_pos()
+		var len = dist.length()
+		if dist.x < 0 and len > PATTERNS_WIDTH:
 			rooms.erase(room)
