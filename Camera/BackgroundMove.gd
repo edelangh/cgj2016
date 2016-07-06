@@ -20,6 +20,8 @@ func _ready():
 	pass
 
 func _process(delta):
+	if global.gameover:
+		return
 	var cur_pos = get_pos()
 	cur_pos.x -= move_speed * delta
 	if cur_pos.x < -200:

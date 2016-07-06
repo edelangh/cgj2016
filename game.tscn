@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://Camera/camera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://spawner/spawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://menu/hud.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,16 +13,16 @@ script/script = ExtResource( 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 46.2143, 180.913 )
-collision/margin = 0.08
+transform/pos = Vector2( 0, 217.177 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -100.332, 342.556 )
-collision/margin = 0.08
+transform/pos = Vector2( -680.55, 342.556 )
 
 [node name="patterns_spawner" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -100, 0 )
+transform/pos = Vector2( -108.791, -16.7371 )
+
+[node name="Control" parent="." instance=ExtResource( 5 )]
 
 

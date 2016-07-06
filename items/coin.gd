@@ -10,8 +10,8 @@ func _ready():
 
 func _on_Area2D_body_enter(body):
 	if not taken and body extends preload("res://player/player.gd"):
-		take_it()
-
-func take_it():
-	get_node("anim").play("taken")
-	taken = true
+		get_node("SamplePlayer2D").play("coin-collect")
+		get_node("anim").play("taken")
+		taken = true
+		global.score_multiplier += 1
+		global.score_multiplier_timer = global.SCORE_MULTIPLIER_DURATION

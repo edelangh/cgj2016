@@ -1,8 +1,6 @@
-
 extends KinematicBody2D
 
-
-const FLOOR_ANGLE_TOLERANCE = 40
+const FLOOR_ANGLE_TOLERANCE = 50
 var WALK_SPEED = global.WALK_SPEED
 var WALK_SPEED_MAX = global.WALK_SPEED_MAX
 var WALK_SPEED_MIN = global.WALK_SPEED_MIN
@@ -10,8 +8,8 @@ var WALK_SPEED_MIN = global.WALK_SPEED_MIN
 const GRAVITY = 2000
 const JUMP_SPEED = 30000
 const JUMP_SPEED_CONTINUE = 1500
-const JUMP_MAX_AIRBORNE_TIME = 0.2
-
+const JUMP_MAX_AIRBORNE_TIME = 0.3
+const DIST_TO_CENTER = 666
 const SLIDE_STOP_VELOCITY = 1.0
 const SLIDE_STOP_MIN_TRAVEL = 1.0
 
@@ -22,20 +20,17 @@ var can_continue_jump = false
 
 var prev_jump_pressed = false
 var die = false
+var animator = null
 
 func die():
 	die = true
-	if not global.gameover:
-		var gameOver = preload('res://gameover/gameover.tscn')
-		var game = gameOver.instance()
-		game.set_pos(global.camera_pos)
-		global.main_camera.add_child(game)
+	global.run_death()
 
 func check_die():
 	var pos = get_pos()
 	var cam_pos = global.camera_pos
 	var dist = cam_pos.x - pos.x
-	if pos.y > 600 or dist > 1000:
+	if pos.y > 896 or dist > 1000:
 		die()
 
 func _fixed_process(delta):
@@ -46,7 +41,7 @@ func _fixed_process(delta):
 	var jump = Input.is_action_pressed("player_jump")
 	var camera_pos = global.camera_pos
 	var pos = get_pos()
-	var dist = camera_pos.x - pos.x - 100
+	var dist = camera_pos.x - pos.x - DIST_TO_CENTER
 	var dist_ratio = dist / 600.0
 	var motion
 	var max_speed = lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0))
@@ -57,6 +52,7 @@ func _fixed_process(delta):
 		motion.x = max_speed
 	
 	motion = move(motion)         # Move and consume motion
+	global.player_pos = pos
 	#if can_continue_jump and not jump:
 #		can_continue_jump = false
 	var floor_velocity = Vector2()
@@ -89,6 +85,7 @@ func _fixed_process(delta):
 	if (jumping and velocity.y > 0):
 		# If falling, no longer jumping
 		jumping = false
+		animator.play("run")
 
 	if jump && jumping and can_continue_jump:
 		velocity.y -= (JUMP_SPEED_CONTINUE + velocity.y) * delta
@@ -98,13 +95,25 @@ func _fixed_process(delta):
 		# Makes controls more snappy.
 		velocity.y = -JUMP_SPEED * delta
 		jumping = true
+		animator.play("jump")
 		can_continue_jump = true
 	
 	velocity.y = clamp(velocity.y, -500, 500) # Horrible things but it fix some bugs
 	on_air_time += delta
 	prev_jump_pressed = jump
 
+var dust = preload("res://particles/running_dust.tscn")
+
+func emit_dust():
+	if not jumping:
+		var r = dust.instance()
+		r.set_pos(get_pos() + Vector2(-5, 25))
+		get_parent().add_child(r)
+		r.set_emitting(true)
 
 func _ready():
+	set_pos(global.PLAYER_START_POS)
 	global.gameover = false
+	animator = get_node("Sprite/anim")
+	animator.play("run")
 	set_fixed_process(true)
