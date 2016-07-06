@@ -7,8 +7,7 @@ func _ready():
 	pass
 
 func _input(ev):
-	if global.gameover:
-		if (ev.type == InputEvent.MOUSE_BUTTON and ev.is_pressed() and ev.button_index == 1):
+	if global.gameover and ev.is_action_released("ui_accept"):
 			global.gameover = false
 			scene_manager.set_scene('res://game.tscn')
 			queue_free()
