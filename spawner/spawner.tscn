@@ -4,6 +4,7 @@
 
 [node name="patterns_spawner" type="Node2D"]
 
+visibility/behind_parent = true
 script/script = ExtResource( 1 )
 tileset_test = null
 
