@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://font/big_intro.fnt" type="Font" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "\nextends Label\n\n# member variables here, example:\n# var a=2\n# var b=\"textvar\"\n\nvar ts = 0 \nvar ti = 1.5 # nbr of s of lavel spawn\nvar te = 2.0 # nbr of s of intro\n\nfunc _ready():\n\tts = 0\n\tset_process(true)\n\t# Called every time the node is added to the scene.\n\t# Initialization here\n\tpass\n\nfunc _process(delta):\n\tts += delta\n\tvar ratio = lerp(0, 1, clamp(ts, 0, ti) / ti)\n\tset_percent_visible(ratio)\n\tif ts > te:\n\t\tscene_manager.set_scene(\'res://menu/main.tscn\')"
+
+[node name="Control" type="Control"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+
+[node name="Label" type="Label" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 1 )
+text = "Yet Another Runner"
+align = 1
+valign = 1
+percent_visible = 0.471
+lines_skipped = 0
+max_lines_visible = -1
+script/script = SubResource( 1 )
+
+
