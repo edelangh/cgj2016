@@ -35,7 +35,7 @@ tracks/0/keys = { "cont":true, "times":FloatArray( 0, 0.3 ), "transitions":Float
 transform/scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 script/script = ExtResource( 2 )
-__meta__ = { "_edit_group_":true }
+__meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

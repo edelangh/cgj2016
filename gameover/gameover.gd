@@ -3,11 +3,14 @@ extends Control
 
 func _ready():
 	global.gameover = true
+	if global.score > global.highscore:
+		global.highscore = global.score
 	set_process_input(true)
-	pass
 
 func _input(ev):
 	if global.gameover and ev.is_action_released("ui_accept"):
 			global.gameover = false
+			global.score = 0
+			global.score_multiplier = 1
 			scene_manager.set_scene('res://game.tscn')
 			queue_free()
