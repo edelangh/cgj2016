@@ -15,5 +15,6 @@ func _fixed_process(delta):
 	move(motion)
 
 func _ready():
+	global.main_camera = self
 	set_fixed_process(true)
 	pass
