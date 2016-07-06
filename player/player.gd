@@ -59,6 +59,10 @@ func _fixed_process(delta):
 	var floor_velocity = Vector2()
 	
 	if (is_colliding()):
+		var collider = get_collider()
+		if collider extends preload("res://items/coin.gd"): # a coin!
+			collider.take_it()
+
 		var n = get_collision_normal()
 		if (rad2deg(acos(n.dot(Vector2(0, -1)))) < FLOOR_ANGLE_TOLERANCE):
 			# If angle to the "up" vectors is < angle tolerance
