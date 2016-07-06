@@ -9,7 +9,7 @@ const GRAVITY = 2000
 const JUMP_SPEED = 30000
 const JUMP_SPEED_CONTINUE = 1500
 const JUMP_MAX_AIRBORNE_TIME = 0.2
-
+const DIST_TO_CENTER = 500
 const SLIDE_STOP_VELOCITY = 1.0
 const SLIDE_STOP_MIN_TRAVEL = 1.0
 
@@ -24,17 +24,13 @@ var animator = null
 
 func die():
 	die = true
-	if not global.gameover:
-		var gameOver = preload('res://gameover/gameover.tscn')
-		var game = gameOver.instance()
-		game.set_pos(global.camera_pos)
-		global.main_camera.add_child(game)
+	global.run_death()
 
 func check_die():
 	var pos = get_pos()
 	var cam_pos = global.camera_pos
 	var dist = cam_pos.x - pos.x
-	if pos.y > 600 or dist > 1000:
+	if pos.y > 896 or dist > 1000:
 		die()
 
 func _fixed_process(delta):
@@ -45,7 +41,7 @@ func _fixed_process(delta):
 	var jump = Input.is_action_pressed("player_jump")
 	var camera_pos = global.camera_pos
 	var pos = get_pos()
-	var dist = camera_pos.x - pos.x - 100
+	var dist = camera_pos.x - pos.x - DIST_TO_CENTER
 	var dist_ratio = dist / 600.0
 	var motion
 	var max_speed = lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0))

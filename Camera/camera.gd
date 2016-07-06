@@ -17,7 +17,8 @@ func _fixed_process(delta):
 	velocity += force * delta
 	if motion.x > WALK_SPEED_MAX:
 		motion.x = WALK_SPEED_MAX
-	set_pos(Vector2(pos.x, p_pos.y))
+	print(p_pos.y)
+	set_pos(Vector2(pos.x, clamp(p_pos.y, 0, 536)))
 	move(motion)
 
 func _ready():
