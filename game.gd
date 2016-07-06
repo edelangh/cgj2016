@@ -29,8 +29,9 @@ func _process(delta):
 			global.score_multiplier_timer -= delta
 			if global.score_multiplier_timer < 0:
 				global.score_multiplier -= 1
-				global.score_multiplier_timer = global.SCORE_MULTIPLIER_DURATION
-		else:
-			global.score_multiplier_timer = 0
+				if global.score_multiplier == 1:
+					global.score_multiplier_timer = 0
+				else:
+					global.score_multiplier_timer = global.SCORE_MULTIPLIER_DURATION
 	else:
 		score_float = 0
