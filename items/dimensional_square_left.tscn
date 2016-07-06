@@ -70,13 +70,4 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-
-rect = Rect2( -10, -10, 20, 20 )
-enabler/pause_animations = true
-enabler/freeze_bodies = true
-enabler/pause_particles = true
-enabler/process_parent = false
-enabler/fixed_process_parent = false
-
 

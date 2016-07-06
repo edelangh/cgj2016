@@ -20,10 +20,16 @@ func _input(event):
 	elif event.is_action_pressed("escape"):
 		scene_manager.set_scene("res://menu/main.tscn")
 
+
 func _process(delta):
 	if not global.gameover:
 		score_float += global.SCORE_BY_SEC * global.score_multiplier * delta
 		global.score = floor(score_float)
-		#print(global.score)
+		if global.score_multiplier > 1:
+			global.score_multiplier_timer -= delta
+			if global.score_multiplier_timer < 0:
+				global.score_multiplier -= 1
+				global.score_multiplier_timer = global.SCORE_MULTIPLIER_DURATION
+		#print(global.score, global.score_multiplier)
 	else:
 		score_float = 0
