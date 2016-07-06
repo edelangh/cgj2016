@@ -26,13 +26,16 @@ var die = false
 func die():
 	die = true
 	if not global.gameover:
-		var gameOver = preload('res://gameover/gameover.scn')
+		var gameOver = preload('res://gameover/gameover.tscn')
 		var game = gameOver.instance()
 		game.set_pos(global.camera_pos)
 		global.main_camera.add_child(game)
 
 func check_die():
-	if get_pos().y > 600:
+	var pos = get_pos()
+	var cam_pos = global.camera_pos
+	var dist = cam_pos.x - pos.x
+	if pos.y > 600 or dist > 1000:
 		die()
 
 func _fixed_process(delta):
