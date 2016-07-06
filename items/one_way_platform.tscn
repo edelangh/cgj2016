@@ -10,7 +10,6 @@ points = Vector2Array( 32, -16, 32, 16, -32, 16, -32, -16 )
 [node name="one_way_platform" type="Sprite"]
 
 texture = ExtResource( 1 )
-region_rect = Rect2( 192, 0, 64, 64 )
 __meta__ = { "_edit_group_":true }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -34,5 +33,14 @@ build_mode = 0
 polygon = Vector2Array( 32, -16, 32, 16, -32, 16, -32, -16 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+
+rect = Rect2( -10, -10, 20, 20 )
+enabler/pause_animations = true
+enabler/freeze_bodies = true
+enabler/pause_particles = true
+enabler/process_parent = false
+enabler/fixed_process_parent = false
 
 

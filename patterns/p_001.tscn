@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://patterns/move.gd" type="Script" id=1]
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=2]
 [ext_resource path="res://items/coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://items/trap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -98,5 +99,15 @@ transform/pos = Vector2( 800, 288 )
 
 transform/pos = Vector2( 928, 352 )
 linear_damp = 0.1
+
+[node name="dimensions_left" type="Node2D" parent="."]
+
+[node name="dimensional_square_left" parent="dimensions_left" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1248, -32 )
+
+[node name="dimensional_square_left1" parent="dimensions_left" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1056, 96 )
 
 
