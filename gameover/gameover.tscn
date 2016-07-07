@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://gameover/gameover.gd" type="Script" id=1]
-[ext_resource path="res://font/big_intro.fnt" type="Font" id=2]
-[ext_resource path="res://font/super_mario_bros.fnt" type="Font" id=3]
-[ext_resource path="res://images_src/gameover2.png" type="Texture" id=4]
+[ext_resource path="res://font/Medici Text.fnt" type="Font" id=2]
 
 [sub_resource type="GDScript" id=1]
 
@@ -39,21 +37,19 @@ size_flags/vertical = 2
 
 [node name="TextureButton" type="Label" parent="CanvasLayer/Panel"]
 
-visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
-margin/left = 3.0
-margin/top = 122.0
-margin/right = 797.0
-margin/bottom = 498.0
+margin/top = 284.0
+margin/right = 801.0
+margin/bottom = 405.0
 rect/scale = Vector2( 2, 2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
 custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.972656, 0.0151978, 0.0151978, 1 )
-custom_colors/font_color_shadow = Color( 0, 1, 0.0859375, 1 )
+custom_colors/font_color = Color( 0.345098, 0.345098, 0.462745, 1 )
+custom_colors/font_color_shadow = Color( 0.768627, 1, 0.0980392, 1 )
 text = "Game Over"
 align = 1
 valign = 1
@@ -66,27 +62,19 @@ script/script = SubResource( 1 )
 
 anchor/right = 1
 anchor/bottom = 1
-margin/top = 700.0
-margin/right = 1067.0
-margin/bottom = 135.0
-rect/scale = Vector2( 3, 3 )
+margin/top = 647.0
+margin/bottom = 87.0
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.015625, 0.0148926, 0.0148926, 1 )
-custom_colors/font_color_shadow = Color( 0, 1, 0.0859375, 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.343903, 0.345731, 0.460938, 1 )
+custom_colors/font_color_shadow = Color( 0.769531, 1, 0.0980392, 1 )
 text = "HighScore: 30000"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script/script = SubResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="CanvasLayer"]
-
-transform/pos = Vector2( 803.449, 410.405 )
-transform/scale = Vector2( 4.47269, 3.4146 )
-texture = ExtResource( 4 )
 
 
