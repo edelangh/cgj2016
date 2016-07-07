@@ -1,9 +1,14 @@
 
 extends Sprite
 
-var current_scale = 0
+export(int, "Small", "Medium", "Big") var starting_scale = 1
+var current_scale
 
 func _ready():
+	var s = [0.25, 0.5, 1][starting_scale]
+	set_scale(Vector2(s, s))
+	current_scale = starting_scale - 1
+	print(starting_scale, current_scale)
 	global.connect("dimension_left", self, "on_dimension_left", [])
 	global.connect("dimension_right", self, "on_dimension_right", [])
 
