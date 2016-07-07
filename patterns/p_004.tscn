@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://patterns/move.gd" type="Script" id=1]
+[ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=2]
+[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=3]
+[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 0, 1, 1, 1, 2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1, 8, 1, 9, 1, 10, 1, 11, 1, 12, 1, 13, 1, 14, 1, 15, 1, 16, 1, 17, 1, 18, 1, 19, 1, 20, 1, 21, 1, 22, 1, 23, 1, 24, 1, 25, 1, 26, 1, 27, 1, 28, 1, 29, 1, 30, 1, 31, 1, 32, 1, 33, 1, 34, 1, 35, 1, 36, 1, 37, 1, 38, 1, 39, 1, 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393220, 1, 393228, 9, 393229, 1, 393230, 1, 393231, 1, 393232, 1, 393233, 1, 393234, 1, 393235, 1, 393236, 1, 393237, 1, 393238, 1, 393239, 1, 393240, 10, 393255, 1, 458763, 9, 458764, 2, 458765, 2, 458766, 2, 458767, 2, 458768, 2, 458769, 2, 458770, 2, 458771, 2, 458772, 2, 458773, 2, 458774, 2, 458775, 2, 458776, 2, 458777, 10, 524299, -1073741815, 524300, 2, 524301, 2, 524302, 2, 524303, 2, 524304, 2, 524305, 2, 524306, 2, 524307, 2, 524308, 2, 524309, 2, 524310, 2, 524311, 2, 524312, 2, 524313, 1610612745, 655366, 9, 655390, 10, 851968, 1, 851969, 1, 851970, 1, 851971, 1, 852001, 1, 852002, 1, 852003, 1, 852004, 1, 852005, 1, 852006, 1, 852007, 1 )
+
+[node name="dimensional_square_left" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -64, 192 )
+
+[node name="dimensional_square_right" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -64, 320 )
+
+[node name="dimensional_square_left1" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 576, 768 )
+
+[node name="dimensional_square_right1" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1792, 768 )
+
+

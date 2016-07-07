@@ -25,86 +25,100 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393220, 1, 393221, 1, 393222, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393238, 1, 393239, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1 )
+tile_data = IntArray( -393199, 9, -393194, 10, -327664, 9, -327663, 1610612745, -327658, -1073741815, -327657, 10, -262134, 9, -262116, 10, -196599, 9, -196598, -1610612726, -196580, -1073741815, -196579, 10, -131068, 9, -65533, 9, -65532, 2, 0, 1, 1, 1, 2, 1, 3, 5, 4, -1610612726, 35, 1, 36, 1, 37, 1, 38, 1, 39, 1, 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393220, 1, 393221, 1, 393222, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393248, 1, 393249, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 655363, 7, 655364, 7, 655365, 7, 655366, 7, 655368, 7, 655369, 7, 655370, 7, 655371, 7, 655373, 7, 655374, 7, 655375, 7, 655376, 7, 655378, 7, 655379, 7, 655380, 7, 655381, 7, 655383, 7, 655384, 7, 655385, 7, 655386, 7, 655388, 7, 655389, 7, 655390, 7, 655391, 7, 655393, 7, 655394, 7, 655395, 7, 655396, 7, 851968, 1, 851969, 1, 851970, -1073741823, 851975, 1, 851980, 1, 851985, 1, 851990, 1, 851995, 1, 852000, 1, 852005, 1, 852006, 1, 852007, 1 )
 
-[node name="dimensional_square_left" parent="." instance=ExtResource( 3 )]
+[node name="Node2D" type="Node2D" parent="."]
 
-transform/pos = Vector2( 767.818, 424.145 )
+[node name="dimensional_square_left" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_left1" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 768, 448 )
 
-transform/pos = Vector2( 900.162, 424.909 )
+[node name="dimensional_square_left1" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_right" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 896, 448 )
 
-transform/pos = Vector2( 773.414, 169.322 )
+[node name="dimensional_square_right" parent="Node2D" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_right1" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 768, 192 )
 
-transform/pos = Vector2( 903.5, 168.537 )
+[node name="dimensional_square_right1" parent="Node2D" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_right2" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 1024, 192 )
 
-transform/pos = Vector2( 1599.63, 422.679 )
+[node name="dimensional_square_right2" parent="Node2D" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_right3" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 1600, 448 )
 
-transform/pos = Vector2( 1156.41, 167.309 )
+[node name="dimensional_square_right3" parent="Node2D" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_left2" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 1152, 192 )
 
-transform/pos = Vector2( 1026.62, 424.909 )
+[node name="dimensional_square_left2" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_left3" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 1024, 448 )
 
-transform/pos = Vector2( 1157.99, 427.364 )
+[node name="dimensional_square_left3" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_right4" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 1152, 448 )
 
-transform/pos = Vector2( 773.414, 169.322 )
+[node name="dimensional_square_right4" parent="Node2D" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_right5" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 896, 192 )
 
-transform/pos = Vector2( 1726.08, 421.451 )
+[node name="dimensional_square_right5" parent="Node2D" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_right6" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 1728, 448 )
 
-transform/pos = Vector2( 1851.31, 420.223 )
+[node name="dimensional_square_right6" parent="Node2D" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_right7" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 1856, 448 )
 
-transform/pos = Vector2( 1976.54, 420.223 )
+[node name="dimensional_square_right7" parent="Node2D" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_right8" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 1984, 448 )
 
-transform/pos = Vector2( 2100.54, 418.995 )
+[node name="dimensional_square_left5" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_right9" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 1600, 192 )
 
-transform/pos = Vector2( 2100.54, 418.995 )
+[node name="dimensional_square_left6" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_left4" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 1728, 192 )
 
-transform/pos = Vector2( 1595.06, 175.678 )
+[node name="dimensional_square_left7" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_left5" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 1856, 192 )
 
-transform/pos = Vector2( 1595.06, 175.678 )
+[node name="dimensional_square_left8" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_left6" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 1984, 192 )
 
-transform/pos = Vector2( 1723.97, 173.222 )
+[node name="dimensional_square_left4" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_left7" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 320, 960 )
 
-transform/pos = Vector2( 1854.11, 171.995 )
+[node name="dimensional_square_left10" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_left8" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 960, 960 )
 
-transform/pos = Vector2( 1983.03, 173.222 )
+[node name="dimensional_square_left11" parent="Node2D" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_left9" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 1600, 960 )
 
-transform/pos = Vector2( 2111.94, 170.767 )
+[node name="dimensional_square_left12" parent="Node2D" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2240, 960 )
+
+[node name="dimensional_square_right8" parent="Node2D" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 640, 960 )
+
+[node name="dimensional_square_right9" parent="Node2D" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1280, 960 )
+
+[node name="dimensional_square_right10" parent="Node2D" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1920, 960 )
 
 
