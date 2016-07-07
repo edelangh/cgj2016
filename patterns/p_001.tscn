@@ -131,6 +131,4 @@ transform/pos = Vector2( 864, 96 )
 
 transform/pos = Vector2( 1376, 224 )
 
-[node name="background" type="Node2D" parent="."]
-
 
