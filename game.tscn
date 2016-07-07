@@ -18,10 +18,12 @@ transform/pos = Vector2( 0, 217.177 )
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( -680.55, 342.556 )
+collision/margin = 0.08
 
 [node name="patterns_spawner" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -108.791, -16.7371 )
+tileset_test = "res://patterns/p_004.tscn"
 
 [node name="Control" parent="." instance=ExtResource( 5 )]
 
