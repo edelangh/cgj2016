@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://gameover/gameover.gd" type="Script" id=1]
-[ext_resource path="res://font/big_intro.fnt" type="Font" id=2]
-[ext_resource path="res://font/super_mario_bros.fnt" type="Font" id=3]
+[ext_resource path="res://font/Medici Text.fnt" type="Font" id=2]
 
 [sub_resource type="GDScript" id=1]
 
@@ -40,17 +39,19 @@ size_flags/vertical = 2
 
 anchor/right = 1
 anchor/bottom = 1
-margin/top = 120.0
-margin/right = 800.0
-margin/bottom = 500.0
-rect/scale = Vector2( 2, 2 )
+margin/top = 362.0
+margin/right = 710.0
+margin/bottom = 358.0
+rect/scale = Vector2( 1.8, 1.8 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
 custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.972656, 0.0151978, 0.0151978, 1 )
-custom_colors/font_color_shadow = Color( 0, 1, 0.0859375, 1 )
+custom_colors/font_color = Color( 0.0196078, 0.0196078, 0.0784314, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
 text = "Game Over"
 align = 1
 valign = 1
@@ -63,16 +64,20 @@ script/script = SubResource( 1 )
 
 anchor/right = 1
 anchor/bottom = 1
-margin/top = 700.0
-margin/right = 1067.0
-margin/bottom = 135.0
-rect/scale = Vector2( 3, 3 )
+margin/left = 4.0
+margin/top = 711.0
+margin/right = -402.0
+margin/bottom = 23.0
+rect/scale = Vector2( 0.8, 0.8 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.972656, 0.0151978, 0.0151978, 1 )
-custom_colors/font_color_shadow = Color( 0, 1, 0.0859375, 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.0196078, 0.0196078, 0.0784314, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_constants/shadow_offset_x = 6
+custom_constants/shadow_offset_y = 5
+custom_constants/shadow_as_outline = 0
 text = "HighScore: 30000"
 align = 1
 percent_visible = 1.0

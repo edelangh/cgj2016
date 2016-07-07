@@ -8,6 +8,7 @@
 [node name="Node2D" type="Node2D"]
 
 script/script = ExtResource( 1 )
+__meta__ = { "_edit_lock_":true }
 
 [node name="TileMap" type="TileMap" parent="."]
 
@@ -25,31 +26,38 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -327656, 9, -327655, 10, -327651, 10, -262121, 9, -262118, 10, -262114, 10, -196586, 9, -196581, 10, -196577, 10, -131051, 9, -131044, 10, -131040, 10, -65516, 9, -65507, 10, -65503, 10, 19, 9, 30, 10, 34, 10, 65554, 9, 65567, 10, 65571, 10, 131080, 15, 131089, 9, 131090, 1, 131091, 1, 131092, 1, 131095, 1, 131096, 1, 131097, 1, 131098, 10, 196616, -1073741815, 196617, 1, 196618, 1, 196619, 1, 196620, 1, 196621, 1, 196622, 1, 196623, 1, 196624, 1, 196625, 1, 196631, -1073741815, 196632, 1, 196633, 1, 196634, 1, 196635, 1, 196636, 1, 196637, 1, 196646, 9, 196647, 1, 262177, 1, 262178, 1, 262179, 1, 262180, 1, 262181, 1, 262182, 1, 393218, 1, 393219, 1, 393220, 1, 393221, 1, 393222, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393227, 1, 393228, 1, 393229, 1, 393230, 1, 393231, 1, 393232, 1, 393233, 1, 393241, 9, 393242, 1, 393243, 1, 393244, 1, 393245, 1, 393246, 1, 393247, 1, 393248, 1, 393249, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 458777, 1, 589824, 1, 589825, 1, 589826, 1, 589827, 1, 589828, 1, 589829, 1, 589832, 1, 589835, 1, 589836, 1, 589837, 1, 589838, 1, 589839, 1, 589840, 1, 589841, 1, 589842, 1, 589843, 1, 589844, 1, 589845, 1, 589846, 1, 589847, 1, 589848, 1, 589849, 1, 589850, 1, 589851, 1, 589852, 1, 589853, 1, 589854, 1, 589855, 1, 589856, 1, 589857, 1, 589858, 1, 589859, 1610612745, 589862, 9, 589863, 1, 655386, 1, 655387, 1, 655389, 1, 655390, 1, 655391, 1, 655397, 9, 655398, 1, 655399, 1610612745, 720932, 9, 720933, 1, 720934, 1610612745, 786467, 9, 786468, 1, 786469, 1610612745, 851970, 1, 851971, 1, 851972, 1, 851974, 1, 851975, 1, 851976, 1, 851977, 1, 851978, 1, 851979, 1, 851980, 1, 851981, 1, 851982, 1, 851983, 1, 851984, 1, 851985, 1, 851986, 1, 851987, 1, 851988, 1, 852002, 9, 852003, 1, 852004, 1610612745 )
+tile_data = IntArray( 0, 1, 38, 1, 39, 1, 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393225, 1, 393226, 1, 393227, 1, 393233, 1, 393234, 1, 393235, 1, 393241, 1, 393242, 1, 393243, 1, 393249, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 851968, 1, 917543, 1 )
 
 [node name="dimensional_square_left" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 1029.85, 450.639 )
+transform/pos = Vector2( 960, 896 )
 
 [node name="dimensional_square_left1" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 1027.85, 191.638 )
+transform/pos = Vector2( 448, 64 )
 
 [node name="dimensional_square_right" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 1397.1, 578.159 )
-
-[node name="dimensional_square_right1" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 238.065, 418.995 )
+transform/pos = Vector2( 960, 64 )
 
 [node name="dimensional_square_right2" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 1575.31, 907.37 )
+transform/pos = Vector2( 1984, 64 )
 
 [node name="dimensional_square_left2" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 1889.61, 909.085 )
-transform/scale = Vector2( 0.5, 0.5 )
+transform/pos = Vector2( 1472, 64 )
+
+[node name="dimensional_square_right1" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 448, 896 )
+
+[node name="dimensional_square_right3" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1472, 896 )
+
+[node name="dimensional_square_left3" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1984, 896 )
 
 

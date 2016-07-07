@@ -5,8 +5,8 @@
 [ext_resource path="res://items/coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://items/trap.tscn" type="PackedScene" id=5]
-[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=6]
-[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=7]
+[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=6]
+[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -107,28 +107,22 @@ __meta__ = { "_editor_collapsed":true }
 transform/pos = Vector2( 672, 224 )
 linear_damp = 0.1
 
-[node name="dimensions_left" type="Node2D" parent="."]
+[node name="dimensions" type="Node2D" parent="."]
 
-__meta__ = { "_editor_collapsed":true }
+[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 6 )]
 
-[node name="dimensional_square_left" parent="dimensions_left" instance=ExtResource( 6 )]
+transform/pos = Vector2( 896, 64 )
 
-transform/pos = Vector2( 1248, -32 )
+[node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 6 )]
 
-[node name="dimensional_square_left1" parent="dimensions_left" instance=ExtResource( 6 )]
+transform/pos = Vector2( 1408, 192 )
 
-transform/pos = Vector2( 1056, 96 )
+[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 7 )]
 
-[node name="dimensions_right" type="Node2D" parent="."]
+transform/pos = Vector2( 1280, -64 )
 
-__meta__ = { "_editor_collapsed":true }
+[node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 7 )]
 
-[node name="dimensional_square_right" parent="dimensions_right" instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 864, 96 )
-
-[node name="dimensional_square_right1" parent="dimensions_right" instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 1376, 224 )
+transform/pos = Vector2( 1088, 64 )
 
 
