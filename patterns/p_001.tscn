@@ -113,7 +113,6 @@ linear_damp = 0.1
 [node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 896, 64 )
-starting_scale = 0
 
 [node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 6 )]
 
@@ -122,12 +121,12 @@ transform/pos = Vector2( 1408, 192 )
 [node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1280, -64 )
-starting_scale = 0
+transform/scale = Vector2( 1, 1 )
+starting_scale = 2
 
 [node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1088, 64 )
-starting_scale = 2
 
 [node name="Background" type="TileMap" parent="."]
 
