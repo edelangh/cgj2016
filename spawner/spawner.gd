@@ -25,7 +25,7 @@ func _ready():
 	rooms.push_back(room)
 	set_process(true)
 
-
+# test
 func _process(delta):
 	if rooms.size() < 3:
 		instance_count += 1
