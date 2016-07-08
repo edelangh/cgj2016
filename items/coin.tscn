@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://items/coin.gd" type="Script" id=1]
 [ext_resource path="res://items/coin.png" type="Texture" id=2]
 [ext_resource path="res://sound/coin1.wav" type="Sample" id=3]
-
+[ext_resource path="res://sound/eat_apple.wav" type="Sample" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -39,6 +39,7 @@ tracks/1/keys = { "times":FloatArray( 0.5 ), "transitions":FloatArray( 1 ), "val
 [sub_resource type="SampleLibrary" id=4]
 
 samples/coin-collect = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
+samples/eat = { "db":0.0, "pitch":1.0, "sample":ExtResource( 4 ) }
 
 [node name="coin" type="Area2D"]
 
@@ -85,7 +86,7 @@ enabler/pause_particles = true
 enabler/process_parent = false
 enabler/fixed_process_parent = false
 
-[node name="SamplePlayer2D" type="SamplePlayer2D" parent="."]
+[node name="audioPlayer" type="SamplePlayer2D" parent="."]
 
 params/volume_db = 0.0
 params/pitch_scale = 1.0
