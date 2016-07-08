@@ -111,154 +111,119 @@ texture = ExtResource( 2 )
 script/script = ExtResource( 3 )
 layer_lvl = 0
 
-[node name="Sprite9" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+[node name="ParallaxBackground 2" type="ParallaxBackground" parent="CanvasLayer"]
 
-transform/pos = Vector2( 1026.92, 399.522 )
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = false
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite98" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
+
+transform/pos = Vector2( 157.614, 399.821 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+layer_lvl = 1
+
+[node name="Sprite9 9" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
+
+transform/pos = Vector2( 446.916, 399.522 )
 texture = ExtResource( 2 )
 script/script = ExtResource( 3 )
 layer_lvl = 0
 
-[node name="Sprite9 2" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+[node name="Sprite93" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
 
 transform/pos = Vector2( 736.916, 399.522 )
 texture = ExtResource( 2 )
 script/script = ExtResource( 3 )
-layer_lvl = 0
+layer_lvl = 1
 
-[node name="Sprite9 3" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+[node name="Sprite10" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
 
-transform/pos = Vector2( 2436.92, 399.522 )
+transform/pos = Vector2( 1026.92, 399.522 )
 texture = ExtResource( 2 )
 script/script = ExtResource( 3 )
-layer_lvl = 0
+layer_lvl = 1
 
-[node name="Sprite9 4" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 1876.92, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 0
-
-[node name="Sprite9 5" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 1596.92, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 0
-
-[node name="Sprite9 6" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+[node name="Sprite9 6" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
 
 transform/pos = Vector2( 1315.92, 399.522 )
 texture = ExtResource( 2 )
 script/script = ExtResource( 3 )
 layer_lvl = 1
 
-[node name="Sprite9 7" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 157.614, 399.821 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 0
-
-[node name="Sprite9 8" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 2156.92, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 0
-
-[node name="Sprite9 9" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 446.916, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 0
-
-[node name="Sprite98" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 157.614, 399.821 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 1
-
-[node name="Sprite99" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 2156.92, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 1
-
-[node name="Sprite10" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 1026.92, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 1
-
-[node name="Sprite93" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 736.916, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 1
-
-[node name="Sprite94" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 2436.92, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 1
-
-[node name="Sprite95" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 1876.92, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 1
-
-[node name="Sprite910" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 446.916, 399.522 )
-texture = ExtResource( 2 )
-script/script = ExtResource( 3 )
-layer_lvl = 1
-
-[node name="Sprite96" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+[node name="Sprite96" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
 
 transform/pos = Vector2( 1596.92, 399.522 )
 texture = ExtResource( 2 )
 script/script = ExtResource( 3 )
 layer_lvl = 1
 
-[node name="Sprite100" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+[node name="Sprite95" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
+
+transform/pos = Vector2( 1876.92, 399.522 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+layer_lvl = 1
+
+[node name="Sprite99" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
+
+transform/pos = Vector2( 2156.92, 399.522 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+layer_lvl = 1
+
+[node name="Sprite94" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
+
+transform/pos = Vector2( 2436.92, 399.522 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+layer_lvl = 1
+
+[node name="ParallaxBackground 3" type="ParallaxBackground" parent="CanvasLayer"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = false
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite100" type="Sprite" parent="CanvasLayer/ParallaxBackground 3"]
 
 transform/pos = Vector2( 563.077, 486.372 )
 texture = ExtResource( 4 )
 script/script = ExtResource( 3 )
 layer_lvl = 2
 
-[node name="Sprite101" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+[node name="Sprite101" type="Sprite" parent="CanvasLayer/ParallaxBackground 3"]
 
 transform/pos = Vector2( 1139.29, 431.256 )
 texture = ExtResource( 4 )
 script/script = ExtResource( 3 )
 layer_lvl = 2
 
-[node name="Sprite102" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
-
-transform/pos = Vector2( 1139.29, 431.256 )
-texture = ExtResource( 4 )
-script/script = ExtResource( 3 )
-layer_lvl = 2
-
-[node name="Sprite103" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+[node name="Sprite103" type="Sprite" parent="CanvasLayer/ParallaxBackground 3"]
 
 transform/pos = Vector2( 1690.45, 486.372 )
 texture = ExtResource( 4 )
 script/script = ExtResource( 3 )
 layer_lvl = 2
 
-[node name="Sprite104" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+[node name="Sprite104" type="Sprite" parent="CanvasLayer/ParallaxBackground 3"]
 
 transform/pos = Vector2( 152.212, 409.543 )
 texture = ExtResource( 4 )
