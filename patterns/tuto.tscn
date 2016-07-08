@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://items/coin.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=4]
 [ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=5]
 [ext_resource path="res://tilemap/background.tres" type="TileSet" id=6]
+[ext_resource path="res://items/trap.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,7 +28,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( 131065, 0, 131066, 0, 131067, 0, 131068, 0, 131069, 0, 131070, 0, 131071, 0, 65536, 0, 65537, 0, 65538, 1, 65539, 1, 65540, 1, 65541, 1, 65542, 1, 65543, 1, 65544, 1, 65545, 1, 65546, 1, 65547, 1, 65548, 1, 65549, 1, 65550, 1, 65551, 1, 65552, 1, 65553, 1, 65554, 2, 65558, 0, 65559, 1, 65560, 1, 65561, 1, 65562, 1, 65563, 1, 65564, 1, 65565, 1, 65566, 2, 65573, 0, 65574, 1, 65575, 1, 65576, 1, 851968, 0, 851992, 0, 1310720, 0 )
+tile_data = IntArray( 131065, 0, 131066, 0, 131067, 0, 131068, 0, 131069, 0, 131070, 0, 131071, 0, 65536, 0, 65537, 0, 65538, 1, 65539, 1, 65540, 1, 65541, 1, 65542, 1, 65543, 1, 65544, 1, 65545, 1, 65546, 1, 65547, 1, 65548, 1, 65549, 1, 65550, 1, 65551, 1, 65552, 1, 65553, 1, 65554, 2, 65558, 0, 65559, 1, 65560, 1, 65561, 1, 65562, 1, 65563, 1, 65564, 1, 65565, 1, 65566, 2, 65573, 0, 65574, 1, 65575, 1, 851968, 0, 851992, 0, 1310720, 0 )
 __meta__ = { "_edit_lock_":true }
 
 [node name="coins" type="Node2D" parent="."]
@@ -66,13 +67,13 @@ linear_damp = 0.1
 
 [node name="coin5" parent="coins" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 1184, -96 )
+transform/pos = Vector2( 1120, -96 )
 gravity = 9.8
 linear_damp = 0.1
 
 [node name="coin6" parent="coins" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 1312, -96 )
+transform/pos = Vector2( 1248, -96 )
 gravity = 9.8
 linear_damp = 0.1
 
@@ -85,6 +86,12 @@ linear_damp = 0.1
 [node name="coin8" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2208, 32 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="coin9" parent="coins" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 992, 32 )
 gravity = 9.8
 linear_damp = 0.1
 
@@ -238,5 +245,10 @@ __meta__ = { "_edit_lock_":true }
 [node name="traps" type="Node2D" parent="."]
 
 __meta__ = { "_edit_lock_":true }
+
+[node name="trap" parent="traps" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 1376, -96 )
+linear_damp = 0.1
 
 
