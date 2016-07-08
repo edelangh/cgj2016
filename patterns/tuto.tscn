@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://items/coin.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://items/trap.tscn" type="PackedScene" id=7]
 [ext_resource path="res://font/big_intro.fnt" type="Font" id=8]
 [ext_resource path="res://font/Medici Text.fnt" type="Font" id=9]
+[ext_resource path="res://items/hotdog.tscn" type="PackedScene" id=10]
+[ext_resource path="res://items/beer.tscn" type="PackedScene" id=11]
 
 [node name="Node2D" type="Node2D"]
 
@@ -39,39 +41,43 @@ __meta__ = { "_edit_lock_":true }
 
 [node name="coin5" parent="coins" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 1120, -96 )
+transform/pos = Vector2( 1248, -96 )
 gravity = 9.8
 linear_damp = 0.1
+sound = "coin-collect"
+score = 1
 
 [node name="coin7" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1888, 32 )
 gravity = 9.8
 linear_damp = 0.1
+sound = "coin-collect"
+score = 1
 
 [node name="coin8" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2464, 32 )
 gravity = 9.8
 linear_damp = 0.1
-
-[node name="coin9" parent="coins" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 992, 32 )
-gravity = 9.8
-linear_damp = 0.1
+sound = "coin-collect"
+score = 1
 
 [node name="coin10" parent="coins" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 992, 32 )
+transform/pos = Vector2( 928, 32 )
 gravity = 9.8
 linear_damp = 0.1
+sound = "coin-collect"
+score = 1
 
 [node name="coin11" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1376, -224 )
 gravity = 9.8
 linear_damp = 0.1
+sound = "coin-collect"
+score = 1
 
 [node name="one_way_platforms" type="Node2D" parent="."]
 
@@ -151,7 +157,6 @@ starting_scale = 2
 [node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 2176, -128 )
-z/z = 0
 
 [node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 4 )]
 
@@ -170,7 +175,6 @@ starting_scale = 0
 [node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 2176, -384 )
-z/z = 0
 
 [node name="background" type="TileMap" parent="."]
 
@@ -304,5 +308,14 @@ text = "twice"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="HotDog" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1056, 32 )
+score = 1
+
+[node name="beer" parent="." instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 1056, -96 )
 
 
