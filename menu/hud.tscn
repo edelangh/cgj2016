@@ -19,6 +19,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+__meta__ = { "_edit_lock_":true }
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -26,6 +27,34 @@ layer = 2
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
+
+[node name="score_box" type="Polygon2D" parent="CanvasLayer"]
+
+polygon = Vector2Array( 704, 0, 896, 0, 960, 64, 896, 128, 704, 128, 640, 64 )
+uv = Vector2Array(  )
+color = Color( 0.133333, 0.133333, 0.133333, 0.25098 )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="multiplier_box" type="Polygon2D" parent="CanvasLayer"]
+
+visibility/visible = false
+transform/pos = Vector2( -620, 724 )
+polygon = Vector2Array( 684, -20, 876, -20, 876, 146, 685, 146 )
+uv = Vector2Array(  )
+color = Color( 0.133333, 0.133333, 0.133333, 0.25098 )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 
@@ -36,21 +65,22 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 script/script = SubResource( 1 )
+__meta__ = { "_edit_lock_":true }
 
 [node name="multiplicator" type="Label" parent="CanvasLayer/Control"]
 
 anchor/right = 3
 anchor/bottom = 1
-margin/left = 3.0
-margin/top = 739.0
-margin/right = -3.0
-margin/bottom = -23.0
+margin/left = 64.0
+margin/top = 704.0
+margin/right = -64.0
+margin/bottom = 12.0
 rect/scale = Vector2( 0.8, 0.8 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0.796078, 0.498039, 0.376471, 1 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.8, 1 )
 custom_colors/font_color_shadow = Color( 0.34375, 0.34375, 0.34375, 1 )
 text = " * 4"
 percent_visible = 1.0
@@ -60,15 +90,14 @@ max_lines_visible = -1
 [node name="score" type="Label" parent="CanvasLayer/Control"]
 
 anchor/right = 1
-margin/left = 3.0
-margin/right = -1603.0
-margin/bottom = 166.0
-rect/scale = Vector2( 0.5, 0.5 )
+margin/right = -685.0
+margin/bottom = 183.0
+rect/scale = Vector2( 0.7, 0.7 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0.796078, 0.498039, 0.376471, 1 )
+custom_colors/font_color = Color( 1, 0.843137, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.34375, 0.34375, 0.34375, 1 )
 text = "1500"
 align = 1
@@ -80,11 +109,11 @@ max_lines_visible = -1
 
 anchor/left = 3
 anchor/right = 1
-margin/left = 781.0
-margin/top = 849.0
-margin/right = -1570.0
-margin/bottom = 2009.0
-rect/scale = Vector2( 0.04, 0.008 )
+margin/left = 736.0
+margin/top = 832.0
+margin/right = -1615.0
+margin/bottom = 1992.0
+rect/scale = Vector2( 0.061, 0.008 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
