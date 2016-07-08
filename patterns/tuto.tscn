@@ -143,6 +143,7 @@ __meta__ = { "_edit_lock_":true }
 
 transform/pos = Vector2( 1792, -64 )
 z/z = 0
+starting_scale = 2
 
 [node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 5 )]
 
@@ -152,6 +153,7 @@ transform/pos = Vector2( 2240, -64 )
 
 transform/pos = Vector2( 1792, -320 )
 z/z = 0
+starting_scale = 2
 
 [node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 5 )]
 
@@ -162,6 +164,7 @@ transform/pos = Vector2( 2240, -320 )
 transform/pos = Vector2( 2240, 320 )
 transform/scale = Vector2( 0.25, 0.25 )
 z/z = 0
+starting_scale = 0
 
 [node name="background" type="TileMap" parent="."]
 
