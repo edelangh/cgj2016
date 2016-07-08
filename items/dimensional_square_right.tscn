@@ -31,10 +31,10 @@ tracks/0/keys = { "cont":true, "times":FloatArray( 0, 0.3 ), "transitions":Float
 
 [node name="dimensional_square_right" type="Sprite"]
 
-transform/scale = Vector2( 0.5, 0.5 )
+transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 script/script = ExtResource( 2 )
-__meta__ = { "_edit_group_":true, "_edit_lock_":true }
+__meta__ = { "_edit_group_":true }
 starting_scale = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

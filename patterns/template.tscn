@@ -1,0 +1,130 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://items/coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=4]
+[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=5]
+[ext_resource path="res://tilemap/background.tres" type="TileSet" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+__meta__ = { "_edit_lock_":true }
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 0, 0, 24, 0, 851968, 0, 851992, 0, 1310720, 0 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="coins" type="Node2D" parent="."]
+
+__meta__ = { "_edit_lock_":true }
+
+[node name="coin" parent="coins" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 2592, 32 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="coin1" parent="coins" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 32, 1376 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="coin2" parent="coins" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 2592, 1376 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="coin3" parent="coins" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 32, -480 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="coin4" parent="coins" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 2592, -480 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="one_way_platforms" type="Node2D" parent="."]
+
+__meta__ = { "_edit_lock_":true }
+
+[node name="one_way_platform" parent="one_way_platforms" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 96, 32 )
+
+[node name="dimensions" type="Node2D" parent="."]
+
+__meta__ = { "_edit_lock_":true }
+
+[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 192, 64 )
+
+[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 288, 32 )
+starting_scale = 0
+
+[node name="background" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 6 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray(  )
+__meta__ = { "_edit_lock_":true }
+
+[node name="decors" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 6 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray(  )
+__meta__ = { "_edit_lock_":true }
+
+[node name="traps" type="Node2D" parent="."]
+
+__meta__ = { "_edit_lock_":true }
+
+
