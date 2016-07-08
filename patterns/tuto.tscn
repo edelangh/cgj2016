@@ -212,12 +212,38 @@ __meta__ = { "_edit_lock_":true }
 [node name="trap" parent="traps" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1440, -96 )
-linear_damp = 0.1
 
 [node name="texts" type="Node2D" parent="."]
 
 z/z = 7
 __meta__ = { "_edit_lock_":true }
+
+[node name="Polygon2D" type="Polygon2D" parent="texts"]
+
+polygon = Vector2Array( 1630, -224, 1953, -224, 1953, -83, 1630, -83 )
+uv = Vector2Array(  )
+color = Color( 0, 0, 1, 0.392157 )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="Polygon2D1" type="Polygon2D" parent="texts"]
+
+transform/pos = Vector2( 450, -2 )
+polygon = Vector2Array( 1630, -224, 1953, -224, 1953, -83, 1630, -83 )
+uv = Vector2Array(  )
+color = Color( 1, 1, 0, 0.392157 )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
 
 [node name="Label" type="Label" parent="texts"]
 
@@ -246,6 +272,7 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "press LEFT"
 percent_visible = 1.0
 lines_skipped = 0
@@ -295,6 +322,7 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "twice"
 percent_visible = 1.0
 lines_skipped = 0

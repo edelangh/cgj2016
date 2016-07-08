@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 12.8301
+radius = 19.3215
 
 [node name="trap" type="Area2D"]
 
