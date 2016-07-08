@@ -137,7 +137,7 @@ layer_lvl = 1
 transform/pos = Vector2( 446.916, 399.522 )
 texture = ExtResource( 2 )
 script/script = ExtResource( 3 )
-layer_lvl = 0
+layer_lvl = 1
 
 [node name="Sprite93" type="Sprite" parent="CanvasLayer/ParallaxBackground 2"]
 
