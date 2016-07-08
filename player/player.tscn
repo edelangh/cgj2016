@@ -1,19 +1,15 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
 [ext_resource path="res://player/player.png" type="Texture" id=2]
+[ext_resource path="res://sound/scream_dead.smp" type="Sample" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 23.5378
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -23, 0, 43, 0, 16, 45, -16, 45 )
-
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 length = 2.0
 loop = true
@@ -23,7 +19,7 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/keys = { "cont":false, "times":FloatArray( 0, 0.4, 0.8, 1.2, 1.6 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "values":[ 8, 9, 11, 13, 15 ] }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 length = 0.5
 loop = true
@@ -33,16 +29,17 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/keys = { "cont":false, "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "values":[ 0, 1, 2, 4, 6 ] }
 
+[sub_resource type="SampleLibrary" id=4]
+
+samples/scream_dead = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
+
 [node name="Player" type="KinematicBody2D"]
 
 z/z = 2
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 23.5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 23.5 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 5 )
-shapes/1/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
-shapes/1/trigger = true
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
@@ -61,8 +58,8 @@ hframes = 8
 playback/process_mode = 1
 playback/default_blend_time = 0.01
 root/root = NodePath("..")
-anims/jump = SubResource( 3 )
-anims/run = SubResource( 4 )
+anims/jump = SubResource( 2 )
+anims/run = SubResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -88,6 +85,17 @@ build_mode = 0
 polygon = Vector2Array( -16, 45, 16, 45, 43, 0, -23, 0 )
 shape_range = Vector2( 1, 1 )
 trigger = true
+
+[node name="audioPlayer" type="SamplePlayer2D" parent="."]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 1
+config/samples = SubResource( 4 )
+config/pitch_random = 0.0
 
 [connection signal="timeout" from="Timer" to="." method="emit_dust"]
 
