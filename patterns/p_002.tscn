@@ -93,4 +93,24 @@ transform/pos = Vector2( 1952, 1248 )
 
 transform/pos = Vector2( 2336, 1248 )
 
+[node name="one_way_platform6" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 864, 1248 )
+
+[node name="one_way_platform7" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 928, 1248 )
+
+[node name="one_way_platform8" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 992, 1248 )
+
+[node name="one_way_platform9" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1056, 1248 )
+
+[node name="one_way_platform10" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1120, 1248 )
+
 
