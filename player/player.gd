@@ -20,15 +20,21 @@ var jumping = false
 var can_continue_jump = false
 
 var prev_jump_pressed = false
-var die = false
+var death = false
 var animator = null
 
 
 func die():
-	die = true
+	death = true
 	global.run_death()
 	audioPlayer.play("scream_dead")
 
+
+func die_because_trap():
+	die()
+	set_fixed_process(false)
+	animator.play("jump") # TODO: EXPLOSION !!!!
+	
 
 func check_die():
 	var pos = get_pos()
@@ -39,7 +45,7 @@ func check_die():
 
 
 func _fixed_process(delta):
-	if not global.gameover and not die:
+	if not global.gameover and not death:
 		check_die()
 
 	var force = Vector2(WALK_SPEED, GRAVITY)
@@ -50,7 +56,7 @@ func _fixed_process(delta):
 	var dist_ratio = dist / 600.0
 
 	var max_speed = lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0)) * delta
-	if die:
+	if death:
 		if pos.x - camera_pos.x <= global.x_max_to_die:
 			max_speed = -1
 		else:
