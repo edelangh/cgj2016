@@ -49,8 +49,8 @@ func _fixed_process(delta):
 
 	var max_speed = lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0)) * delta
 	if die:
-		if dist < global.x_max_to_die:
-			max_speed = 0
+		if pos.x - camera_pos.x <= global.x_max_to_die:
+			max_speed = -1
 		else:
 			max_speed = WALK_SPEED_MIN * delta
 	

@@ -23,7 +23,7 @@ func rescale(new_scale):
 
 
 func on_dimension_left(scale):
-	if get_tree().is_editor_hint():
+	if get_tree().is_editor_hint() || !is_visible():
 		return
 	if current_scale == -1:
 		get_node("anim").play_backwards("right")
@@ -34,7 +34,7 @@ func on_dimension_left(scale):
 		
 
 func on_dimension_right(scale):
-	if get_tree().is_editor_hint():
+	if get_tree().is_editor_hint() || !is_visible():
 		return
 	if current_scale == 1:
 		get_node("anim").play_backwards("left")
