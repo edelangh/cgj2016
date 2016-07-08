@@ -1,9 +1,24 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
 [ext_resource path="res://player/player.png" type="Texture" id=2]
 [ext_resource path="res://sound/scream_dead.smp" type="Sample" id=3]
-[ext_resource path="res://player/dead/dead10.png" type="Texture" id=4]
+[ext_resource path="res://player/dead/dead1.png" type="Texture" id=4]
+[ext_resource path="res://player/dead/dead2.png" type="Texture" id=5]
+[ext_resource path="res://player/dead/dead3.png" type="Texture" id=6]
+[ext_resource path="res://player/dead/dead4.png" type="Texture" id=7]
+[ext_resource path="res://player/dead/dead5.png" type="Texture" id=8]
+[ext_resource path="res://player/dead/dead6.png" type="Texture" id=9]
+[ext_resource path="res://player/dead/dead7.png" type="Texture" id=10]
+[ext_resource path="res://player/dead/dead8.png" type="Texture" id=11]
+[ext_resource path="res://player/dead/dead9.png" type="Texture" id=12]
+[ext_resource path="res://player/dead/dead10.png" type="Texture" id=13]
+[ext_resource path="res://player/dead/dead11.png" type="Texture" id=14]
+[ext_resource path="res://player/dead/dead12.png" type="Texture" id=15]
+[ext_resource path="res://player/dead/dead13.png" type="Texture" id=16]
+[ext_resource path="res://player/dead/dead14.png" type="Texture" id=17]
+[ext_resource path="res://player/dead/dead15.png" type="Texture" id=18]
+[ext_resource path="res://player/dead/dead16.png" type="Texture" id=19]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -100,7 +115,7 @@ config/pitch_random = 0.0
 
 [node name="Fleshs" type="Node2D" parent="."]
 
-[node name="KinematicBody2D" type="RigidBody2D" parent="Fleshs"]
+[node name="viking_helmet" type="RigidBody2D" parent="Fleshs"]
 
 input/pickable = false
 collision/layers = 1
@@ -121,12 +136,12 @@ velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 
-[node name="Sprite1" type="Sprite" parent="Fleshs/KinematicBody2D"]
+[node name="Sprite1" type="Sprite" parent="Fleshs/viking_helmet"]
 
 transform/scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 
-[node name="KinematicBody2D1" type="RigidBody2D" parent="Fleshs"]
+[node name="viking_head" type="RigidBody2D" parent="Fleshs"]
 
 input/pickable = false
 collision/layers = 1
@@ -146,14 +161,16 @@ velocity/linear = Vector2( 0, 0 )
 velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
 
-[node name="Sprite1" type="Sprite" parent="Fleshs/KinematicBody2D1"]
+[node name="Sprite1" type="Sprite" parent="Fleshs/viking_head"]
 
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
-[node name="KinematicBody2D2" type="RigidBody2D" parent="Fleshs"]
+[node name="viking_arm" type="RigidBody2D" parent="Fleshs"]
 
+transform/pos = Vector2( 0, 1 )
 input/pickable = false
 collision/layers = 1
 collision/mask = 1
@@ -173,10 +190,361 @@ velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 
-[node name="Sprite1" type="Sprite" parent="Fleshs/KinematicBody2D2"]
+[node name="Sprite1" type="Sprite" parent="Fleshs/viking_arm"]
 
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
+
+[node name="viking_arm_beer" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/viking_arm_beer"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="viking_arm3 2" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/viking_arm3 2"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="viking_body" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/viking_body"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="viking_foot" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/viking_foot"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="viking_foot 2" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/viking_foot 2"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="viking_foot 3" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/viking_foot 3"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="renne_head" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/renne_head"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="renne_leg" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/renne_leg"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="renne_leg 2" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/renne_leg 2"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
+
+[node name="renne_leg3" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/renne_leg3"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="renne_leg4" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/renne_leg4"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="renne_collier" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/renne_collier"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="renne_body" type="RigidBody2D" parent="Fleshs"]
+
+transform/pos = Vector2( 0, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite1" type="Sprite" parent="Fleshs/renne_body"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
 
 [connection signal="timeout" from="Timer" to="." method="emit_dust"]
 
