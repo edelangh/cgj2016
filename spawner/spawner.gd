@@ -18,6 +18,7 @@ func _ready():
 	store.push_back(preload('res://patterns/p_001.tscn'))
 	store.push_back(preload('res://patterns/p_002.tscn'))
 	store.push_back(preload('res://patterns/p_003.tscn'))
+	store.push_back(preload('res://patterns/p_004.tscn'))
 	var room
 	#if not tileset_test:
 	room = store[0].instance()
