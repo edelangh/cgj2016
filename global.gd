@@ -21,9 +21,12 @@ const SCALE_FACTOR_MIN = -1
 const SCALE_FACTOR_MAX = 1
 const PLAYER_START_POS = Vector2(-600, 0)
 var y_max_to_die
+var x_max_to_die
 
 func _ready():
-	y_max_to_die = get_viewport().get_rect().size.y
+	var screen_size = get_viewport().get_rect().size
+	y_max_to_die = screen_size.y
+	x_max_to_die = -screen_size.x * 0.7
 
 func run_death():
 	if not gameover:

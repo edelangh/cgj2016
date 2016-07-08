@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://items/coin.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=4]
 [ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=5]
 [ext_resource path="res://tilemap/background.tres" type="TileSet" id=6]
+[ext_resource path="res://items/trap.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,7 +28,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( 0, 0, 24, 0, 851968, 0, 851992, 0, 1310720, 0 )
+tile_data = IntArray( -524288, 0, -524249, 1, 0, 0, 39, 1, 1310720, 0, 1310759, 1 )
 __meta__ = { "_edit_lock_":true }
 
 [node name="coins" type="Node2D" parent="."]
@@ -42,7 +43,7 @@ linear_damp = 0.1
 
 [node name="coin1" parent="coins" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 32, 1376 )
+transform/pos = Vector2( -32, 1376 )
 gravity = 9.8
 linear_damp = 0.1
 
@@ -54,7 +55,7 @@ linear_damp = 0.1
 
 [node name="coin3" parent="coins" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 32, -480 )
+transform/pos = Vector2( -32, -480 )
 gravity = 9.8
 linear_damp = 0.1
 
@@ -126,5 +127,10 @@ __meta__ = { "_edit_lock_":true }
 [node name="traps" type="Node2D" parent="."]
 
 __meta__ = { "_edit_lock_":true }
+
+[node name="trap" parent="traps" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 352, 32 )
+linear_damp = 0.1
 
 

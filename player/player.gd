@@ -22,31 +22,37 @@ var prev_jump_pressed = false
 var die = false
 var animator = null
 
+
 func die():
 	die = true
 	global.run_death()
 
+
 func check_die():
 	var pos = get_pos()
 	var cam_pos = global.main_camera.get_pos()
-	var dist = cam_pos.x - pos.x
-	if pos.y > 896 or dist > 1000:
+	var dist = pos.x - cam_pos.x
+	if pos.y > global.y_max_to_die or dist < global.x_max_to_die:
 		die()
 
+
 func _fixed_process(delta):
-	if global.gameover or die:
-		return
-	check_die()
+	if not global.gameover and not die:
+		check_die()
+
 	var force = Vector2(WALK_SPEED, GRAVITY)
 	var jump = Input.is_action_pressed("player_jump")
 	var camera_pos = global.main_camera.get_pos()
 	var pos = get_pos()
 	var dist = camera_pos.x - pos.x - DIST_TO_CENTER
 	var dist_ratio = dist / 600.0
-	var motion
+
 	var max_speed = lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0)) * delta
+	if die:
+		max_speed = WALK_SPEED_MIN * delta
+	
 	velocity += force * delta     # Integrate forces to velocity
-	motion = velocity * delta     # Integrate velocity into motion and move
+	var motion = velocity * delta     # Integrate velocity into motion and move
 	
 	if motion.x > max_speed:
 		motion.x = max_speed
@@ -60,9 +66,11 @@ func _fixed_process(delta):
 		#var collider = get_collider()
 
 		var n = get_collision_normal()
-		if (rad2deg(acos(n.dot(Vector2(0, -1)))) < FLOOR_ANGLE_TOLERANCE):
+		var rad = acos(n.dot(Vector2(0, -1)))
+		if (rad2deg(rad) < FLOOR_ANGLE_TOLERANCE):
 			# If angle to the "up" vectors is < angle tolerance
 			# char is on floor
+			set_rot(rad / 2 * -sign(n.x))
 			on_air_time = 0
 			floor_velocity = get_collider_velocity()
 		
@@ -85,6 +93,7 @@ func _fixed_process(delta):
 		# If falling, no longer jumping
 		jumping = false
 		animator.play("run")
+		set_rot(0)
 
 	if jump && jumping and can_continue_jump:
 		velocity.y -= (JUMP_SPEED_CONTINUE + velocity.y) * delta
