@@ -1,14 +1,13 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=1]
-[ext_resource path="res://items/coin.tscn" type="PackedScene" id=2]
-[ext_resource path="res://items/hotdog.tscn" type="PackedScene" id=3]
-[ext_resource path="res://items/beer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=5]
-[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=6]
-[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=7]
-[ext_resource path="res://tilemap/background.tres" type="TileSet" id=8]
-[ext_resource path="res://items/trap.tscn" type="PackedScene" id=9]
+[ext_resource path="res://items/hotdog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://items/beer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=5]
+[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=6]
+[ext_resource path="res://tilemap/background.tres" type="TileSet" id=7]
+[ext_resource path="res://items/trap.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -30,78 +29,119 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -524288, 0, -524287, 1, -524286, 1, -524285, 1, -524284, 10, -524249, 1, -458749, 6, -458748, 4, -458747, 10, -393212, 6, -393211, 8, -65535, 9, -65534, 1, -65531, 1, -65530, 1, -65529, 1, -65528, 1, -65527, 1, -65526, 1, -65525, 1, -65524, 1, -65523, 1, -65522, 1, -65521, 1, -65520, 1, -65519, 1, -65518, 1, -65517, 1, -65516, 1, -65515, 1, -65514, 1, -65513, 1, -65512, 1, -65511, 1, -65510, 1, -65509, 1, -65508, 1, -65507, 1, -65506, 1, -65505, 1, -65504, 1, -65503, 1, 0, 0, 1, 1, 2, 5, 38, 9, 39, 1, 65537, 4, 65538, 4, 65539, 10, 65573, 9, 65574, 4, 65575, 5, 131074, 4, 131075, 4, 131076, 10, 131108, 9, 131109, 4, 131110, 7, 131111, 8, 196611, 4, 196612, 5, 196640, 9, 196641, 1, 196642, 1, 196643, 1, 196644, 4, 196645, 7, 262148, 4, 262149, 1, 262150, 1, 262151, 2, 262175, 9, 262176, 4, 262177, 4, 262178, 7, 262179, 7, 262180, 7, 327685, 4, 327686, 4, 327687, 1, 327688, 1, 327689, 1, 327690, 1, 327691, 1, 327692, 2, 327693, 1, 327694, 1, 327695, 1, 327696, 1, 327697, 1, 327698, 1, 327699, 1, 327700, 2, 327710, 9, 327711, 4, 327712, 7, 327713, 8, 393236, 5, 393245, 0, 393246, 4, 393247, 5, 458772, 3, 458773, 1, 458774, 1, 458775, 1, 458776, 1, 458777, 1, 458778, 1, 458779, 1, 458780, 1, 458781, 4, 458782, 4, 458783, 5, 524308, 6, 524309, 7, 524310, 7, 524311, 7, 524312, 7, 524313, 7, 524314, 7, 524315, 7, 524316, 7, 524317, 7, 524318, 7, 524319, 8, 1310720, 0, 1310759, 1 )
+tile_data = IntArray( -720879, 9, -720878, 1, -720877, 1, -720876, 1, -720875, 1, -720874, 1, -720873, 10, -720864, 9, -720863, 1, -720862, 1, -720861, 1, -720860, 10, -655344, 9, -655343, 4, -655342, 4, -655341, 4, -655340, 4, -655339, 4, -655338, 4, -655337, 4, -655336, 10, -655329, 9, -655328, 4, -655327, 4, -655326, 4, -655325, 4, -655324, 4, -655323, 10, -589809, 9, -589808, 7, -589807, 7, -589806, 7, -589805, 7, -589804, 7, -589803, 7, -589802, 7, -589801, 7, -589800, 7, -589799, 10, -589794, 9, -589793, 7, -589792, 7, -589791, 7, -589790, 4, -589789, 4, -589788, 4, -589787, 4, -589786, 10, -524288, 0, -524287, 1, -524286, 1, -524285, 1, -524284, 10, -524254, 6, -524253, 7, -524252, 7, -524251, 7, -524250, 7, -524249, 1, -458749, 6, -458748, 4, -458747, 10, -393212, 6, -393211, 8, -327671, 9, -327670, 8, -262136, 9, -262135, 8, -65535, 9, -65534, 1, -65531, 1, -65530, 1, -65529, 1, -65528, 1, -65527, 1, -65526, 1, -65525, 1, -65524, 1, -65523, 1, -65522, 1, -65521, 1, -65520, 1, -65519, 1, -65518, 1, -65517, 1, -65516, 1, -65515, 1, -65514, 1, -65513, 1, -65512, 1, -65511, 1, -65510, 1, -65509, 1, -65508, 1, -65507, 1, -65506, 1, -65505, 1, -65504, 1, -65503, 1, 0, 0, 1, 1, 2, 5, 38, 9, 39, 1, 65536, 6, 65537, 4, 65538, 4, 65539, 10, 65573, 9, 65574, 4, 65575, 5, 131073, 6, 131074, 4, 131075, 4, 131076, 10, 131108, 9, 131109, 4, 131110, 7, 131111, 8, 196610, 6, 196611, 4, 196612, 5, 196640, 9, 196641, 1, 196642, 1, 196643, 1, 196644, 4, 196645, 7, 262147, 6, 262148, 4, 262149, 1, 262150, 1, 262151, 2, 262175, 9, 262176, 4, 262177, 4, 262178, 7, 262179, 7, 262180, 7, 327684, 6, 327685, 4, 327686, 4, 327687, 1, 327688, 1, 327689, 1, 327690, 1, 327691, 1, 327692, 2, 327693, 1, 327694, 1, 327695, 1, 327696, 1, 327697, 1, 327698, 1, 327699, 1, 327700, 2, 327710, 9, 327711, 4, 327712, 7, 327713, 8, 393221, 6, 393222, 7, 393223, 7, 393224, 7, 393225, 7, 393226, 7, 393227, 7, 393228, 7, 393229, 7, 393230, 7, 393231, 7, 393232, 7, 393233, 7, 393234, 7, 393235, 7, 393236, 8, 393245, 0, 393246, 4, 393247, 5, 458774, 9, 458775, 1, 458776, 1, 458777, 1, 458778, 1, 458779, 1, 458780, 1, 458781, 4, 458782, 4, 458783, 5, 524309, 9, 524310, 7, 524311, 7, 524312, 7, 524313, 7, 524314, 7, 524315, 7, 524316, 7, 524317, 7, 524318, 7, 524319, 8, 589842, 9, 655362, 9, 655363, 1, 655364, 1, 655365, 10, 655377, 9, 655378, 5, 720897, 9, 720898, 4, 720899, 4, 720900, 4, 720901, 4, 720902, 10, 720912, 9, 720913, 8, 720914, 8, 786433, 6, 786434, 7, 786435, 7, 786436, 7, 786437, 7, 786438, 8, 786445, 9, 851980, 9, 851981, 5, 917515, 9, 917516, 8, 917517, 8, 983048, 9, 1048583, 9, 1048584, 5, 1114118, 9, 1114119, 8, 1114120, 8, 1310720, 0, 1310721, 1, 1310722, 1, 1310723, 2, 1310728, 0, 1310729, 1, 1310730, 1, 1310731, 1, 1310732, 1, 1310733, 1, 1310734, 1, 1310735, 1, 1310736, 1, 1310737, 1, 1310738, 1, 1310739, 1, 1310740, 1, 1310741, 1, 1310742, 2, 1310748, 0, 1310749, 1, 1310750, 1, 1310751, 1, 1310752, 1, 1310753, 1, 1310754, 1, 1310755, 1, 1310756, 1, 1310757, 1, 1310758, 1, 1310759, 1, 1376256, 7, 1376257, 7, 1376258, 7, 1376259, 8, 1376264, 6, 1376265, 7, 1376266, 7, 1376267, 7, 1376268, 7, 1376269, 7, 1376270, 7, 1376271, 7, 1376272, 7, 1376273, 7, 1376274, 7, 1376275, 7, 1376276, 7, 1376277, 7, 1376278, 8, 1376284, 6, 1376285, 7, 1376286, 7, 1376287, 7, 1376288, 7, 1376289, 7, 1376290, 7, 1376291, 7, 1376292, 7, 1376293, 7, 1376294, 7, 1376295, 7 )
 __meta__ = { "_edit_lock_":true }
 
 [node name="coins" type="Node2D" parent="."]
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="coin" parent="coins" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 2592, 32 )
-gravity = 9.8
-linear_damp = 0.1
-
-[node name="coin1" parent="coins" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( -32, 1376 )
-gravity = 9.8
-linear_damp = 0.1
-
-[node name="coin2" parent="coins" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 2592, 1376 )
-gravity = 9.8
-linear_damp = 0.1
-
-[node name="coin3" parent="coins" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( -32, -480 )
-gravity = 9.8
-linear_damp = 0.1
-
-[node name="coin4" parent="coins" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 2592, -480 )
-gravity = 9.8
-linear_damp = 0.1
-
-[node name="HotDog" parent="coins" instance=ExtResource( 3 )]
+[node name="HotDog" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1504, 416 )
 gravity = 9.8
 linear_damp = 0.1
 
-[node name="beer" parent="coins" instance=ExtResource( 4 )]
+[node name="beer" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1376, 288 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
-[node name="beer1" parent="coins" instance=ExtResource( 4 )]
+[node name="beer1" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1120, 288 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
-[node name="HotDog1" parent="coins" instance=ExtResource( 3 )]
+[node name="HotDog1" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1632, 352 )
 gravity = 9.8
 linear_damp = 0.1
 
-[node name="HotDog2" parent="coins" instance=ExtResource( 3 )]
+[node name="HotDog2" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1760, 416 )
 gravity = 9.8
 linear_damp = 0.1
 
+[node name="beer2" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2144, -736 )
+gravity = 9.8
+linear_damp = 0.1
+score_multiplier = 1
+
+[node name="beer3" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 736, -480 )
+gravity = 9.8
+linear_damp = 0.1
+score_multiplier = 1
+
+[node name="beer4" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 864, -608 )
+gravity = 9.8
+linear_damp = 0.1
+score_multiplier = 1
+
+[node name="HotDog3" parent="coins" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1760, -800 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer5" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1248, -736 )
+gravity = 9.8
+linear_damp = 0.1
+score_multiplier = 1
+
+[node name="beer6" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1376, -96 )
+gravity = 9.8
+linear_damp = 0.1
+score_multiplier = 1
+
+[node name="beer7" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 224, 608 )
+gravity = 9.8
+linear_damp = 0.1
+score_multiplier = 1
+
+[node name="beer8" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 608, 928 )
+gravity = 9.8
+linear_damp = 0.1
+score_multiplier = 1
+
+[node name="beer9" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1824, 1248 )
+gravity = 9.8
+linear_damp = 0.1
+score_multiplier = 1
+
+[node name="beer10" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2336, 1248 )
+gravity = 9.8
+linear_damp = 0.1
+score_multiplier = 1
+
 [node name="one_way_platforms" type="Node2D" parent="."]
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="one_way_platform" parent="one_way_platforms" instance=ExtResource( 5 )]
+[node name="one_way_platform" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 96, 32 )
 
@@ -109,47 +149,77 @@ transform/pos = Vector2( 96, 32 )
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 6 )]
+[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1120, 160 )
 z/z = 0
 starting_scale = 2
 
-[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 7 )]
+[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1432, 216 )
 transform/scale = Vector2( 0.25, 0.25 )
 starting_scale = 0
 
-[node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 6 )]
+[node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1824, 224 )
 z/z = 0
 starting_scale = 2
 
-[node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 7 )]
+[node name="dimensional_square_right2" parent="dimensions" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 672, -224 )
+transform/pos = Vector2( 1856, -192 )
 transform/scale = Vector2( 1, 1 )
 starting_scale = 2
 
-[node name="dimensional_square_right2" parent="dimensions" instance=ExtResource( 7 )]
+[node name="dimensional_square_right3" parent="dimensions" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 1824, -224 )
-transform/scale = Vector2( 1, 1 )
+transform/pos = Vector2( 832, -384 )
+
+[node name="dimensional_square_left2" parent="dimensions" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1728, -832 )
+z/z = 0
 starting_scale = 2
 
-[node name="dimensional_square_right3" parent="dimensions" instance=ExtResource( 7 )]
+[node name="dimensional_square_left3" parent="dimensions" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 928, -480 )
-transform/scale = Vector2( 1, 1 )
-starting_scale = 2
+transform/pos = Vector2( 704, -192 )
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
+starting_scale = 1
+
+[node name="dimensional_square_right4" parent="dimensions" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 544, -480 )
+transform/scale = Vector2( 0.25, 0.25 )
+starting_scale = 0
+
+[node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 736, 992 )
+transform/scale = Vector2( 0.25, 0.25 )
+starting_scale = 0
+
+[node name="dimensional_square_right5" parent="dimensions" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1376, 608 )
+transform/scale = Vector2( 0.25, 0.25 )
+starting_scale = 0
+
+[node name="dimensional_square_left4" parent="dimensions" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1056, 800 )
+transform/scale = Vector2( 0.25, 0.25 )
+z/z = 0
+starting_scale = 0
 
 [node name="background" type="TileMap" parent="."]
 
 visibility/behind_parent = true
 mode = 0
-tile_set = ExtResource( 8 )
+tile_set = ExtResource( 7 )
 cell/size = Vector2( 128, 128 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -162,14 +232,14 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray(  )
+tile_data = IntArray( -327664, 36, -262144, 36, -262143, 36, -262142, 36, -262141, 36, -262140, 36, -262139, 36, -262138, 36, -262137, 36, -262136, 36, -262135, 36, -262134, 36, -262133, 36, -262132, 36, -262131, 36, -262130, 36, -262129, 36, -262128, 36, -262127, 36, -262126, 36, -262125, 36, -196608, 36, -196607, 36, -196606, 36, -196605, 36, -196604, 36, -196603, 36, -196602, 36, -196601, 36, -196600, 36, -196599, 36, -196598, 36, -196597, 36, -196596, 36, -196595, 36, -196594, 36, -196593, 36, -196592, 36, -196591, 36, -196590, 36, -196589, 36, -131072, 36, -131071, 36, -131070, 36, -131069, 36, -131068, 36, -131067, 36, -131066, 36, -131065, 36, -131064, 36, -131063, 36, -131062, 36, -131061, 36, -131060, 36, -131059, 36, -131058, 36, -131057, 36, -131056, 36, -131055, 36, -131054, 36, -131053, 36, -65536, 36, -65535, 36, -65534, 36, -65533, 36, -65532, 36, -65531, 36, -65530, 36, -65529, 36, -65528, 36, -65527, 36, -65526, 36, -65525, 36, -65524, 36, -65523, 36, -65522, 36, -65521, 36, -65520, 36, -65519, 36, -65518, 36, -65517, 36, 0, 36, 1, 36, 2, 36, 3, 36, 4, 36, 5, 36, 6, 36, 7, 36, 8, 36, 9, 36, 10, 36, 11, 36, 12, 36, 13, 36, 14, 36, 15, 36, 16, 36, 17, 36, 18, 36, 19, 36, 65536, 36, 65537, 36, 65538, 36, 65539, 36, 65540, 36, 65541, 36, 65542, 36, 65543, 36, 65544, 36, 65545, 36, 65546, 36, 65547, 36, 65548, 36, 65549, 36, 65550, 36, 65551, 36, 65552, 36, 65553, 36, 65554, 36, 65555, 36, 131072, 36, 131073, 36, 131074, 36, 131076, 36, 131077, 36, 131078, 36, 131079, 36, 131080, 36, 131081, 36, 131082, 36, 131083, 36, 131084, 36, 131085, 36, 131086, 36, 131087, 36, 131088, 36, 131089, 36, 131090, 36, 131091, 36, 196608, 36, 196609, 36, 196610, 36, 196611, 36, 196612, 36, 196613, 36, 196614, 36, 196615, 36, 196616, 36, 196617, 36, 196618, 36, 196619, 36, 196620, 36, 196621, 36, 196622, 36, 196623, 36, 196624, 36, 196625, 36, 196626, 36, 196627, 36, 262144, 36, 262145, 36, 262146, 36, 262147, 36, 262148, 36, 262149, 36, 262150, 36, 262151, 36, 262152, 36, 262153, 36, 262154, 36, 262155, 36, 262156, 36, 262157, 36, 262158, 36, 262159, 36, 262160, 36, 262161, 36, 262162, 36, 262163, 36, 327680, 36, 327681, 36, 327682, 36, 327683, 36, 327684, 36, 327685, 36, 327686, 36, 327687, 36, 327688, 36, 327689, 36, 327690, 36, 327691, 36, 327692, 36, 327693, 36, 327694, 36, 327695, 36, 327696, 36, 327697, 36, 327698, 36, 327699, 36, 393216, 36, 393217, 36, 393218, 36, 393219, 36, 393220, 36, 393221, 36, 393222, 36, 393223, 36, 393224, 36, 393225, 36, 393226, 36, 393227, 36, 393228, 36, 393229, 36, 393230, 36, 393231, 36, 393232, 36, 393233, 36, 393234, 36, 393235, 36, 458752, 36, 458753, 36, 458754, 36, 458755, 36, 458756, 36, 458757, 36, 458758, 36, 458759, 36, 458760, 36, 458761, 36, 458762, 36, 458763, 36, 458764, 36, 458765, 36, 458766, 36, 458767, 36, 458768, 36, 458769, 36, 458770, 36, 458771, 36, 524288, 36, 524289, 36, 524290, 36, 524291, 36, 524292, 36, 524293, 36, 524294, 36, 524295, 36, 524296, 36, 524297, 36, 524298, 36, 524299, 36, 524300, 36, 524301, 36, 524302, 36, 524303, 36, 524304, 36, 524305, 36, 524306, 36, 524307, 36, 589824, 36, 589825, 36, 589826, 36, 589827, 36, 589828, 36, 589829, 36, 589830, 36, 589831, 36, 589832, 36, 589833, 36, 589834, 36, 589835, 36, 589836, 36, 589837, 36, 589838, 36, 589839, 36, 589840, 36, 589841, 36, 589842, 36, 589843, 36, 655360, 36, 655361, 36, 655362, 36, 655363, 36, 655364, 36, 655365, 36, 655366, 36, 655367, 36, 655368, 36, 655369, 36, 655370, 36, 655371, 36, 655372, 36, 655373, 36, 655374, 36, 655375, 36, 655376, 36, 655377, 36, 655378, 36, 655379, 36, 720896, 36, 720897, 36, 720898, 36, 720899, 36, 720900, 36, 720901, 36, 720902, 36, 720903, 36, 720904, 36, 720905, 36, 720906, 36, 720907, 36, 720908, 36, 720909, 36, 720910, 36, 720911, 36, 720912, 36, 720913, 36, 720914, 36, 720915, 36, 786432, 36, 786433, 36, 786434, 36, 786435, 36, 786436, 36, 786437, 36, 786438, 36, 786439, 36, 786440, 36, 786441, 36, 786442, 36, 786443, 36, 786444, 36, 786445, 36, 786446, 36, 786447, 36, 786448, 36, 786449, 36, 786450, 36, 786451, 36, 851968, 36, 851969, 36, 851970, 36, 851971, 36, 851972, 36, 851973, 36, 851974, 36, 851975, 36, 851976, 36, 851977, 36, 851978, 36, 851979, 36, 851980, 36, 851981, 36, 851982, 36, 851983, 36, 851984, 36, 851985, 36, 851986, 36, 851987, 36, 917504, 36, 917505, 36, 917506, 36, 917507, 36, 917508, 36, 917509, 36, 917510, 36, 917511, 36, 917512, 36, 917513, 36, 917514, 36, 917515, 36, 917516, 36, 917517, 36, 917518, 36, 917519, 36, 917520, 36, 917521, 36, 917522, 36, 917523, 36, 983040, 36, 983041, 36, 983042, 36, 983043, 36, 983044, 36, 983045, 36, 983046, 36, 983047, 36, 983048, 36, 983049, 36, 983050, 36, 983051, 36, 983052, 36, 983053, 36, 983054, 36, 983055, 36, 983056, 36, 983057, 36, 983058, 36, 983059, 36 )
 __meta__ = { "_edit_lock_":true }
 
 [node name="decors" type="TileMap" parent="."]
 
 visibility/behind_parent = true
 mode = 0
-tile_set = ExtResource( 8 )
+tile_set = ExtResource( 7 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -182,46 +252,66 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -655342, 56, -589806, 56, -524270, 56, -458742, 39, -458734, 56, -458724, 39, -393198, 56, -327666, 51, -327664, 40, -327662, 56, -327659, 40, -327655, 40, -327651, 39, -262139, 41, -262111, 41, -196595, 29, -196594, 37, -196593, 10, -196590, 57, -196586, 52, -196585, 52, -131059, 31, -131058, 32, 32, 59, 65546, 62, 131077, 46, 131106, 53, 196633, 48, 393237, 47 )
+tile_data = IntArray( -589805, 56, -524269, 56, -458742, 39, -458733, 56, -458724, 39, -393216, 28, -393197, 56, -393180, 61, -327666, 51, -327664, 40, -327661, 56, -327659, 40, -327655, 40, -327651, 39, -262139, 23, -262111, 23, -196595, 29, -196594, 37, -196593, 10, -196589, 57, -196586, 52, -196585, 52, -131059, 31, -131058, 32, 32, 59, 65544, 28, 65546, 62, 131077, 46, 131106, 53, 196633, 48, 393237, 47, 786456, 51, 786465, 51, 851996, 60, 983073, 14, 983074, 17, 1048609, 15, 1048610, 16, 1114145, 15, 1114146, 16, 1179657, 46, 1179659, 46, 1179664, 37, 1179681, 15, 1179682, 16, 1179683, 49, 1245192, 53, 1245197, 45, 1245201, 47, 1245202, 47, 1245203, 47, 1245204, 47, 1245205, 47, 1245206, 47, 1245217, 15, 1245218, 16 )
 __meta__ = { "_edit_lock_":true }
 
 [node name="traps" type="Node2D" parent="."]
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="trap" parent="traps" instance=ExtResource( 9 )]
+[node name="trap" parent="traps" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 928, 288 )
 linear_damp = 0.1
 
-[node name="trap1" parent="traps" instance=ExtResource( 9 )]
+[node name="trap1" parent="traps" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 224, 32 )
 linear_damp = 0.1
 
-[node name="trap2" parent="traps" instance=ExtResource( 9 )]
+[node name="trap2" parent="traps" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 800, 224 )
 linear_damp = 0.1
 
-[node name="trap3" parent="traps" instance=ExtResource( 9 )]
+[node name="trap3" parent="traps" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 1632, 416 )
 linear_damp = 0.1
 
-[node name="trap4" parent="traps" instance=ExtResource( 9 )]
+[node name="trap4" parent="traps" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 2336, -32 )
 linear_damp = 0.1
 
-[node name="trap5" parent="traps" instance=ExtResource( 9 )]
+[node name="trap5" parent="traps" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 1632, 96 )
 linear_damp = 0.1
 
-[node name="trap6" parent="traps" instance=ExtResource( 9 )]
+[node name="trap6" parent="traps" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 544, 224 )
+linear_damp = 0.1
+
+[node name="trap7" parent="traps" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 1056, -96 )
+linear_damp = 0.1
+
+[node name="trap8" parent="traps" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 1248, -864 )
+linear_damp = 0.1
+
+[node name="trap9" parent="traps" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 2080, 1248 )
+linear_damp = 0.1
+
+[node name="trap10" parent="traps" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 992, 1248 )
 linear_damp = 0.1
 
 
