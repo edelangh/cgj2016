@@ -13,6 +13,7 @@ const DIST_TO_CENTER = 666
 const SLIDE_STOP_VELOCITY = 1.0
 const SLIDE_STOP_MIN_TRAVEL = 1.0
 
+var audioPlayer = null
 var velocity = Vector2()
 var on_air_time = 100
 var jumping = false
@@ -26,6 +27,7 @@ var animator = null
 func die():
 	die = true
 	global.run_death()
+	audioPlayer.play("scream_dead")
 
 
 func check_die():
@@ -129,4 +131,5 @@ func _ready():
 	global.gameover = false
 	animator = get_node("Sprite/anim")
 	animator.play("run")
+	audioPlayer = get_node("audioPlayer")
 	set_fixed_process(true)

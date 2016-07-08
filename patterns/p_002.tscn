@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://patterns/move.gd" type="Script" id=1]
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=4]
 [ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://tilemap/background.tres" type="TileSet" id=6]
+[ext_resource path="res://items/hotdog.tscn" type="PackedScene" id=7]
+[ext_resource path="res://items/beer.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -47,12 +49,10 @@ z/z = 0
 [node name="dimensional_square_right" parent="dimension" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 960, 128 )
-z/z = 0
 
 [node name="dimensional_square_right2" parent="dimension" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1984, 128 )
-z/z = 0
 
 [node name="dimensional_square_left2" parent="dimension" instance=ExtResource( 3 )]
 
@@ -62,12 +62,10 @@ z/z = 0
 [node name="dimensional_square_right1" parent="dimension" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 512, 960 )
-z/z = 0
 
 [node name="dimensional_square_right3" parent="dimension" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1792, 960 )
-z/z = 0
 
 [node name="dimensional_square_left3" parent="dimension" instance=ExtResource( 3 )]
 
@@ -161,6 +159,19 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( 65541, 40, 65544, 40, 65549, 40, 65552, 40, 65557, 40, 65560, 40, 65565, 40, 65568, 40, 327706, 55, 589828, 50, 589833, 61, 589838, 50, 589847, 50, 589851, 60, 589856, 50 )
+tile_data = IntArray( 65541, 40, 65544, 40, 65549, 40, 65552, 40, 65557, 40, 65560, 40, 65565, 40, 65568, 40, 327706, 54, 589828, 50, 589833, 61, 589838, 50, 589847, 50, 589851, 60, 589856, 50 )
+
+[node name="HotDog" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 672, -160 )
+score = 1
+
+[node name="beer" parent="." instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 416, 224 )
+
+[node name="beer1" parent="." instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 1504, 224 )
 
 

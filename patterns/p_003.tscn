@@ -26,7 +26,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -393199, 9, -393194, 10, -327664, 9, -327663, 1610612745, -327658, -1073741815, -327657, 10, -262133, 9, -262116, 10, -196598, 9, -196597, 1610612745, -196580, -1073741815, -196579, 10, -131067, 9, -65532, 9, -65531, 1610612745, 0, 1, 1, 1, 2, 1, 3, 5, 4, -1610612726, 35, 1, 36, 1, 37, 1, 38, 1, 39, 1, 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393220, 1, 393221, 1, 393222, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393246, 1, 393247, 1, 393248, 1, 393249, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 655363, 7, 655364, 7, 655365, 7, 655366, 7, 655368, 7, 655369, 7, 655370, 7, 655371, 7, 655373, 7, 655374, 7, 655375, 7, 655376, 7, 655378, 7, 655379, 7, 655380, 7, 655381, 7, 655383, 7, 655384, 7, 655385, 7, 655386, 7, 655388, 7, 655389, 7, 655390, 7, 655391, 7, 655393, 7, 655394, 7, 655395, 7, 655396, 7, 851968, 1, 851969, 1, 851970, -1073741823, 851975, 1, 851980, 1, 851985, 1, 851990, 1, 851995, 1, 852000, 1, 852005, 1, 852006, 1, 852007, 1, 917520, 9, 917521, 1610612745, 983055, 9, 983056, 1610612745, 1048589, 9, 1048590, 1, 1048591, 1, 1114124, 9, 1114125, 1610612745, 1179658, 9, 1179659, 1, 1179660, 1610612745, 1245184, 1, 1245185, 1, 1245186, 1, 1245187, 1, 1245188, 1, 1245189, 1, 1245190, 1, 1245191, 1, 1245192, 1, 1245193, 1, 1245194, 536870916 )
+tile_data = IntArray( -393199, 9, -393194, 10, -327664, 9, -327663, 1610612745, -327658, -1073741815, -327657, 10, -262133, 9, -262116, 10, -196598, 9, -196597, 1610612745, -196580, -1073741815, -196579, 10, -131067, 9, -65532, 9, -65531, 1610612745, 0, 1, 1, 1, 2, 1, 3, 5, 4, -1610612726, 35, 1, 36, 1, 37, 1, 38, 1, 39, 1, 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393220, 1, 393221, 1, 393222, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393246, 1, 393247, 1, 393248, 1, 393249, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 655363, 9, 655364, 7, 655365, 7, 655366, 7, 655368, 7, 655369, 7, 655370, 7, 655371, 7, 655373, 7, 655374, 7, 655375, 7, 655376, 7, 655378, 7, 655379, 7, 655380, 7, 655381, 7, 655383, 7, 655384, 7, 655385, 7, 655386, 7, 655388, 7, 655389, 7, 655390, 7, 655391, 7, 655393, 7, 655394, 7, 655395, 7, 655396, 7, 851968, 1, 851969, 1, 851970, 1, 851975, 1, 851980, 1, 851985, 1, 851990, 1, 851995, 1, 852000, 1, 852005, 1, 852006, 1, 852007, 1, 917520, 9, 917521, 1610612745, 983055, 9, 983056, 1610612745, 1048589, 9, 1048590, 1, 1048591, 1, 1114124, 9, 1114125, 1610612745, 1179658, 9, 1179659, 1, 1179660, 1610612745, 1245184, 1, 1245185, 1, 1245186, 1, 1245187, 1, 1245188, 1, 1245189, 1, 1245190, 1, 1245191, 1, 1245192, 1, 1245193, 1, 1245194, 536870916 )
 __meta__ = { "_edit_lock_":true }
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -46,22 +46,18 @@ z/z = 0
 [node name="dimensional_square_right" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 768, 192 )
-z/z = 0
 
 [node name="dimensional_square_right1" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1024, 192 )
-z/z = 0
 
 [node name="dimensional_square_right2" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1600, 448 )
-z/z = 0
 
 [node name="dimensional_square_right3" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1152, 192 )
-z/z = 0
 
 [node name="dimensional_square_left2" parent="Node2D" instance=ExtResource( 3 )]
 
@@ -76,22 +72,18 @@ z/z = 0
 [node name="dimensional_square_right4" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 896, 192 )
-z/z = 0
 
 [node name="dimensional_square_right5" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1728, 448 )
-z/z = 0
 
 [node name="dimensional_square_right6" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1856, 448 )
-z/z = 0
 
 [node name="dimensional_square_right7" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1472, 448 )
-z/z = 0
 
 [node name="dimensional_square_left5" parent="Node2D" instance=ExtResource( 3 )]
 
@@ -131,17 +123,14 @@ z/z = 0
 [node name="dimensional_square_right8" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 640, 960 )
-z/z = 0
 
 [node name="dimensional_square_right9" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1280, 960 )
-z/z = 0
 
 [node name="dimensional_square_right10" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1920, 960 )
-z/z = 0
 
 [node name="background" type="TileMap" parent="."]
 

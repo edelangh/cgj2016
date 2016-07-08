@@ -1,14 +1,16 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
 [ext_resource path="res://player/player.png" type="Texture" id=2]
+[ext_resource path="res://sound/eat_apple.smp" type="Sample" id=3]
+[ext_resource path="res://sound/scream_dead.smp" type="Sample" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 23.5378
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -23, 0, 43, 0, 16, 45, -16, 45 )
@@ -33,15 +35,20 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/keys = { "cont":false, "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "values":[ 0, 1, 2, 4, 6 ] }
 
+[sub_resource type="SampleLibrary" id=5]
+
+samples/scream_dead = { "db":0.0, "pitch":1.0, "sample":ExtResource( 4 ) }
+samples/eat = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
+
 [node name="Player" type="KinematicBody2D"]
 
 z/z = 2
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 23.5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 23.5 )
 shapes/0/trigger = true
-shapes/1/shape = SubResource( 5 )
-shapes/1/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -88,6 +95,17 @@ build_mode = 0
 polygon = Vector2Array( -16, 45, 16, 45, 43, 0, -23, 0 )
 shape_range = Vector2( 1, 1 )
 trigger = false
+
+[node name="audioPlayer" type="SamplePlayer2D" parent="."]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 1
+config/samples = SubResource( 5 )
+config/pitch_random = 0.0
 
 [connection signal="timeout" from="Timer" to="." method="emit_dust"]
 

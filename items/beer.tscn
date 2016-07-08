@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://items/coin.gd" type="Script" id=1]
-[ext_resource path="res://items/coin.png" type="Texture" id=2]
+[ext_resource path="res://tilemap/decocastle.png" type="Texture" id=2]
 [ext_resource path="res://sound/coin1.wav" type="Sample" id=3]
 [ext_resource path="res://sound/eat_apple.wav" type="Sample" id=4]
 
@@ -13,13 +13,21 @@ radius = 10.0
 [sub_resource type="Animation" id=2]
 
 resource/name = "spin"
-length = 1.5
+length = 1.0
 loop = true
 step = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
-tracks/0/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5, 0.75, 1, 1.25, 1.5 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1 ), "values":[ 0, 1, 2, 3, 2, 1, 0 ] }
+tracks/0/keys = { "cont":false, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:region_rect")
+tracks/1/interp = 0
+tracks/1/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5, 0.75 ), "transitions":FloatArray( 1, 1, 1, 1 ), "values":[ Rect2( 0, 832, 64, 64 ), Rect2( 64, 832, 64, 64 ), Rect2( 128, 832, 64, 64 ), Rect2( 64, 832, 64, 64 ) ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:transform/pos")
+tracks/2/interp = 1
+tracks/2/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5, 0.75 ), "transitions":FloatArray( 1, 1, 1, 1 ), "values":[ Vector2( 0, 0 ), Vector2( 0, -4 ), Vector2( -1, -8 ), Vector2( 0, -4 ) ] }
 
 [sub_resource type="Animation" id=3]
 
@@ -41,8 +49,9 @@ tracks/1/keys = { "times":FloatArray( 0.5 ), "transitions":FloatArray( 1 ), "val
 samples/coin-collect = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
 samples/eat = { "db":0.0, "pitch":1.0, "sample":ExtResource( 4 ) }
 
-[node name="coin" type="Area2D"]
+[node name="beer" type="Area2D"]
 
+transform/pos = Vector2( 0, -4 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -53,11 +62,16 @@ linear_damp = 0.1
 angular_damp = 1.0
 script/script = ExtResource( 1 )
 __meta__ = { "_edit_group_":true }
+sound = "eat"
+score = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
 hframes = 4
+frame = 1
+region = true
+region_rect = Rect2( 64, 832, 64, 64 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
 
