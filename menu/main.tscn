@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://images_src/texture/reinder_frise.png" type="Texture" id=1]
-[ext_resource path="res://images_src/texture/bois3_64.png" type="Texture" id=2]
-[ext_resource path="res://images_src/texture/bois3_focus_64.png" type="Texture" id=3]
+[ext_resource path="res://images_src/texture/bois3_focus_64.png" type="Texture" id=2]
+[ext_resource path="res://images_src/texture/bois3_64.png" type="Texture" id=3]
 [ext_resource path="res://font/killig.fnt" type="Font" id=4]
 [ext_resource path="res://images_src/texture/reinder_frise2.png" type="Texture" id=5]
 
@@ -10,7 +10,7 @@
 
 script/source = "\nextends TextureButton\n\n\nfunc _on_button_pressed():\n\tscene_manager.set_scene(\"res://game.tscn\")\n\nfunc _ready():\n\tset_focus_mode(FOCUS_ALL)\n\tgrab_focus()\n\tconnect(\"pressed\", self, \"_on_button_pressed\")\n\tset_texture_scale(Vector2(get_rect().size.x/get_minimum_size().x, get_rect().size.y/get_minimum_size().y))\n\tset_process_input(true)\n\nfunc _input(event):\n\tif event.is_action_pressed(\"ui_up\"):\n\t\tgrab_focus()\n"
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=2]
 
 script/source = "extends TextureButton\n\nfunc _on_button_pressed():\n\tget_tree().quit()\n\n\nfunc _ready():\n\tset_focus_mode(FOCUS_ALL)\n\tconnect(\"pressed\", self, \"_on_button_pressed\")\n\tset_texture_scale(Vector2(get_rect().size.x/get_minimum_size().x, get_rect().size.y/get_minimum_size().y))\n\tset_process_input(true)\n\n\nfunc _input(event):\n\tif event.is_action_pressed(\"ui_down\"):\n\t\tgrab_focus()\n"
 
@@ -93,7 +93,7 @@ size_flags/vertical = 2
 toggle_mode = false
 textures/normal = ExtResource( 2 )
 textures/focused = ExtResource( 3 )
-script/script = SubResource( 3 )
+script/script = SubResource( 2 )
 __meta__ = { "_edit_group_":true }
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/Button2"]
