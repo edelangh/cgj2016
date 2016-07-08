@@ -8,4 +8,4 @@ func _ready():
 
 func _on_Area2D_body_enter(body):
 	if not taken and body extends preload("res://player/player.gd"):
-		global.run_death()
+		global.player.die_because_trap()
