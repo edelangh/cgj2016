@@ -24,9 +24,9 @@ tracks/0/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5, 0.75, 1, 1.25, 
 [sub_resource type="Animation" id=3]
 
 resource/name = "taken"
-length = 0.5
+length = 0.3
 loop = false
-step = 0.0
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -34,7 +34,7 @@ tracks/0/keys = { "cont":false, "times":FloatArray( 0 ), "transitions":FloatArra
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
-tracks/1/keys = { "times":FloatArray( 0.5 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"queue_free" } ] }
+tracks/1/keys = { "times":FloatArray( 0.3 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"queue_free" } ] }
 
 [sub_resource type="SampleLibrary" id=4]
 
@@ -53,6 +53,8 @@ linear_damp = 0.1
 angular_damp = 1.0
 script/script = ExtResource( 1 )
 __meta__ = { "_edit_group_":true }
+sound = "coin-collect"
+score = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 

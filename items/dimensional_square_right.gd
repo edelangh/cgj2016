@@ -43,5 +43,6 @@ func on_dimension_right(scale):
 		get_node("anim").play("right")
 		current_scale += 1
 
+
 func is_not_visible():
-	return get_pos().x > global.main_camera.get_pos().x + get_viewport().get_rect().size.x
+	return get_pos().x > get_node("/root/global").main_camera.get_pos().x + get_viewport().get_rect().size.x

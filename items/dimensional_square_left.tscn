@@ -44,7 +44,6 @@ z/z = 3
 texture = ExtResource( 1 )
 script/script = ExtResource( 2 )
 __meta__ = { "_edit_group_":true }
-starting_scale = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

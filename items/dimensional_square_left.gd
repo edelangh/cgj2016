@@ -23,7 +23,6 @@ func rescale(new_scale):
 
 
 func on_dimension_left(scale):
-	print(get_pos().x > get_viewport().get_rect().size.x)
 	if get_tree().is_editor_hint() || is_not_visible():
 		return
 	if current_scale == -1:
@@ -44,5 +43,6 @@ func on_dimension_right(scale):
 		get_node("anim").play("right")
 		current_scale -= 1
 
+
 func is_not_visible():
-	return get_pos().x > global.main_camera.get_pos().x + get_viewport().get_rect().size.x
+	return get_pos().x > get_node("/root/global").main_camera.get_pos().x + get_viewport().get_rect().size.x
