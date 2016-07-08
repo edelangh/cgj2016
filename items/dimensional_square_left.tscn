@@ -41,7 +41,6 @@ tracks/1/keys = { "cont":false, "times":FloatArray( 0, 0.2 ), "transitions":Floa
 [node name="dimensional_square_left" type="Sprite"]
 
 transform/scale = Vector2( 0.5, 0.5 )
-z/z = 3
 texture = ExtResource( 1 )
 script/script = ExtResource( 2 )
 __meta__ = { "_edit_group_":true }

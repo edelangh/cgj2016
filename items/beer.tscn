@@ -8,7 +8,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 10.0
+radius = 24.4046
 
 [sub_resource type="Animation" id=2]
 
@@ -46,8 +46,8 @@ tracks/1/keys = { "times":FloatArray( 0.5 ), "transitions":FloatArray( 1 ), "val
 
 [sub_resource type="SampleLibrary" id=4]
 
-samples/coin-collect = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
 samples/eat = { "db":0.0, "pitch":1.0, "sample":ExtResource( 4 ) }
+samples/coin-collect = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
 
 [node name="beer" type="Area2D"]
 
@@ -67,6 +67,7 @@ score = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 
+transform/pos = Vector2( 0, -3.49786 )
 texture = ExtResource( 2 )
 hframes = 4
 frame = 1

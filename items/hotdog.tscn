@@ -8,7 +8,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 10.0
+radius = 17.6669
 
 [sub_resource type="Animation" id=2]
 
@@ -17,13 +17,9 @@ length = 1.0
 loop = true
 step = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/keys = { "cont":false, "times":FloatArray(  ), "transitions":FloatArray(  ), "values":[  ] }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:region_rect")
-tracks/1/interp = 0
-tracks/1/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5, 0.75 ), "transitions":FloatArray( 1, 1, 1, 1 ), "values":[ Rect2( 0, 768, 64, 64 ), Rect2( 64, 768, 64, 64 ), Rect2( 128, 768, 64, 64 ), Rect2( 64, 768, 64, 64 ) ] }
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 0
+tracks/0/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5, 0.75 ), "transitions":FloatArray( 1, 1, 1, 1 ), "values":[ Rect2( 0, 768, 64, 64 ), Rect2( 64, 768, 64, 64 ), Rect2( 128, 768, 64, 64 ), Rect2( 64, 768, 64, 64 ) ] }
 
 [sub_resource type="Animation" id=3]
 
@@ -42,8 +38,8 @@ tracks/1/keys = { "times":FloatArray( 0.5 ), "transitions":FloatArray( 1 ), "val
 
 [sub_resource type="SampleLibrary" id=4]
 
-samples/coin-collect = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
 samples/eat = { "db":0.0, "pitch":1.0, "sample":ExtResource( 4 ) }
+samples/coin-collect = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
 
 [node name="HotDog" type="Area2D"]
 
