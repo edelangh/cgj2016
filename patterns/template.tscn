@@ -90,7 +90,7 @@ starting_scale = 0
 
 mode = 0
 tile_set = ExtResource( 6 )
-cell/size = Vector2( 64, 64 )
+cell/size = Vector2( 128, 128 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 cell/half_offset = 2
