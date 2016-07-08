@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://items/coin.tscn" type="PackedScene" id=2]
-[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=3]
-[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=4]
-[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=5]
-[ext_resource path="res://tilemap/background.tres" type="TileSet" id=6]
-[ext_resource path="res://items/trap.tscn" type="PackedScene" id=7]
+[ext_resource path="res://items/hotdog.tscn" type="PackedScene" id=3]
+[ext_resource path="res://items/beer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=6]
+[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=7]
+[ext_resource path="res://tilemap/background.tres" type="TileSet" id=8]
+[ext_resource path="res://items/trap.tscn" type="PackedScene" id=9]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,7 +30,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -524288, 0, -524249, 1, 0, 0, 39, 1, 1310720, 0, 1310759, 1 )
+tile_data = IntArray( -524288, 0, -524287, 1, -524286, 1, -524285, 1, -524284, 10, -524249, 1, -458749, 6, -458748, 4, -458747, 10, -393212, 6, -393211, 8, -65535, 9, -65534, 1, -65531, 1, -65530, 1, -65529, 1, -65528, 1, -65527, 1, -65526, 1, -65525, 1, -65524, 1, -65523, 1, -65522, 1, -65521, 1, -65520, 1, -65519, 1, -65518, 1, -65517, 1, -65516, 1, -65515, 1, -65514, 1, -65513, 1, -65512, 1, -65511, 1, -65510, 1, -65509, 1, -65508, 1, -65507, 1, -65506, 1, -65505, 1, -65504, 1, -65503, 1, 0, 0, 1, 1, 2, 5, 38, 9, 39, 1, 65537, 4, 65538, 4, 65539, 10, 65573, 9, 65574, 4, 65575, 5, 131074, 4, 131075, 4, 131076, 10, 131108, 9, 131109, 4, 131110, 7, 131111, 8, 196611, 4, 196612, 5, 196640, 9, 196641, 1, 196642, 1, 196643, 1, 196644, 4, 196645, 7, 262148, 4, 262149, 1, 262150, 1, 262151, 2, 262175, 9, 262176, 4, 262177, 4, 262178, 7, 262179, 7, 262180, 7, 327685, 4, 327686, 4, 327687, 1, 327688, 1, 327689, 1, 327690, 1, 327691, 1, 327692, 2, 327693, 1, 327694, 1, 327695, 1, 327696, 1, 327697, 1, 327698, 1, 327699, 1, 327700, 2, 327710, 9, 327711, 4, 327712, 7, 327713, 8, 393236, 5, 393245, 0, 393246, 4, 393247, 5, 458772, 3, 458773, 1, 458774, 1, 458775, 1, 458776, 1, 458777, 1, 458778, 1, 458779, 1, 458780, 1, 458781, 4, 458782, 4, 458783, 5, 524308, 6, 524309, 7, 524310, 7, 524311, 7, 524312, 7, 524313, 7, 524314, 7, 524315, 7, 524316, 7, 524317, 7, 524318, 7, 524319, 8, 1310720, 0, 1310759, 1 )
 __meta__ = { "_edit_lock_":true }
 
 [node name="coins" type="Node2D" parent="."]
@@ -65,11 +67,41 @@ transform/pos = Vector2( 2592, -480 )
 gravity = 9.8
 linear_damp = 0.1
 
+[node name="HotDog" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1504, 416 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer" parent="coins" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1376, 288 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer1" parent="coins" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1120, 288 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="HotDog1" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1632, 352 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="HotDog2" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1760, 416 )
+gravity = 9.8
+linear_damp = 0.1
+
 [node name="one_way_platforms" type="Node2D" parent="."]
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="one_way_platform" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform" parent="one_way_platforms" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 96, 32 )
 
@@ -77,22 +109,47 @@ transform/pos = Vector2( 96, 32 )
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 4 )]
+[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 192, 64 )
-transform/scale = Vector2( 0.5, 0.5 )
+transform/pos = Vector2( 1120, 160 )
+z/z = 0
+starting_scale = 2
 
-[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 5 )]
+[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 288, 32 )
+transform/pos = Vector2( 1432, 216 )
 transform/scale = Vector2( 0.25, 0.25 )
 starting_scale = 0
+
+[node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1824, 224 )
+z/z = 0
+starting_scale = 2
+
+[node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 672, -224 )
+transform/scale = Vector2( 1, 1 )
+starting_scale = 2
+
+[node name="dimensional_square_right2" parent="dimensions" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 1824, -224 )
+transform/scale = Vector2( 1, 1 )
+starting_scale = 2
+
+[node name="dimensional_square_right3" parent="dimensions" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 928, -480 )
+transform/scale = Vector2( 1, 1 )
+starting_scale = 2
 
 [node name="background" type="TileMap" parent="."]
 
 visibility/behind_parent = true
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 8 )
 cell/size = Vector2( 128, 128 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -112,7 +169,7 @@ __meta__ = { "_edit_lock_":true }
 
 visibility/behind_parent = true
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 8 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -125,16 +182,46 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray(  )
+tile_data = IntArray( -655342, 56, -589806, 56, -524270, 56, -458742, 39, -458734, 56, -458724, 39, -393198, 56, -327666, 51, -327664, 40, -327662, 56, -327659, 40, -327655, 40, -327651, 39, -262139, 41, -262111, 41, -196595, 29, -196594, 37, -196593, 10, -196590, 57, -196586, 52, -196585, 52, -131059, 31, -131058, 32, 32, 59, 65546, 62, 131077, 46, 131106, 53, 196633, 48, 393237, 47 )
 __meta__ = { "_edit_lock_":true }
 
 [node name="traps" type="Node2D" parent="."]
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="trap" parent="traps" instance=ExtResource( 7 )]
+[node name="trap" parent="traps" instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 352, 32 )
+transform/pos = Vector2( 928, 288 )
+linear_damp = 0.1
+
+[node name="trap1" parent="traps" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 224, 32 )
+linear_damp = 0.1
+
+[node name="trap2" parent="traps" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 800, 224 )
+linear_damp = 0.1
+
+[node name="trap3" parent="traps" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1632, 416 )
+linear_damp = 0.1
+
+[node name="trap4" parent="traps" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 2336, -32 )
+linear_damp = 0.1
+
+[node name="trap5" parent="traps" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1632, 96 )
+linear_damp = 0.1
+
+[node name="trap6" parent="traps" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 544, 224 )
 linear_damp = 0.1
 
 
