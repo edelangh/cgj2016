@@ -5,7 +5,7 @@
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, -16, 32, 16, -32, 16, -32, -16 )
+points = Vector2Array( 40, -12, 40, 15, -40, 15, -40, -12 )
 
 [node name="one_way_platform" type="Sprite"]
 
@@ -30,7 +30,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( 32, -16, 32, 16, -32, 16, -32, -16 )
+polygon = Vector2Array( 40, -12, 40, 15, -40, 15, -40, -12 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 

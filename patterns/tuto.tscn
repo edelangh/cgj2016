@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://items/beer.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://items/trap.tscn" type="PackedScene" id=8]
 [ext_resource path="res://font/big_intro.fnt" type="Font" id=9]
 [ext_resource path="res://font/Medici Text.fnt" type="Font" id=10]
+[ext_resource path="res://particles/press_left.tscn" type="PackedScene" id=11]
+[ext_resource path="res://particles/press_right.tscn" type="PackedScene" id=12]
 
 [node name="Node2D" type="Node2D"]
 
@@ -69,6 +71,8 @@ score_multiplier = 1
 [node name="HotDog" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1440, -224 )
+gravity = 9.8
+linear_damp = 0.1
 
 [node name="one_way_platforms" type="Node2D" parent="."]
 
@@ -144,29 +148,34 @@ __meta__ = { "_edit_lock_":true }
 
 [node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 1792, -64 )
+transform/pos = Vector2( 2240, -64 )
+transform/scale = Vector2( 0.5, 0.5 )
 z/z = 0
-starting_scale = 2
+starting_scale = 1
 
 [node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 2240, -64 )
+transform/pos = Vector2( 1792, -64 )
+transform/scale = Vector2( 1, 1 )
+starting_scale = 2
 
 [node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 1792, -320 )
+transform/pos = Vector2( 2240, -320 )
+transform/scale = Vector2( 0.5, 0.5 )
 z/z = 0
-starting_scale = 2
+starting_scale = 1
 
 [node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 2240, -320 )
+transform/pos = Vector2( 1792, -320 )
+transform/scale = Vector2( 1, 1 )
+starting_scale = 2
 
-[node name="dimensional_square_left2" parent="dimensions" instance=ExtResource( 5 )]
+[node name="dimensional_square_right2" parent="dimensions" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 2240, 320 )
 transform/scale = Vector2( 0.25, 0.25 )
-z/z = 0
 starting_scale = 0
 
 [node name="background" type="TileMap" parent="."]
@@ -224,6 +233,7 @@ __meta__ = { "_edit_lock_":true }
 
 [node name="Polygon2D" type="Polygon2D" parent="texts"]
 
+visibility/visible = false
 polygon = Vector2Array( 1630, -224, 1953, -224, 1953, -83, 1630, -83 )
 uv = Vector2Array(  )
 color = Color( 0, 0, 1, 0.392157 )
@@ -237,6 +247,7 @@ invert/border = 100.0
 
 [node name="Polygon2D1" type="Polygon2D" parent="texts"]
 
+visibility/visible = false
 transform/pos = Vector2( 450, -2 )
 polygon = Vector2Array( 1630, -224, 1953, -224, 1953, -83, 1630, -83 )
 uv = Vector2Array(  )
@@ -251,6 +262,7 @@ invert/border = 100.0
 
 [node name="Label" type="Label" parent="texts"]
 
+visibility/visible = false
 margin/left = 1661.0
 margin/top = -209.0
 margin/right = 2432.0
@@ -267,6 +279,7 @@ max_lines_visible = -1
 
 [node name="Label1" type="Label" parent="texts"]
 
+visibility/visible = false
 margin/left = 2117.0
 margin/top = -206.0
 margin/right = 2888.0
@@ -301,6 +314,7 @@ max_lines_visible = -1
 
 [node name="Label3" type="Label" parent="texts"]
 
+visibility/visible = false
 margin/left = 1729.0
 margin/top = -136.0
 margin/right = 2500.0
@@ -317,6 +331,7 @@ max_lines_visible = -1
 
 [node name="Label4" type="Label" parent="texts"]
 
+visibility/visible = false
 margin/left = 2177.0
 margin/top = -137.0
 margin/right = 2948.0
@@ -331,5 +346,13 @@ text = "twice"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="press_left" parent="texts" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 1792, -191 )
+
+[node name="press_right" parent="texts" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2241, -191 )
 
 
