@@ -8,12 +8,12 @@
 custom_solver_bias = 0.0
 radius = 23.5378
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -23, 1, 38, 0, 42, 10, 6, 45, -16, 45 )
+points = Vector2Array( -23, 0, 43, 0, 16, 45, -16, 45 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 length = 2.0
 loop = true
@@ -23,7 +23,7 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/keys = { "cont":false, "times":FloatArray( 0, 0.4, 0.8, 1.2, 1.6 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "values":[ 8, 9, 11, 13, 15 ] }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 
 length = 0.5
 loop = true
@@ -35,13 +35,13 @@ tracks/0/keys = { "cont":false, "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ), "tr
 
 [node name="Player" type="KinematicBody2D"]
 
-z/z = 1
+z/z = 2
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 23.5 )
 shapes/0/trigger = true
-shapes/1/shape = SubResource( 6 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/shape = SubResource( 5 )
+shapes/1/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -55,16 +55,14 @@ transform/scale = Vector2( 0.465, 0.465 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 8
-frame = 15
-__meta__ = { "_editor_collapsed":true }
 
 [node name="anim" type="AnimationPlayer" parent="Sprite"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.01
 root/root = NodePath("..")
-anims/jump = SubResource( 4 )
-anims/run = SubResource( 5 )
+anims/jump = SubResource( 3 )
+anims/run = SubResource( 4 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -87,7 +85,7 @@ autostart = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
 build_mode = 0
-polygon = Vector2Array( -16, 45, 6, 45, 42, 10, 38, 0, -23, 1 )
+polygon = Vector2Array( -16, 45, 16, 45, 43, 0, -23, 0 )
 shape_range = Vector2( 1, 1 )
 trigger = false
 
