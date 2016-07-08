@@ -15,7 +15,7 @@ script/source = "\nextends TextureButton\n\n# member variables here, example:\n#
 
 [sub_resource type="GDScript" id=3]
 
-script/source = "extends TextureButton\n\n# member variables here, example:\n# var a=2\n# var b=\"textvar\"\n\nfunc _on_button_pressed():\n\tget_tree().quit()\n\nfunc _ready():\n\t# Called every time the node is added to the scene.\n\t# Initialization here\n\tconnect(\"pressed\", self, \"_on_button_pressed\")\n\tset_texture_scale(Vector2(get_rect().size.x/get_minimum_size().x, get_rect().size.y/get_minimum_size().y))\n\tpass"
+script/source = "extends TextureButton\n\nfunc _on_button_pressed():\n\tget_tree().quit()\n\nfunc _ready():\n\tconnect(\"pressed\", self, \"_on_button_pressed\")\n\tset_texture_scale(Vector2(get_rect().size.x/get_minimum_size().x, get_rect().size.y/get_minimum_size().y))\n\tset_process_input(true)\n\tpass\n\t\nfunc _input(event):\n\tif Input.is_action_pressed(\"escape\"):\n\t\t_on_button_pressed()"
 
 [node name="Node" type="Node"]
 
