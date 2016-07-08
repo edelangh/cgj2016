@@ -23,8 +23,30 @@ var prev_jump_pressed = false
 var death = false
 var animator = null
 
+var fleshs = null # set in ready
+var sprite = null # set in ready
+func spread_fleshs():
+	var child_count = fleshs.get_child_count()
+	var i = 0
+	sprite.hide()
+	while i < child_count:
+		var child = fleshs.get_child(i)
+		child.show()
+		var strength = Vector2(rand_range(-500, 100), rand_range(-1000, 100) - 200)
+		child.apply_impulse(get_pos(), strength)
+		child.set_gravity_scale(25)
+		i += 1
+
+func hide_fleshs():
+	var child_count = fleshs.get_child_count()
+	var i = 0
+	while i < child_count:
+		var child = fleshs.get_child(i)
+		child.hide()
+		i += 1
 
 func die():
+	emit_signal("spread_fleshs")
 	death = true
 	global.run_death()
 	audioPlayer.play("scream_dead")
@@ -33,7 +55,7 @@ func die():
 func die_because_trap():
 	die()
 	set_fixed_process(false)
-	animator.play("jump") # TODO: EXPLOSION !!!!
+	spread_fleshs()
 	
 
 func check_die():
@@ -138,4 +160,7 @@ func _ready():
 	animator = get_node("Sprite/anim")
 	animator.play("run")
 	audioPlayer = get_node("audioPlayer")
+	fleshs = get_node("Fleshs")
+	sprite = get_node("Sprite")
+	hide_fleshs()
 	set_fixed_process(true)
