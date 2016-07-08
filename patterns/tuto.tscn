@@ -72,6 +72,12 @@ transform/pos = Vector2( 992, 32 )
 gravity = 9.8
 linear_damp = 0.1
 
+[node name="coin11" parent="coins" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1376, -224 )
+gravity = 9.8
+linear_damp = 0.1
+
 [node name="one_way_platforms" type="Node2D" parent="."]
 
 __meta__ = { "_edit_lock_":true }
@@ -149,6 +155,7 @@ starting_scale = 2
 [node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 2176, 192 )
+transform/scale = Vector2( 0.25, 0.25 )
 starting_scale = 0
 
 [node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 4 )]
@@ -217,7 +224,11 @@ __meta__ = { "_edit_lock_":true }
 transform/pos = Vector2( 1376, -96 )
 linear_damp = 0.1
 
-[node name="Label" type="Label" parent="."]
+[node name="texts" type="Node2D" parent="."]
+
+z/z = 7
+
+[node name="Label" type="Label" parent="texts"]
 
 margin/left = 1593.0
 margin/top = -206.0

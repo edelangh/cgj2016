@@ -6,6 +6,7 @@ var current_scale
 
 
 func _ready():
+	set_z(0)
 	if get_tree().is_editor_hint():
 		return
 	rescale(starting_scale)
