@@ -66,9 +66,11 @@ func _fixed_process(delta):
 		#var collider = get_collider()
 
 		var n = get_collision_normal()
-		if (rad2deg(acos(n.dot(Vector2(0, -1)))) < FLOOR_ANGLE_TOLERANCE):
+		var rad = acos(n.dot(Vector2(0, -1)))
+		if (rad2deg(rad) < FLOOR_ANGLE_TOLERANCE):
 			# If angle to the "up" vectors is < angle tolerance
 			# char is on floor
+			set_rot(rad / 2 * -sign(n.x))
 			on_air_time = 0
 			floor_velocity = get_collider_velocity()
 		
@@ -91,6 +93,7 @@ func _fixed_process(delta):
 		# If falling, no longer jumping
 		jumping = false
 		animator.play("run")
+		set_rot(0)
 
 	if jump && jumping and can_continue_jump:
 		velocity.y -= (JUMP_SPEED_CONTINUE + velocity.y) * delta
