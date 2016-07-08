@@ -235,4 +235,60 @@ region = true
 region_rect = Rect2( 704, 640, 128, 128 )
 __meta__ = { "_edit_group_":true }
 
+[node name="board4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 832 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 512, 768, 128, 128 )
+__meta__ = { "_edit_group_":true }
+
+[node name="board5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 960 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 512, 896, 128, 128 )
+__meta__ = { "_edit_group_":true }
+
+[node name="board6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 832 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 640, 768, 128, 128 )
+__meta__ = { "_edit_group_":true }
+
+[node name="board7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 960 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 640, 896, 128, 128 )
+__meta__ = { "_edit_group_":true }
+
+[node name="board8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 832 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 768, 768, 128, 128 )
+__meta__ = { "_edit_group_":true }
+
+[node name="board9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 960 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 768, 896, 128, 128 )
+__meta__ = { "_edit_group_":true }
+
+[node name="board10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 896 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 256, 832, 128, 128 )
+__meta__ = { "_edit_group_":true }
+
 
