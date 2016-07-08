@@ -26,7 +26,7 @@ var x_max_to_die
 func _ready():
 	var screen_size = get_viewport().get_rect().size
 	y_max_to_die = screen_size.y * 1.5
-	x_max_to_die = -screen_size.x * 0.7
+	x_max_to_die = -screen_size.x * 0.651
 
 func run_death():
 	if not gameover:
