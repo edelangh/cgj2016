@@ -14,6 +14,7 @@ func _ready():
 	start_pos = -get_viewport().get_rect().size.x * 0.5
 	store.push_back(preload('res://patterns/tuto.tscn'))
 	store.push_back(preload('res://patterns/tresor.tscn'))
+	store.push_back(preload('res://patterns/stairs.tscn'))
 	store.push_back(preload('res://patterns/p_001.tscn'))
 	store.push_back(preload('res://patterns/p_002.tscn'))
 	store.push_back(preload('res://patterns/p_003.tscn'))
