@@ -47,12 +47,14 @@ linear_damp = 0.1
 transform/pos = Vector2( 1376, 288 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer1" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1120, 288 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="HotDog1" parent="coins" instance=ExtResource( 2 )]
 
@@ -71,18 +73,21 @@ linear_damp = 0.1
 transform/pos = Vector2( 2144, -736 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer3" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 736, -480 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer4" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 864, -608 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="HotDog3" parent="coins" instance=ExtResource( 2 )]
 
@@ -95,36 +100,42 @@ linear_damp = 0.1
 transform/pos = Vector2( 1248, -736 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer6" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1376, -96 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer7" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 224, 608 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer8" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 608, 928 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer9" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1824, 1248 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer10" parent="coins" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 2336, 1248 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="one_way_platforms" type="Node2D" parent="."]
 
@@ -185,20 +196,24 @@ transform/pos = Vector2( 544, -480 )
 transform/scale = Vector2( 0.25, 0.25 )
 starting_scale = 0
 
-[node name="dimensional_square_left4" parent="dimensions" instance=ExtResource( 5 )]
+[node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 960, 832 )
-transform/scale = Vector2( 0.5, 0.5 )
-z/z = 0
-starting_scale = 1
+transform/pos = Vector2( 736, 992 )
+transform/scale = Vector2( 0.25, 0.25 )
+starting_scale = 0
 
 [node name="dimensional_square_right5" parent="dimensions" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 1280, 640 )
+transform/pos = Vector2( 1376, 608 )
+transform/scale = Vector2( 0.25, 0.25 )
+starting_scale = 0
 
-[node name="dimensional_square_right6" parent="dimensions" instance=ExtResource( 6 )]
+[node name="dimensional_square_left4" parent="dimensions" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 640, 1024 )
+transform/pos = Vector2( 1056, 800 )
+transform/scale = Vector2( 0.25, 0.25 )
+z/z = 0
+starting_scale = 0
 
 [node name="background" type="TileMap" parent="."]
 
