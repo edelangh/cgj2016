@@ -36,105 +36,117 @@ __meta__ = { "_editor_collapsed":true }
 [node name="dimensional_square_left" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 768, 448 )
+z/z = 0
 
 [node name="dimensional_square_left1" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 896, 448 )
+z/z = 0
 
 [node name="dimensional_square_right" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 768, 192 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_right1" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1024, 192 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_right2" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1600, 448 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_right3" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1152, 192 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_left2" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1024, 448 )
+z/z = 0
 
 [node name="dimensional_square_left3" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1152, 448 )
+z/z = 0
 
 [node name="dimensional_square_right4" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 896, 192 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_right5" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1728, 448 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_right6" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1856, 448 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_right7" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1472, 448 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_left5" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1600, 192 )
+z/z = 0
 
 [node name="dimensional_square_left6" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1728, 192 )
+z/z = 0
 
 [node name="dimensional_square_left7" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1856, 192 )
+z/z = 0
 
 [node name="dimensional_square_left8" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1472, 192 )
+z/z = 0
 
 [node name="dimensional_square_left4" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 320, 960 )
+z/z = 0
 
 [node name="dimensional_square_left10" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 960, 960 )
+z/z = 0
 
 [node name="dimensional_square_left11" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1600, 960 )
+z/z = 0
 
 [node name="dimensional_square_left12" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 2240, 960 )
+z/z = 0
 
 [node name="dimensional_square_right8" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 640, 960 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_right9" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1280, 960 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="dimensional_square_right10" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1920, 960 )
-transform/scale = Vector2( 0.5, 0.5 )
+z/z = 0
 
 [node name="background" type="TileMap" parent="."]
 
@@ -173,7 +185,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -131058, 46, -131057, 46, -131056, 46, -131054, 50, -131053, 46, -131051, 50, -131049, 46, -131048, 46, -65522, 53, -65521, 53, -65520, 53, -65519, 53, -65518, 53, -65517, 53, -65516, 53, -65515, 53, -65514, 53, -65513, 53, -65512, 53, -65511, 53, -65510, 44 )
+tile_data = IntArray( -393194, 56, -262122, 56, -131058, 46, -131057, 46, -131056, 46, -131054, 50, -131053, 46, -131051, 50, -131050, 56, -131049, 46, -131048, 46, -65522, 53, -65521, 53, -65520, 53, -65519, 53, -65518, 53, -65517, 53, -65516, 53, -65515, 53, -65514, 53, -65513, 53, -65512, 53, -65511, 53, -65510, 44, 22, 56, 65548, 41, 65570, 41, 131094, 56, 131110, 51, 196618, 48, 262166, 56, 262181, 52, 262182, 52, 262183, 52, 327720, 47, 393238, 56, 393240, 59, 458759, 23, 458790, 23, 524310, 58 )
 __meta__ = { "_edit_lock_":true }
 
 
