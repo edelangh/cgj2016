@@ -3,11 +3,11 @@
 [ext_resource path="res://patterns/move.gd" type="Script" id=1]
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=2]
 [ext_resource path="res://items/beer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=4]
-[ext_resource path="res://items/trap.tscn" type="PackedScene" id=5]
-[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=6]
-[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=7]
-[ext_resource path="res://tilemap/background.tres" type="TileSet" id=8]
+[ext_resource path="res://tilemap/background.tres" type="TileSet" id=4]
+[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://items/trap.tscn" type="PackedScene" id=6]
+[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=7]
+[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -76,100 +76,11 @@ transform/pos = Vector2( 1824, 352 )
 gravity = 9.8
 linear_damp = 0.1
 
-[node name="on_way_platforms" type="Node2D" parent="."]
-
-__meta__ = { "_editor_collapsed":true }
-
-[node name="one_way_platform" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 352, 416 )
-
-[node name="one_way_platform1" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 416, 416 )
-
-[node name="one_way_platform2" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1120, 288 )
-
-[node name="one_way_platform3" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1056, 288 )
-
-[node name="one_way_platform4" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 992, 288 )
-
-[node name="one_way_platform5" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 928, 288 )
-
-[node name="one_way_platform6" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 864, 288 )
-
-[node name="one_way_platform7" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 800, 288 )
-
-[node name="one_way_platform8" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 800, 288 )
-
-[node name="one_way_platform9" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 288, 416 )
-
-[node name="one_way_platform10" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 224, 416 )
-
-[node name="one_way_platform11" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1760, 480 )
-
-[node name="one_way_platform12" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1696, 480 )
-
-[node name="one_way_platform13" parent="on_way_platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1632, 480 )
-
-[node name="traps" type="Node2D" parent="."]
-
-__meta__ = { "_editor_collapsed":true }
-
-[node name="trap" parent="traps" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 672, 224 )
-linear_damp = 0.1
-
-[node name="dimensions" type="Node2D" parent="."]
-
-__meta__ = { "_editor_collapsed":true }
-
-[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 640, 896 )
-
-[node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 1408, 256 )
-
-[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 2432, 768 )
-
-[node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 832, 256 )
-
 [node name="Background" type="TileMap" parent="."]
 
 visibility/behind_parent = true
 mode = 0
-tile_set = ExtResource( 8 )
+tile_set = ExtResource( 4 )
 cell/size = Vector2( 128, 128 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -189,7 +100,7 @@ tile_data = IntArray( 0, 7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 7, 7, 8, 7, 9, 7
 visibility/behind_parent = true
 transform/pos = Vector2( -192, 0 )
 mode = 0
-tile_set = ExtResource( 8 )
+tile_set = ExtResource( 4 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -202,6 +113,124 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( 131077, 40, 131083, 40, 131089, 40, 131094, 40, 131098, 40, 131103, 40, 262152, 42, 262153, 43, 262162, 38, 262168, 37, 262169, 43, 262170, 42 )
+tile_data = IntArray( 131077, 40, 131083, 40, 131089, 40, 131094, 40, 131098, 40, 131103, 40, 196636, 51, 262154, 42, 262155, 43, 262162, 38, 262167, 37, 262168, 42 )
+
+[node name="on_way_platforms" type="Node2D" parent="."]
+
+__meta__ = { "_editor_collapsed":true }
+
+[node name="one_way_platform" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 352, 416 )
+
+[node name="one_way_platform1" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 416, 416 )
+
+[node name="one_way_platform2" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1120, 288 )
+
+[node name="one_way_platform3" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1056, 288 )
+
+[node name="one_way_platform4" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 992, 288 )
+
+[node name="one_way_platform5" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 928, 288 )
+
+[node name="one_way_platform6" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 864, 288 )
+
+[node name="one_way_platform7" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 800, 288 )
+
+[node name="one_way_platform8" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 800, 288 )
+
+[node name="one_way_platform9" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 288, 416 )
+
+[node name="one_way_platform10" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 224, 416 )
+
+[node name="one_way_platform11" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1760, 480 )
+
+[node name="one_way_platform12" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1696, 480 )
+
+[node name="one_way_platform13" parent="on_way_platforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1632, 480 )
+
+[node name="traps" type="Node2D" parent="."]
+
+__meta__ = { "_editor_collapsed":true }
+
+[node name="trap" parent="traps" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 672, 224 )
+linear_damp = 0.1
+
+[node name="trap1" parent="traps" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 224, 736 )
+linear_damp = 0.1
+
+[node name="trap2" parent="traps" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1056, 1248 )
+linear_damp = 0.1
+
+[node name="trap3" parent="traps" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1248, 1248 )
+linear_damp = 0.1
+
+[node name="trap4" parent="traps" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1888, 1184 )
+linear_damp = 0.1
+
+[node name="trap5" parent="traps" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1888, 1184 )
+linear_damp = 0.1
+
+[node name="dimensions" type="Node2D" parent="."]
+
+__meta__ = { "_editor_collapsed":true }
+
+[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 640, 896 )
+
+[node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 1408, 256 )
+
+[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 2432, 768 )
+z/z = 0
+starting_scale = 1
+
+[node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 832, 256 )
+z/z = 0
+starting_scale = 1
 
 

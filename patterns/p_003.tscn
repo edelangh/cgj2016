@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://patterns/move.gd" type="Script" id=1]
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=2]
 [ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=3]
 [ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=4]
-[ext_resource path="res://tilemap/background.tres" type="TileSet" id=5]
+[ext_resource path="res://items/hotdog.tscn" type="PackedScene" id=5]
+[ext_resource path="res://items/beer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://items/trap.tscn" type="PackedScene" id=7]
+[ext_resource path="res://tilemap/background.tres" type="TileSet" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,7 +29,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -393199, 9, -393194, 10, -327664, 9, -327663, 1610612745, -327658, -1073741815, -327657, 10, -262133, 9, -262116, 10, -196598, 9, -196597, 1610612745, -196580, -1073741815, -196579, 10, -131067, 9, -65532, 9, -65531, 1610612745, 0, 1, 1, 1, 2, 1, 3, 5, 4, -1610612726, 35, 1, 36, 1, 37, 1, 38, 1, 39, 1, 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393220, 1, 393221, 1, 393222, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393246, 1, 393247, 1, 393248, 1, 393249, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 655363, 9, 655364, 7, 655365, 7, 655366, 7, 655368, 7, 655369, 7, 655370, 7, 655371, 7, 655373, 7, 655374, 7, 655375, 7, 655376, 7, 655378, 7, 655379, 7, 655380, 7, 655381, 7, 655383, 7, 655384, 7, 655385, 7, 655386, 7, 655388, 7, 655389, 7, 655390, 7, 655391, 7, 655393, 7, 655394, 7, 655395, 7, 655396, 7, 851968, 1, 851969, 1, 851970, 1, 851975, 1, 851980, 1, 851985, 1, 851990, 1, 851995, 1, 852000, 1, 852005, 1, 852006, 1, 852007, 1, 917520, 9, 917521, 1610612745, 983055, 9, 983056, 1610612745, 1048589, 9, 1048590, 1, 1048591, 1, 1114124, 9, 1114125, 1610612745, 1179658, 9, 1179659, 1, 1179660, 1610612745, 1245184, 1, 1245185, 1, 1245186, 1, 1245187, 1, 1245188, 1, 1245189, 1, 1245190, 1, 1245191, 1, 1245192, 1, 1245193, 1, 1245194, 536870916 )
+tile_data = IntArray( -393199, 9, -393194, 10, -327664, 9, -327663, 1610612745, -327658, -1073741815, -327657, 10, -262133, 9, -262116, 10, -196598, 9, -196597, 1610612745, -196580, -1073741815, -196579, 10, -131067, 9, -65532, 9, -65531, 1610612745, 0, 1, 1, 1, 2, 1, 3, 5, 4, -1610612726, 35, 1, 36, 1, 37, 1, 38, 1, 39, 1, 196630, 1, 196631, 1, 196632, 1, 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393220, 1, 393221, 1, 393222, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393246, 1, 393247, 1, 393248, 1, 393249, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 655363, 9, 655364, 7, 655365, 7, 655366, 7, 655368, 7, 655369, 7, 655370, 7, 655371, 7, 655373, 7, 655374, 7, 655375, 7, 655376, 7, 655378, 7, 655379, 7, 655380, 7, 655381, 7, 655383, 7, 655384, 7, 655385, 7, 655386, 7, 655388, 7, 655389, 7, 655390, 7, 655391, 7, 655393, 7, 655394, 7, 655395, 7, 655396, 7, 851968, 1, 851969, 1, 851970, 1, 851975, 1, 851980, 1, 851985, 1, 851990, 1, 851995, 1, 852000, 1, 852005, 1, 852006, 1, 852007, 1, 917520, 9, 917521, 1610612745, 983055, 9, 983056, 1610612745, 1048589, 9, 1048590, 1, 1048591, 1, 1114124, 9, 1114125, 1610612745, 1179658, 9, 1179659, 1, 1179660, 1610612745, 1245184, 1, 1245185, 1, 1245186, 1, 1245187, 1, 1245188, 1, 1245189, 1, 1245190, 1, 1245191, 1, 1245192, 1, 1245193, 1, 1245194, 536870916 )
 __meta__ = { "_edit_lock_":true }
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -36,89 +39,60 @@ __meta__ = { "_editor_collapsed":true }
 [node name="dimensional_square_left" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 768, 448 )
+transform/scale = Vector2( 0.5, 0.5 )
 z/z = 0
+starting_scale = 1
 
 [node name="dimensional_square_left1" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 896, 448 )
+transform/scale = Vector2( 0.5, 0.5 )
 z/z = 0
+starting_scale = 1
 
 [node name="dimensional_square_right" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 768, 192 )
 
-[node name="dimensional_square_right1" parent="Node2D" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1024, 192 )
-
-[node name="dimensional_square_right2" parent="Node2D" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1600, 448 )
-
-[node name="dimensional_square_right3" parent="Node2D" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1152, 192 )
-
-[node name="dimensional_square_left2" parent="Node2D" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 1024, 448 )
-z/z = 0
-
-[node name="dimensional_square_left3" parent="Node2D" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 1152, 448 )
-z/z = 0
-
 [node name="dimensional_square_right4" parent="Node2D" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 896, 192 )
 
-[node name="dimensional_square_right5" parent="Node2D" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1728, 448 )
-
 [node name="dimensional_square_right6" parent="Node2D" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 1856, 448 )
-
-[node name="dimensional_square_right7" parent="Node2D" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1472, 448 )
-
-[node name="dimensional_square_left5" parent="Node2D" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 1600, 192 )
-z/z = 0
+transform/pos = Vector2( 1728, 576 )
 
 [node name="dimensional_square_left6" parent="Node2D" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 1728, 192 )
+transform/pos = Vector2( 1152, 256 )
+transform/scale = Vector2( 0.5, 0.5 )
 z/z = 0
+starting_scale = 1
 
 [node name="dimensional_square_left7" parent="Node2D" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 1856, 192 )
+transform/pos = Vector2( 1280, 256 )
+transform/scale = Vector2( 0.5, 0.5 )
 z/z = 0
-
-[node name="dimensional_square_left8" parent="Node2D" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 1472, 192 )
-z/z = 0
+starting_scale = 1
 
 [node name="dimensional_square_left4" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 320, 960 )
 z/z = 0
+starting_scale = 1
 
 [node name="dimensional_square_left11" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1600, 960 )
 z/z = 0
+starting_scale = 1
 
 [node name="dimensional_square_left12" parent="Node2D" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 2240, 960 )
 z/z = 0
+starting_scale = 1
 
 [node name="dimensional_square_right8" parent="Node2D" instance=ExtResource( 4 )]
 
@@ -132,11 +106,89 @@ transform/pos = Vector2( 1280, 960 )
 
 transform/pos = Vector2( 1920, 960 )
 
+[node name="HotDog" parent="Node2D" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 736, 1056 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer" parent="Node2D" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 352, 224 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer1" parent="Node2D" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1696, 416 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer2" parent="Node2D" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1760, 96 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer3" parent="Node2D" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1760, -352 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer4" parent="Node2D" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 672, -288 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer5" parent="Node2D" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1760, 736 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="trap" parent="Node2D" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 1312, 608 )
+z/z = 2
+linear_damp = 0.1
+
+[node name="trap1" parent="Node2D" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 928, -160 )
+z/z = 2
+linear_damp = 0.1
+
+[node name="trap2" parent="Node2D" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 224, 352 )
+z/z = 2
+linear_damp = 0.1
+
+[node name="trap3" parent="Node2D" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 224, 160 )
+z/z = 2
+linear_damp = 0.1
+
+[node name="trap4" parent="Node2D" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 2464, 288 )
+z/z = 2
+linear_damp = 0.1
+
+[node name="trap5" parent="Node2D" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 2464, 96 )
+z/z = 2
+linear_damp = 0.1
+
 [node name="background" type="TileMap" parent="."]
 
 visibility/behind_parent = true
 mode = 0
-tile_set = ExtResource( 5 )
+tile_set = ExtResource( 8 )
 cell/size = Vector2( 128, 128 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -156,7 +208,7 @@ __meta__ = { "_edit_lock_":true }
 
 transform/pos = Vector2( -192, 0 )
 mode = 0
-tile_set = ExtResource( 5 )
+tile_set = ExtResource( 8 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -169,7 +221,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -393194, 56, -262122, 56, -131058, 46, -131057, 46, -131056, 46, -131054, 50, -131053, 46, -131051, 50, -131050, 56, -131049, 46, -131048, 46, -65522, 53, -65521, 53, -65520, 53, -65519, 53, -65518, 53, -65517, 53, -65516, 53, -65515, 53, -65514, 53, -65513, 53, -65512, 53, -65511, 53, -65510, 44, 22, 56, 65548, 41, 65570, 41, 131094, 56, 131110, 51, 196618, 48, 262166, 56, 262181, 52, 262182, 52, 262183, 52, 327720, 47, 393238, 56, 393240, 59, 458759, 23, 458790, 23, 524310, 58 )
+tile_data = IntArray( -393194, 56, -262122, 56, -262112, 54, -131051, 50, -131050, 56, -65519, 61, -65508, 62, 22, 56, 65548, 41, 65570, 41, 131094, 56, 131110, 51, 196612, 51, 196618, 48, 262166, 56, 262181, 52, 262182, 52, 262183, 52, 327720, 47, 393238, 56, 393240, 59, 458759, 23, 458790, 23, 524310, 57, 524312, 49, 1114145, 60, 1179657, 53, 1179658, 55, 1179667, 61 )
 __meta__ = { "_edit_lock_":true }
 
 
