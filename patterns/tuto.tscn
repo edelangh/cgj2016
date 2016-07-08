@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://items/beer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=3]
-[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=4]
-[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=5]
-[ext_resource path="res://tilemap/background.tres" type="TileSet" id=6]
-[ext_resource path="res://items/trap.tscn" type="PackedScene" id=7]
-[ext_resource path="res://font/big_intro.fnt" type="Font" id=8]
-[ext_resource path="res://font/Medici Text.fnt" type="Font" id=9]
+[ext_resource path="res://items/hotdog.tscn" type="PackedScene" id=3]
+[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=5]
+[ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=6]
+[ext_resource path="res://tilemap/background.tres" type="TileSet" id=7]
+[ext_resource path="res://items/trap.tscn" type="PackedScene" id=8]
+[ext_resource path="res://font/big_intro.fnt" type="Font" id=9]
+[ext_resource path="res://font/Medici Text.fnt" type="Font" id=10]
 
 [node name="Node2D" type="Node2D"]
 
@@ -42,96 +43,98 @@ __meta__ = { "_edit_lock_":true }
 transform/pos = Vector2( 1056, -96 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer1" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 928, 32 )
 gravity = 9.8
 linear_damp = 0.1
-
-[node name="beer2" parent="coins" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 1440, -224 )
-gravity = 9.8
-linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer3" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2464, 32 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
 
 [node name="beer4" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2400, 32 )
 gravity = 9.8
 linear_damp = 0.1
+score_multiplier = 1
+
+[node name="HotDog" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1440, -224 )
 
 [node name="one_way_platforms" type="Node2D" parent="."]
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="one_way_platform" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1120, -32 )
 
-[node name="one_way_platform1" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform1" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1184, -32 )
 
-[node name="one_way_platform2" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform2" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1248, -32 )
 
-[node name="one_way_platform3" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform3" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1312, -32 )
 
-[node name="one_way_platform4" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform4" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1376, -32 )
 
-[node name="one_way_platform5" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform5" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1056, -32 )
 
-[node name="one_way_platform6" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform6" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 992, -32 )
 
-[node name="one_way_platform7" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform7" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 928, -32 )
 
-[node name="one_way_platform8" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform8" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 864, -32 )
 
-[node name="one_way_platform9" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform9" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 800, -32 )
 
-[node name="one_way_platform10" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform10" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 736, -32 )
 
-[node name="one_way_platform11" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform11" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 672, -32 )
 
-[node name="one_way_platform12" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform12" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 608, -32 )
 
-[node name="one_way_platform13" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform13" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 544, -32 )
 
-[node name="one_way_platform14" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform14" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 480, -32 )
 
-[node name="one_way_platform15" parent="one_way_platforms" instance=ExtResource( 3 )]
+[node name="one_way_platform15" parent="one_way_platforms" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1440, -32 )
 
@@ -139,27 +142,27 @@ transform/pos = Vector2( 1440, -32 )
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 4 )]
+[node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1792, -64 )
 z/z = 0
 starting_scale = 2
 
-[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 5 )]
+[node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 2240, -64 )
 
-[node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 4 )]
+[node name="dimensional_square_left1" parent="dimensions" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1792, -320 )
 z/z = 0
 starting_scale = 2
 
-[node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 5 )]
+[node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 2240, -320 )
 
-[node name="dimensional_square_left2" parent="dimensions" instance=ExtResource( 4 )]
+[node name="dimensional_square_left2" parent="dimensions" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 2240, 320 )
 transform/scale = Vector2( 0.25, 0.25 )
@@ -170,7 +173,7 @@ starting_scale = 0
 
 visibility/behind_parent = true
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 7 )
 cell/size = Vector2( 128, 128 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -189,7 +192,7 @@ __meta__ = { "_edit_lock_":true }
 [node name="decors" type="TileMap" parent="."]
 
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 7 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -209,9 +212,10 @@ __meta__ = { "_edit_lock_":true }
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="trap" parent="traps" instance=ExtResource( 7 )]
+[node name="trap" parent="traps" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 1440, -96 )
+linear_damp = 0.1
 
 [node name="texts" type="Node2D" parent="."]
 
@@ -255,7 +259,7 @@ rect/scale = Vector2( 0.4, 0.4 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
-custom_fonts/font = ExtResource( 8 )
+custom_fonts/font = ExtResource( 9 )
 text = "press RIGHT"
 percent_visible = 1.0
 lines_skipped = 0
@@ -271,7 +275,7 @@ rect/scale = Vector2( 0.4, 0.4 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
-custom_fonts/font = ExtResource( 8 )
+custom_fonts/font = ExtResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "press LEFT"
 percent_visible = 1.0
@@ -288,7 +292,7 @@ rect/scale = Vector2( 0.7, 0.7 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color = Color( 0.133333, 0.133333, 0.133333, 1 )
 text = "welcome to YAR"
 percent_visible = 1.0
@@ -305,7 +309,7 @@ rect/scale = Vector2( 0.4, 0.4 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
-custom_fonts/font = ExtResource( 8 )
+custom_fonts/font = ExtResource( 9 )
 text = "twice"
 percent_visible = 1.0
 lines_skipped = 0
@@ -321,7 +325,7 @@ rect/scale = Vector2( 0.4, 0.4 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
-custom_fonts/font = ExtResource( 8 )
+custom_fonts/font = ExtResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "twice"
 percent_visible = 1.0
