@@ -2,7 +2,7 @@
 
 [ext_resource path="res://patterns/move.gd" type="Script" id=1]
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=2]
-[ext_resource path="res://items/coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://items/beer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://items/trap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=6]
@@ -32,31 +32,47 @@ occluder/light_mask = 1
 tile_data = IntArray( -65536, 9, -65535, 10, -65532, 9, -65531, 10, -65528, 9, -65527, 10, -65524, 9, -65523, 10, -65520, 9, -65519, 10, -65516, 9, -65515, 10, -65512, 9, -65511, 10, -65508, 9, -65507, 10, -65504, 9, -65503, 10, -65500, 9, -65499, 10, 8, 15, 65544, 15, 131080, 15, 131095, 1, 131097, 1, 131098, 1, 131103, 9, 131104, 1, 131105, 1, 131106, 1, 131107, 1, 131108, 1, 131109, 1, 131110, 10, 196616, 16, 196638, 9, 196639, 1, 196640, 1, 196641, 1, 196642, 1, 196643, 1, 196644, 1, 196645, 1, 196646, 1, 196647, 10, 262173, 9, 262174, 7, 262175, 7, 262176, 7, 262177, 7, 262178, 7, 262179, 7, 262180, 7, 262181, 7, 262182, 7, 262183, 7, 327687, 12, 327688, 13, 327689, 14, 393216, 1, 393217, 1, 393218, 1, 393223, 1, 393224, 1, 393225, 1, 393226, 1, 393227, 1, 393230, 1, 393231, 1, 393232, 1, 393233, 1, 393234, 1, 393235, 1, 393236, 1, 393237, 1, 393240, 1, 393241, 1, 393242, 1, 393243, 1, 393244, 1, 393245, 1, 393246, 1, 393247, 1, 393248, 1, 393249, 4, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 458787, -1073741815, 458788, 1, 458789, 1, 458790, 1, 458791, 1, 524324, -1073741815, 524325, 4, 524326, 4, 524327, 4, 589828, 9, 589829, 1, 589830, 10, 589846, 9, 589847, 1, 589848, 10, 655373, 9, 655374, 1, 655392, 9, 655393, 1, 720896, 9, 720897, 1, 720904, 9, 720905, 1, 720914, 9, 720915, 1, 720924, 9, 720925, 1, 720932, 9, 720933, 1, 720934, 1, 851981, 9, 851982, 1, 851983, 10, 852001, 9, 852002, 1, 852003, 10, 917511, 9, 917512, 1, 917529, 9, 917530, 1, 983042, 9, 983043, 1, 983059, 9, 983060, 1, 983069, 9, 983070, 1, 1048613, 9, 1048614, 1, 1048615, 10, 1114117, 9, 1114118, 1, 1114123, 9, 1114124, 1, 1114125, 10, 1114135, 9, 1114136, 1, 1245185, 9, 1245186, 1, 1245187, 10 )
 __meta__ = { "_edit_lock_":true }
 
-[node name="coins" type="Node2D" parent="."]
+[node name="Bonus" type="Node2D" parent="."]
 
-__meta__ = { "_editor_collapsed":true }
+[node name="beer" parent="Bonus" instance=ExtResource( 3 )]
 
-[node name="coin" parent="coins" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 541.345, 299.38 )
+transform/pos = Vector2( 288, 352 )
 gravity = 9.8
 linear_damp = 0.1
 
-[node name="coin1" parent="coins" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 928, 224 )
-gravity = 9.8
-linear_damp = 0.1
-
-[node name="coin2" parent="coins" instance=ExtResource( 3 )]
+[node name="beer1" parent="Bonus" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 992, 224 )
 gravity = 9.8
 linear_damp = 0.1
 
-[node name="coin3" parent="coins" instance=ExtResource( 3 )]
+[node name="beer2" parent="Bonus" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 1184, 160 )
+transform/pos = Vector2( 928, 352 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer3" parent="Bonus" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 608, 672 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer4" parent="Bonus" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1376, 800 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer5" parent="Bonus" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2400, 672 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer6" parent="Bonus" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1824, 352 )
 gravity = 9.8
 linear_damp = 0.1
 
@@ -124,12 +140,10 @@ __meta__ = { "_editor_collapsed":true }
 [node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 640, 896 )
-z/z = 0
 
 [node name="dimensional_square_right1" parent="dimensions" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1408, 256 )
-z/z = 0
 
 [node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 7 )]
 
@@ -165,6 +179,7 @@ tile_data = IntArray( 0, 7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 7, 7, 8, 7, 9, 7
 [node name="BackgroundDeco" type="TileMap" parent="."]
 
 visibility/behind_parent = true
+transform/pos = Vector2( -192, 0 )
 mode = 0
 tile_set = ExtResource( 8 )
 cell/size = Vector2( 64, 64 )
