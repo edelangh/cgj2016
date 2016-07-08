@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://patterns/move.gd" type="Script" id=1]
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=2]
 [ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=3]
 [ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=4]
+[ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,38 +27,70 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( 0, 1, 38, 1, 39, 1, 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393225, 1, 393226, 1, 393227, 1, 393233, 1, 393234, 1, 393235, 1, 393241, 1, 393242, 1, 393243, 1, 393249, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 851968, 1, 917543, 1 )
+tile_data = IntArray( 0, 1, 38, 1, 39, 1, 393216, 1, 393217, 1, 393218, 1, 393219, 1, 393225, 1, 393226, 1, 393227, 1, 393233, 1, 393234, 1, 393235, 1, 393241, 1, 393242, 1, 393243, 1, 393249, 1, 393250, 1, 393251, 1, 393252, 1, 393253, 1, 393254, 1, 393255, 1, 851968, 1, 1245184, 1, 1245223, 1 )
 
-[node name="dimensional_square_left" parent="." instance=ExtResource( 3 )]
+[node name="dimension" type="Node2D" parent="."]
 
-transform/pos = Vector2( 960, 896 )
+[node name="dimensional_square_left" parent="dimension" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_left1" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 1152, 960 )
 
-transform/pos = Vector2( 448, 64 )
+[node name="dimensional_square_left1" parent="dimension" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_right" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 448, 128 )
 
-transform/pos = Vector2( 960, 64 )
+[node name="dimensional_square_right" parent="dimension" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_right2" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 960, 128 )
+transform/scale = Vector2( 0.5, 0.5 )
 
-transform/pos = Vector2( 1984, 64 )
+[node name="dimensional_square_right2" parent="dimension" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_left2" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 1984, 128 )
+transform/scale = Vector2( 0.5, 0.5 )
 
-transform/pos = Vector2( 1472, 64 )
+[node name="dimensional_square_left2" parent="dimension" instance=ExtResource( 3 )]
 
-[node name="dimensional_square_right1" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 1472, 128 )
 
-transform/pos = Vector2( 448, 896 )
+[node name="dimensional_square_right1" parent="dimension" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_right3" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 512, 960 )
+transform/scale = Vector2( 0.5, 0.5 )
 
-transform/pos = Vector2( 1472, 896 )
+[node name="dimensional_square_right3" parent="dimension" instance=ExtResource( 4 )]
 
-[node name="dimensional_square_left3" parent="." instance=ExtResource( 3 )]
+transform/pos = Vector2( 1792, 960 )
+transform/scale = Vector2( 0.5, 0.5 )
 
-transform/pos = Vector2( 1984, 896 )
+[node name="dimensional_square_left3" parent="dimension" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2432, 960 )
+
+[node name="Plateform" type="Node2D" parent="."]
+
+[node name="one_way_platform" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 416, 1248 )
+
+[node name="one_way_platform1" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 800, 1248 )
+
+[node name="one_way_platform2" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1568, 1248 )
+
+[node name="one_way_platform3" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1184, 1248 )
+
+[node name="one_way_platform4" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1952, 1248 )
+
+[node name="one_way_platform5" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 2336, 1248 )
 
 

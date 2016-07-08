@@ -39,9 +39,9 @@ size_flags/vertical = 2
 
 anchor/right = 1
 anchor/bottom = 1
-margin/top = 362.0
+margin/top = 225.0
 margin/right = 710.0
-margin/bottom = 358.0
+margin/bottom = 500.0
 rect/scale = Vector2( 1.8, 1.8 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -64,10 +64,9 @@ script/script = SubResource( 1 )
 
 anchor/right = 1
 anchor/bottom = 1
-margin/left = 4.0
-margin/top = 711.0
-margin/right = -402.0
-margin/bottom = 23.0
+margin/top = 675.0
+margin/right = -400.0
+margin/bottom = 75.0
 rect/scale = Vector2( 0.8, 0.8 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
