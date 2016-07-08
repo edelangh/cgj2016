@@ -14,7 +14,6 @@ __meta__ = { "_edit_lock_":true }
 
 [node name="TileMap" type="TileMap" parent="."]
 
-visibility/visible = false
 mode = 0
 tile_set = ExtResource( 2 )
 cell/size = Vector2( 64, 64 )
@@ -129,7 +128,6 @@ transform/pos = Vector2( 352, 1248 )
 
 [node name="Background" type="TileMap" parent="."]
 
-visibility/visible = false
 visibility/behind_parent = true
 mode = 0
 tile_set = ExtResource( 6 )
@@ -149,7 +147,6 @@ tile_data = IntArray( -131072, 36, -131071, 36, -131070, 36, -131069, 36, -13106
 
 [node name="Decoration" type="TileMap" parent="."]
 
-visibility/visible = false
 mode = 0
 tile_set = ExtResource( 6 )
 cell/size = Vector2( 64, 64 )
