@@ -80,17 +80,20 @@ __meta__ = { "_edit_lock_":true }
 [node name="dimensional_square_left" parent="dimensions" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 192, 64 )
+transform/scale = Vector2( 0.5, 0.5 )
 
 [node name="dimensional_square_right" parent="dimensions" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 288, 32 )
+transform/scale = Vector2( 0.25, 0.25 )
 starting_scale = 0
 
 [node name="background" type="TileMap" parent="."]
 
+visibility/behind_parent = true
 mode = 0
 tile_set = ExtResource( 6 )
-cell/size = Vector2( 64, 64 )
+cell/size = Vector2( 128, 128 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 cell/half_offset = 2
@@ -107,6 +110,7 @@ __meta__ = { "_edit_lock_":true }
 
 [node name="decors" type="TileMap" parent="."]
 
+visibility/behind_parent = true
 mode = 0
 tile_set = ExtResource( 6 )
 cell/size = Vector2( 64, 64 )

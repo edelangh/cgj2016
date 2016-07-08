@@ -104,6 +104,7 @@ func _fixed_process(delta):
 		velocity.y = -JUMP_SPEED * delta
 		jumping = true
 		animator.play("jump")
+		set_rot(0)
 		can_continue_jump = true
 	
 	velocity.y = clamp(velocity.y, -500, 500) # Horrible things but it fix some bugs
