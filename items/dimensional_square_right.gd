@@ -23,7 +23,7 @@ func rescale(new_scale):
 
 
 func on_dimension_left(scale):
-	if get_tree().is_editor_hint() || !is_visible():
+	if get_tree().is_editor_hint() || is_not_visible():
 		return
 	if current_scale == 1:
 		get_node("anim").play_backwards("right")
@@ -34,7 +34,7 @@ func on_dimension_left(scale):
 
 
 func on_dimension_right(scale):
-	if get_tree().is_editor_hint() || !is_visible():
+	if get_tree().is_editor_hint() || is_not_visible():
 		return
 	if current_scale == -1:
 		get_node("anim").play_backwards("left")
@@ -42,3 +42,6 @@ func on_dimension_right(scale):
 	elif current_scale == 0:
 		get_node("anim").play("right")
 		current_scale += 1
+
+func is_not_visible():
+	return get_pos().x > global.main_camera.get_pos().x + get_viewport().get_rect().size.x

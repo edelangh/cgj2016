@@ -17,10 +17,10 @@ func _ready():
 	store.push_back(preload('res://patterns/p_002.tscn'))
 	store.push_back(preload('res://patterns/p_003.tscn'))
 	var room
-	if not tileset_test:
-		room = store[0].instance()
-	else:
-		room = load(tileset_test).instance()
+	#if not tileset_test:
+	room = store[0].instance()
+	#else:
+	#	room = load(tileset_test).instance()
 	room.set_pos(Vector2(start_pos, 0))
 	add_child(room)
 	rooms.push_back(room)

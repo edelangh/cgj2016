@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://tilemap/castle_tilemap.tres" type="TileSet" id=1]
-[ext_resource path="res://items/coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://items/beer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://items/one_way_platform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://items/dimensional_square_left.tscn" type="PackedScene" id=4]
 [ext_resource path="res://items/dimensional_square_right.tscn" type="PackedScene" id=5]
@@ -37,33 +37,33 @@ __meta__ = { "_edit_lock_":true }
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="coin5" parent="coins" instance=ExtResource( 2 )]
+[node name="beer" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1056, -96 )
 gravity = 9.8
 linear_damp = 0.1
 
-[node name="coin8" parent="coins" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 2528, -32 )
-gravity = 9.8
-linear_damp = 0.1
-
-[node name="coin10" parent="coins" instance=ExtResource( 2 )]
+[node name="beer1" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 928, 32 )
 gravity = 9.8
 linear_damp = 0.1
 
-[node name="coin11" parent="coins" instance=ExtResource( 2 )]
+[node name="beer2" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1440, -224 )
 gravity = 9.8
 linear_damp = 0.1
 
-[node name="coin9" parent="coins" instance=ExtResource( 2 )]
+[node name="beer3" parent="coins" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2464, 32 )
+gravity = 9.8
+linear_damp = 0.1
+
+[node name="beer4" parent="coins" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 2528, -32 )
 gravity = 9.8
 linear_damp = 0.1
 
@@ -219,6 +219,7 @@ linear_damp = 0.1
 [node name="texts" type="Node2D" parent="."]
 
 z/z = 7
+__meta__ = { "_edit_lock_":true }
 
 [node name="Label" type="Label" parent="texts"]
 
