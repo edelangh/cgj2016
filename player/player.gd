@@ -51,7 +51,10 @@ func _fixed_process(delta):
 
 	var max_speed = lerp(WALK_SPEED_MIN, WALK_SPEED_MAX, clamp(dist_ratio, 0.0, 1.0)) * delta
 	if die:
-		max_speed = WALK_SPEED_MIN * delta
+		if dist < global.x_max_to_die:
+			max_speed = 0
+		else:
+			max_speed = WALK_SPEED_MIN * delta
 	
 	velocity += force * delta     # Integrate forces to velocity
 	var motion = velocity * delta     # Integrate velocity into motion and move

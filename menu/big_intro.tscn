@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://font/big_intro.fnt" type="Font" id=1]
+[ext_resource path="res://font/Medici Text.fnt" type="Font" id=1]
 
 [sub_resource type="GDScript" id=1]
 
@@ -23,8 +23,8 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0.972656, 0.0151978, 0.0151978, 1 )
-custom_colors/font_color_shadow = Color( 0, 1, 0.0859375, 1 )
+custom_colors/font_color = Color( 0.937255, 0.717647, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.733333, 0.733333, 0.733333, 1 )
 text = "Yet Another Runner"
 align = 1
 valign = 1
