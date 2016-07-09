@@ -133,6 +133,18 @@ transform/pos = Vector2( 1120, 1248 )
 
 transform/pos = Vector2( 352, 1248 )
 
+[node name="one_way_platform12" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1632, 1248 )
+
+[node name="one_way_platform13" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 2016, 1248 )
+
+[node name="one_way_platform14" parent="Plateform" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 2400, 1248 )
+
 [node name="Background" type="TileMap" parent="."]
 
 visibility/behind_parent = true
@@ -183,14 +195,12 @@ linear_damp = 0.1
 transform/pos = Vector2( 416, 224 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="beer1" parent="Node2D" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 1504, 224 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="trap" parent="Node2D" instance=ExtResource( 9 )]
 
