@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://font/Medici Text.fnt" type="Font" id=1]
-[ext_resource path="res://images_src/gameover.png" type="Texture" id=2]
+[ext_resource path="res://menu/progress_bar.png" type="Texture" id=2]
 
 [sub_resource type="GDScript" id=1]
 
-script/source = "\nextends Control\n\nvar scoreLabel = null\nvar multiLabel = null\nvar progressBar = null\n\nfunc _ready():\n\tscoreLabel = get_node(\"score\")\n\tmultiLabel = get_node(\"multiplicator\")\n\tprogressBar = get_node(\"progress\")\n\tset_process(true)\n\tpass\n\nfunc _process(delta): # Can be better if we use signal on change of score\n\tscoreLabel.set_text(\"%d \" % global.score)\n\tmultiLabel.set_text(\"* %d\" % global.score_multiplier)\n\tprogressBar.set_value(100 * global.score_multiplier_timer / global.SCORE_MULTIPLIER_DURATION)"
+script/source = "\nextends Control\n\nvar scoreLabel = null\nvar multiLabel = null\nvar progressBar = null\n\nfunc _ready():\n\tscoreLabel = get_node(\"score\")\n\tmultiLabel = get_node(\"multiplicator\")\n\tprogressBar = get_node(\"multiplicator/progress\")\n\tset_process(true)\n\tpass\n\nfunc _process(delta): # Can be better if we use signal on change of score\n\tscoreLabel.set_text(\"%d \" % global.score)\n\tmultiLabel.set_text(\"* %d\" % global.score_multiplier)\n\tprogressBar.set_value(100 * global.score_multiplier_timer / global.SCORE_MULTIPLIER_DURATION)"
 
 [sub_resource type="GDScript" id=2]
 
@@ -32,7 +32,7 @@ scale = Vector2( 1, 1 )
 
 polygon = Vector2Array( 704, 0, 896, 0, 960, 64, 896, 128, 704, 128, 640, 64 )
 uv = Vector2Array(  )
-color = Color( 0.133333, 0.133333, 0.133333, 0.25098 )
+color = Color( 0.133333, 0.133333, 0.133333, 0.313726 )
 offset = Vector2( 0, 0 )
 texture/texture = null
 texture/offset = Vector2( 0, 0 )
@@ -40,6 +40,7 @@ texture/scale = Vector2( 1, 1 )
 texture/rotation = 0.0
 invert/enable = false
 invert/border = 100.0
+__meta__ = { "_edit_lock_":true }
 
 [node name="multiplier_box" type="Polygon2D" parent="CanvasLayer"]
 
@@ -71,11 +72,11 @@ __meta__ = { "_edit_lock_":true }
 
 anchor/right = 3
 anchor/bottom = 1
-margin/left = 64.0
-margin/top = 704.0
-margin/right = -64.0
-margin/bottom = 12.0
-rect/scale = Vector2( 0.8, 0.8 )
+margin/left = 961.0
+margin/top = 7.0
+margin/right = -961.0
+margin/bottom = 709.0
+rect/scale = Vector2( 0.6, 0.6 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -86,6 +87,33 @@ text = " * 4"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="progress" type="TextureProgress" parent="CanvasLayer/Control/multiplicator"]
+
+anchor/left = 3
+anchor/right = 1
+margin/left = 400.0
+margin/top = 157.0
+margin/right = -2697.0
+margin/bottom = 13449.0
+rect/scale = Vector2( 1.655, 0.91 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 100.0
+range/exp_edit = false
+range/rounded = false
+texture/under = null
+texture/over = null
+texture/progress = ExtResource( 2 )
+radial_fill/fill_degrees = 360.0
+radial_fill/center_offset = Vector2( 0, 0 )
+script/script = SubResource( 2 )
 
 [node name="score" type="Label" parent="CanvasLayer/Control"]
 
@@ -104,33 +132,6 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-
-[node name="progress" type="TextureProgress" parent="CanvasLayer/Control"]
-
-anchor/left = 3
-anchor/right = 1
-margin/left = 736.0
-margin/top = 832.0
-margin/right = -1615.0
-margin/bottom = 1992.0
-rect/scale = Vector2( 0.061, 0.008 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-range/min = 0.0
-range/max = 100.0
-range/step = 1.0
-range/page = 0.0
-range/value = 100.0
-range/exp_edit = false
-range/rounded = false
-texture/under = null
-texture/over = null
-texture/progress = ExtResource( 2 )
-radial_fill/initial_angle = 7.31136
-radial_fill/fill_degrees = 360.0
-radial_fill/center_offset = Vector2( 0, 0 )
-script/script = SubResource( 2 )
+__meta__ = { "_edit_lock_":true }
 
 
