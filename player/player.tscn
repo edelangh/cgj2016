@@ -51,6 +51,7 @@ samples/scream_dead = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
 
 [node name="Player" type="KinematicBody2D"]
 
+transform/pos = Vector2( -1000, -1000 )
 z/z = 2
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
