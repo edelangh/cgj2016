@@ -158,56 +158,48 @@ linear_damp = 0.1
 transform/pos = Vector2( 1440, -32 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="beer1" parent="Bonus" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 544, 480 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="beer2" parent="Bonus" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1888, 608 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="beer3" parent="Bonus" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1376, 480 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="beer4" parent="Bonus" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1440, 608 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="beer5" parent="Bonus" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 992, 544 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="beer6" parent="Bonus" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1184, 288 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="beer7" parent="Bonus" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1824, 32 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="HotDog1" parent="Bonus" instance=ExtResource( 6 )]
 
@@ -220,14 +212,12 @@ linear_damp = 0.1
 transform/pos = Vector2( 2080, 160 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="beer9" parent="Bonus" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 2144, 224 )
 gravity = 9.8
 linear_damp = 0.1
-score_multiplier = 1
 
 [node name="Plank" type="Node2D" parent="."]
 
@@ -255,7 +245,6 @@ transform/pos = Vector2( 1888, 416 )
 
 [node name="Background" type="TileMap" parent="."]
 
-visibility/visible = false
 visibility/behind_parent = true
 mode = 0
 tile_set = ExtResource( 9 )
@@ -275,7 +264,6 @@ tile_data = IntArray( -262138, 69, -262137, 69, -262136, 69, -262135, 69, -26213
 
 [node name="Decoration" type="TileMap" parent="."]
 
-visibility/visible = false
 mode = 0
 tile_set = ExtResource( 9 )
 cell/size = Vector2( 64, 64 )
