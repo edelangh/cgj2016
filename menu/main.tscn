@@ -9,7 +9,7 @@
 
 [sub_resource type="GDScript" id=1]
 
-script/source = "\nextends TextureButton\n\n\nfunc _on_button_pressed():\n\tscene_manager.set_scene(\"res://game.tscn\")\n\nfunc _ready():\n\tset_focus_mode(FOCUS_ALL)\n\tgrab_focus()\n\tconnect(\"pressed\", self, \"_on_button_pressed\")\n\tset_texture_scale(Vector2(get_rect().size.x/get_minimum_size().x, get_rect().size.y/get_minimum_size().y))\n\tset_process_input(true)\n\nfunc _input(event):\n\tif event.is_action_pressed(\"ui_up\"):\n\t\tgrab_focus()\n"
+script/source = "\nextends TextureButton\n\n\nfunc _on_button_pressed():\n\tglobal.reset_game()\n\tscene_manager.set_scene(\"res://game.tscn\")\n\n\nfunc _ready():\n\tset_focus_mode(FOCUS_ALL)\n\tgrab_focus()\n\tconnect(\"pressed\", self, \"_on_button_pressed\")\n\tset_texture_scale(Vector2(get_rect().size.x/get_minimum_size().x, get_rect().size.y/get_minimum_size().y))\n\tset_process_input(true)\n\n\nfunc _input(event):\n\tif event.is_action_pressed(\"ui_up\"):\n\t\tgrab_focus()\n"
 
 [sub_resource type="GDScript" id=2]
 

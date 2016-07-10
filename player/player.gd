@@ -12,6 +12,7 @@ const JUMP_MAX_AIRBORNE_TIME = 0.3
 const DIST_TO_CENTER = 666
 const SLIDE_STOP_VELOCITY = 1.0
 const SLIDE_STOP_MIN_TRAVEL = 1.0
+const SPEED_BONUS_FOR_STAIRS = 2.0
 
 var audioPlayer = null
 var velocity = Vector2()
@@ -25,6 +26,10 @@ var animator = null
 
 var fleshs = null # set in ready
 var sprite = null # set in ready
+
+var dust = preload("res://particles/running_dust.tscn")
+
+
 func spread_fleshs():
 	var child_count = fleshs.get_child_count()
 	var i = 0
@@ -37,6 +42,7 @@ func spread_fleshs():
 		child.set_gravity_scale(25)
 		i += 1
 
+
 func hide_fleshs():
 	var child_count = fleshs.get_child_count()
 	var i = 0
@@ -44,6 +50,7 @@ func hide_fleshs():
 		var child = fleshs.get_child(i)
 		child.hide()
 		i += 1
+
 
 func die():
 	emit_signal("spread_fleshs")
@@ -96,7 +103,7 @@ func _fixed_process(delta):
 	var floor_velocity = Vector2()
 	
 	if (is_colliding()):
-		#var collider = get_collider()
+		var collider = get_collider()
 
 		var n = get_collision_normal()
 		var rad = acos(n.dot(Vector2(0, -1)))
@@ -113,14 +120,20 @@ func _fixed_process(delta):
 		else:
 			# For every other c-ase of motion, our motion was interrupted.
 			# Try to complete the motion by "sliding" by the normal
+			
 			motion = n.slide(motion)
 			velocity = n.slide(velocity)
+			if n.x != 0 && n.x != -1:
+				print(n.x, " ---- ", motion.x)
+				motion.x -= n.x * SPEED_BONUS_FOR_STAIRS  # TODO!!
+			if n.x != 0 && n.x != -1:
+				print(">>>", motion.x)
 			# Then move again
 			move(motion)
 	
 	if (floor_velocity != Vector2()):
 		# If floor moves, move with floor
-		move(floor_velocity*delta)
+		move(floor_velocity * delta)
 	
 	if (jumping and velocity.y > 0):
 		# If falling, no longer jumping
@@ -144,7 +157,6 @@ func _fixed_process(delta):
 	on_air_time += delta
 	prev_jump_pressed = jump
 
-var dust = preload("res://particles/running_dust.tscn")
 
 func emit_dust():
 	if not jumping:
@@ -152,6 +164,7 @@ func emit_dust():
 		r.set_pos(get_pos() + Vector2(-5, 25))
 		get_parent().add_child(r)
 		r.set_emitting(true)
+
 
 func _ready():
 	global.player = self

@@ -23,10 +23,12 @@ const PLAYER_START_POS = Vector2(-600, 0)
 var y_max_to_die
 var x_max_to_die
 
+
 func _ready():
 	var screen_size = get_viewport().get_rect().size
 	y_max_to_die = screen_size.y * 1.5
 	x_max_to_die = -screen_size.x * 0.651
+
 
 func run_death():
 	if not gameover:
@@ -35,3 +37,9 @@ func run_death():
 		game.set_pos(main_camera.get_pos())
 		main_camera.add_child(game)
 
+
+func reset_game():
+	score = 0
+	score_multiplier = 1
+	score_multiplier_timer = 0
+	scene_manager.set_scene('res://game.tscn')
