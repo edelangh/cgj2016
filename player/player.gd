@@ -123,11 +123,9 @@ func _fixed_process(delta):
 			
 			motion = n.slide(motion)
 			velocity = n.slide(velocity)
-			if n.x != 0 && n.x != -1:
-				print(n.x, " ---- ", motion.x)
-				motion.x -= n.x * SPEED_BONUS_FOR_STAIRS  # TODO!!
-			if n.x != 0 && n.x != -1:
-				print(">>>", motion.x)
+			if n.x != 0 && n.x != -1: # ni le sol ni un mur
+				var k = (WALK_SPEED_MIN * delta) / motion.x # or max_speed / motion.x ?
+				motion *= k
 			# Then move again
 			move(motion)
 	
